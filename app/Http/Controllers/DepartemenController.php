@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Departemen;
-use App\Http\Requests\StoreKaryawanRequest;
-use App\Http\Requests\UpdateKaryawanRequest;
+use App\Http\Requests\StoreDepartemenRequest;
+use App\Http\Requests\UpdateDepartemenRequest;
 
 class DepartemenController extends Controller
 {
@@ -13,7 +13,7 @@ class DepartemenController extends Controller
      */
     public function index()
     {
-        return view('Departemen.data')->with([
+        return view('departemen.data')->with([
             'departemen' => Departemen::all()
         ]);
     }
