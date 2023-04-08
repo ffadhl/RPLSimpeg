@@ -6,7 +6,7 @@ use App\Models\Departemen;
 use App\Http\Requests\StoreKaryawanRequest;
 use App\Http\Requests\UpdateKaryawanRequest;
 
-class KaryawanController extends Controller
+class DepartemenController extends Controller
 {
     /**
      * Display a listing of the resource.
