@@ -20,6 +20,12 @@
                         <i class="fas fa-user"></i> <b>Karyawan</b>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->segment('1') == 'departemen' ? 'active' : '' }} " aria-current="page"
+                        href="{{ url('departemen') }}">
+                        <i class="fas fa-hospital-alt"></i> <b>Departemen</b>
+                    </a>
+                </li>
 
             </ul>
             <ul class="navbar-nav right">

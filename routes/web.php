@@ -27,6 +27,10 @@ Route::get('/karyawan/add', function () {
     return view('karyawan.formadd');
 });
 
+Route::get('/departemen/add', function () {
+    return view('departemen.formadd');
+});
+
 Route::resource('karyawan', KaryawanController::class)->middleware('isLogin');
 
 Route::get('/sesi', [SessionController::class, 'index']);
