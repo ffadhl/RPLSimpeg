@@ -32,6 +32,7 @@ Route::get('/departemen/add', function () {
 });
 
 Route::resource('karyawan', KaryawanController::class)->middleware('isLogin');
+Route::resource('departemen', DepartemenController::class)->middleware('isLogin');
 
 Route::get('/sesi', [SessionController::class, 'index']);
 Route::post('/sesi/login', [SessionController::class, 'login']);
