@@ -9,7 +9,7 @@
             </button>
         </div>
         <div class="card-body">
-            <form method="POST" action="{{ url('departemen') }}">
+            <form method="POST" action="{{ url('departeme') }}">
                 @csrf
                 <div class="row mb-3">
                     <label for="id_dprtmn" class="col-sm-2 col-form-label ">ID departemen</label>
