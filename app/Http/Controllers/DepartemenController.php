@@ -42,13 +42,13 @@ class DepartemenController extends Controller
      */
     public function show(Departemen $dprtmn, $id_departemen)
     {
-        $dprtmn = $dprtmn->find($id_departemen);
+        $data = $dprtmn->find($id_departemen);
         return view('departemen.formedit')->with([
             'id_dprtmn' => $id_departemen,
-            'nama_dprtmn' => $nama_departemen,
-            'kepala_dprtmn' => $kepala_departemen,
-            'deskripsi_dprtmn' => $deskripsi_departemen,
-            'lokasi_dprtmn' => $lokasi_departemen
+            'nama_dprtmn' => $data->$nama_departemen,
+            'kepala_dprtmn' => $data->$kepala_departemen,
+            'deskripsi_dprtmn' => $data->$deskripsi_departemen,
+            'lokasi_dprtmn' => $data->$lokasi_departemen
             
         ]);
     }
