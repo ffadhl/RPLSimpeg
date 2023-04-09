@@ -26,7 +26,7 @@
                 <div class="row mb-3">
                     <label for="txtnip" class="col-sm-2 col-form-label ">NIP</label>
                     <div class="col-sm-4">
-                        <select id="txtnip" name =txtnip class="form-control select2-multiple" multiple>
+                        <select id="txtnip" name ="txtnip" class="form-control select2-multiple" multiple>
                             <option value=""></option>
 
                             @foreach($karyawans as $karyawan)
