@@ -26,8 +26,14 @@
                 <div class="row mb-3">
                     <label for="txtnip" class="col-sm-2 col-form-label ">NIP</label>
                     <div class="col-sm-4">
-                        <input type="text" class="form-control form-control-sm @error('txtnip') is-invalid @enderror"
-                            id="txtnip" name="txtnip">
+                        <select id="txtnip" name =txtnip class="form-control select2-multiple" multiple>
+                            <option value=""></option>
+
+                            @foreach($karyawan as $kywn)
+                            <option value="{{$kywn->nip}}">{{$kywn->nip}}</option>
+                            @endforeach
+                            
+                        </select>
                         @error('txtnip')
                             <div class="invalid-feedback">
                                 {{ $message }}
