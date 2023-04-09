@@ -62,7 +62,7 @@
                                     class="colortext">Data Departemen Depatemen</span>.</h1>
                             <p class="my-4">Pada Menu Ini Merupakan CRUD Untuk Mengelola Data deaprtemen, Silahkan click
                                 button dibawah untuk Mengelola Data Departemen</p><a class="btn btn-primary btn-lg me-2"
-                                role="button" href="/karyawan">Data Departemen</a>
+                                role="button" href="/departemen">Data Departemen</a>
                         </div>
                     </div>
                     <div class="col-md-6">
