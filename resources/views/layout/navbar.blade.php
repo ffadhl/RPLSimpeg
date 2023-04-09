@@ -26,6 +26,12 @@
                         <i class="fas fa-hospital-alt"></i> <b>Departemen</b>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->segment('1') == 'penggajian' ? 'active' : '' }} " aria-current="page"
+                        href="{{ url('penggajian') }}">
+                        <i class="fas fa fa-money"></i> <b>Penggajian</b>
+                    </a>
+                </li>
 
             </ul>
             <ul class="navbar-nav right">
