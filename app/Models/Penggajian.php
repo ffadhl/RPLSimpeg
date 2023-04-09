@@ -14,7 +14,4 @@ class Penggajian extends Model
     public $incrementing = false;
     public $timestamps = true;
 
-    public function karyawans(){
-        return $this->belongsTo('App\Karyawan','nip');
-    }
 }
