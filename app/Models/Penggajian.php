@@ -13,4 +13,8 @@ class Penggajian extends Model
 
     public $incrementing = false;
     public $timestamps = true;
+
+    public function hosts(){
+        return $this->belongsTo('App\Karyawan','nip');
+    }
 }
