@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\DepartemenController;
+use App\Http\Controllers\PenggajianController;
 use App\Http\Controllers\SessionController;
 
 /*

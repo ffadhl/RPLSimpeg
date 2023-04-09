@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('penggajian', function (Blueprint $table) {
             //$table->id();
             $table->integer('id_gaji');
-            $table->unsignedstring('nip');
-            $table->unsignedstring('nama');
+            $table->string('nip');
+            $table->string('nama');
             $table->integer('gaji_pokok');
             $table->integer('tunjangan');
 
