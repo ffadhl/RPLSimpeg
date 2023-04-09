@@ -26,7 +26,7 @@
                 <div class="row mb-3">
                     <label for="txtnip" class="col-sm-2 col-form-label ">NIP</label>
                     <div class="col-sm-4">
-                        <select name="courseName">
+                        <select name="nip">
                         <?php 
                         foreach ($options as $option) {
                         ?>
