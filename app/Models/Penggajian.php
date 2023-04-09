@@ -13,4 +13,5 @@ class Penggajian extends Model
 
     public $incrementing = false;
     public $timestamps = true;
+
 }
