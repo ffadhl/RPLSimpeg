@@ -60,7 +60,7 @@ class CutiController extends Controller
     public function update(UpdateCutiRequest $request, Cuti $ct, $id_cuti)
     {
         $data = $ct->find($id_cuti);
-        $data->id_cuti = $request->id_gj;
+        $data->id_cuti = $request->id_ct;
         $data->nip = $request->txtnip;
         $data->nama = $request->txtnama;
         $data->jenis_cuti = $request->jns_ct;
