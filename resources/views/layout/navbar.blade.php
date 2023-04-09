@@ -32,6 +32,12 @@
                         <i class="fab fa-cc-visa"></i> <b>Penggajian</b>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->segment('1') == 'cuti' ? 'active' : '' }} " aria-current="page"
+                        href="{{ url('cuti') }}">
+                        <i class="fas fa-calendar-alt"></i> <b>Cuti</b>
+                    </a>
+                </li>
 
             </ul>
             <ul class="navbar-nav right">
