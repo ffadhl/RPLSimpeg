@@ -45,7 +45,7 @@ class CutiController extends Controller
     {
         $data = $ct->find($id_cuti);
         return view('cuti.formedit')->with([
-            'id_gj' => $id_cuti,
+            'id_ct' => $id_cuti,
             'txtnip' => $data->nip,
             'txtnama' => $data->nama,
             'jns_ct' => $data->jenis_cuti,
