@@ -26,15 +26,8 @@
                 <div class="row mb-3">
                     <label for="txtnip" class="col-sm-2 col-form-label ">NIP</label>
                     <div class="col-sm-4">
-                        <select name="nip">
-                        <?php 
-                        foreach ($options as $option) {
-                        ?>
-                          <option><?php echo $option['nip']; ?> </option>
-                          <?php 
-                          }
-                         ?>
-                        </select>
+                        <input type="text" class="form-control form-control-sm @error('txtnip') is-invalid @enderror"
+                            id="txtnip" name="txtnip">
                         @error('txtnip')
                             <div class="invalid-feedback">
                                 {{ $message }}
