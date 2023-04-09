@@ -76,7 +76,7 @@ class CutiController extends Controller
      */
     public function destroy(Cuti $ct, $id_cuti)
     {
-        $data = $ct->find($id_ct);
+        $data = $ct->find($id_cuti);
         $data->delete();
         return redirect('cuti')->with('msg', 'Data ' . $data->nama . ' Berhasil Dihapus');
     }
