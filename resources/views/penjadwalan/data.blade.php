@@ -39,7 +39,7 @@
                             <td>{{ $row->waktu_shift }}</td>
                             <td>{{ $row->tanggal_shift }}</td>
                             <td>
-                                <button onclick="window.location='{{ url('cuti/' . $row->kode_jadwal) }}'" type="button"
+                                <button onclick="window.location='{{ url('penjadwalan/' . $row->kode_jadwal) }}'" type="button"
                                     class="btn btb-sm btn-primary" title="edit data">
                                     <i class="fa-solid fa-edit"></i>
                                 </button>
