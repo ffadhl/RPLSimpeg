@@ -62,7 +62,7 @@ class PenjadwalanController extends Controller
     {
         $data = $pjwln->find($kode_jadwal);
         $data->kode_jadwal = $request->kd_jwl;
-        $data->nim = $request->txtnip;
+        $data->nip = $request->txtnip;
         $data->nama = $request->txtnama;
         $data->id_jabatan = $request->id_jbtn;
         $data->waktu_shift = $request->wkt_shft;
