@@ -32,6 +32,12 @@
                         <i class="fab fa-cc-visa"></i> <b>Penggajian</b>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->segment('1') == 'penggajian' ? 'active' : '' }} " aria-current="page"
+                        href="{{ url('penggajian') }}">
+                        <i class="fa-solid fa-calendar-days"></i> <b>Jadwal Karyawan</b>
+                    </a>
+                </li>
 
             </ul>
             <ul class="navbar-nav right">
