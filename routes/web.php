@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\DepartemenController;
 use App\Http\Controllers\PenggajianController;
+use App\Http\Controllers\CutiController;
 use App\Http\Controllers\SessionController;
 
 /*
@@ -37,9 +38,14 @@ Route::get('/penggajian/add', function () {
     return view('penggajian.formadd');
 });
 
+Route::get('/cuti/add', function () {
+    return view('cuti.formadd');
+});
+
 Route::resource('karyawan', KaryawanController::class)->middleware('isLogin');
 Route::resource('departemen', DepartemenController::class)->middleware('isLogin');
 Route::resource('penggajian', PenggajianController::class)->middleware('isLogin');
+Route::resource('cuti', CutiController::class)->middleware('isLogin');
 
 Route::get('/sesi', [SessionController::class, 'index']);
 Route::post('/sesi/login', [SessionController::class, 'login']);
