@@ -43,7 +43,7 @@ Route::get('/cuti/add', function () {
     return view('cuti.formadd');
 });
 
-Route::get('/cuti/add', function () {
+Route::get('/penjadwalan/add', function () {
     return view('penjadwalan.formadd');
 });
 
