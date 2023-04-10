@@ -33,9 +33,21 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link {{ request()->segment('1') == 'cuti' ? 'active' : '' }} " aria-current="page"
+                        href="{{ url('cuti') }}">
+                        <i class="fas fa-calendar-alt"></i> <b>Cuti</b>
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link {{ request()->segment('1') == 'penggajian' ? 'active' : '' }} " aria-current="page"
-                        href="{{ url('penggajian') }}">
-                        <i class="fa-solid fa-calendar-days"></i> <b>Jadwal Karyawan</b>
+                        href="{{ url('jadwal') }}">
+                        <i class="fa-regular fa-calendar"></i></i> <b>Jadwal Karyawan</b>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->segment('1') == 'penggajian' ? 'active' : '' }} " aria-current="page"
+                        href="{{ url('presensi') }}">
+                        <i class="fa-solid fa-person-circle-check"></i></i> <b>Presensi</b>
                     </a>
                 </li>
 
