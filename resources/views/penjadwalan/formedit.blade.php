@@ -47,7 +47,7 @@
                     <label for="id_jbtn" class="col-sm-2 col-form-label">ID Jabatan</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control form-control-sm @error('id_jbtn') is-invalid @enderror"
-                            id="id_jbtn" name="id_jbtn" value="{{ $jns_ct }}">
+                            id="id_jbtn" name="id_jbtn" value="{{ $id_jbtn }}">
                         @error('id_jbtn')
                             <div class="invalid-feedback">
                                 {{ $message }}
@@ -71,7 +71,7 @@
                     <label for="tgl_shft" class="col-sm-2 col-form-label">Tanggal Shift</label>
                     <div class="col-sm-10">
                         <input type="date" class="form-control form-control-sm @error('tgl_shft') is-invalid @enderror"
-                            id="tgl_shft" name="tgl_shft" value="{{ $sls_ct }}">
+                            id="tgl_shft" name="tgl_shft" value="{{ $tgl_shft }}">
                         @error('tgl_shft')
                             <div class="invalid-feedback">
                                 {{ $message }}
