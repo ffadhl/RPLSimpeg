@@ -51,7 +51,7 @@ Route::resource('karyawan', KaryawanController::class)->middleware('isLogin');
 Route::resource('departemen', DepartemenController::class)->middleware('isLogin');
 Route::resource('penggajian', PenggajianController::class)->middleware('isLogin');
 Route::resource('cuti', CutiController::class)->middleware('isLogin');
-Route::resource('cuti', PenjadwalanController::class)->middleware('isLogin');
+Route::resource('penjadwalan', PenjadwalanController::class)->middleware('isLogin');
 
 Route::get('/sesi', [SessionController::class, 'index']);
 Route::post('/sesi/login', [SessionController::class, 'login']);
