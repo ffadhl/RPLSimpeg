@@ -20,21 +20,41 @@
                         <i class="fas fa-user"></i> <b>Karyawan</b>
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->segment('1') == 'departemen' ? 'active' : '' }} " aria-current="page"
-                        href="{{ url('jabatan') }}">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Dropdown link
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="nav-link {{ request()->segment('1') == 'departemen' ? 'active' : '' }} "
+                                aria-current="page" href="{{ url('jabatan') }}">
+                                <i class="fa-solid fa-building-circle-check"></i> <b>Jabatan</b>
+                            </a>
+                        </li>
+                        <li><a class="nav-link {{ request()->segment('1') == 'departemen' ? 'active' : '' }} "
+                                aria-current="page" href="{{ url('departemen') }}">
+                                <i class="fas fa-hospital-alt"></i> <b>Departemen</b>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                {{-- <li class="nav-item">
+                    <a class="nav-link {{ request()->segment('1') == 'departemen' ? 'active' : '' }} "
+                        aria-current="page" href="{{ url('jabatan') }}">
                         <i class="fa-solid fa-building-circle-check"></i> <b>Jabatan</b>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->segment('1') == 'departemen' ? 'active' : '' }} " aria-current="page"
-                        href="{{ url('departemen') }}">
-                        <i class="fas fa-hospital-alt"></i> <b>Departemen</b>
+                    <a class="nav-link {{ request()->segment('1') == 'departemen' ? 'active' : '' }} "
+                        aria-current="page" href="{{ url('departemen') }}">
+                        <i class="fas fa-hospital-alt"></i> <b>Departemen</b> --}}
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->segment('1') == 'penggajian' ? 'active' : '' }} " aria-current="page"
-                        href="{{ url('penggajian') }}">
+                    <a class="nav-link {{ request()->segment('1') == 'penggajian' ? 'active' : '' }} "
+                        aria-current="page" href="{{ url('penggajian') }}">
                         <i class="fab fa-cc-visa"></i> <b>Penggajian</b>
                     </a>
                 </li>
@@ -45,14 +65,14 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->segment('1') == 'penggajian' ? 'active' : '' }} " aria-current="page"
-                        href="{{ url('jadwal') }}">
+                    <a class="nav-link {{ request()->segment('1') == 'penggajian' ? 'active' : '' }} "
+                        aria-current="page" href="{{ url('jadwal') }}">
                         <i class="fa-regular fa-calendar"></i></i> <b>Jadwal Karyawan</b>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->segment('1') == 'penggajian' ? 'active' : '' }} " aria-current="page"
-                        href="{{ url('presensi') }}">
+                    <a class="nav-link {{ request()->segment('1') == 'penggajian' ? 'active' : '' }} "
+                        aria-current="page" href="{{ url('presensi') }}">
                         <i class="fa-solid fa-person-circle-check"></i></i> <b>Presensi</b>
                     </a>
                 </li>
