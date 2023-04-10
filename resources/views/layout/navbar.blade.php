@@ -43,12 +43,12 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa-solid fa-calendar-users"></i> <b> Jadwal </b>
+                        <i class="fa-solid fa-calendar-circle-user"></i><b>Jadwal</b>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li><a class="nav-link {{ request()->segment('1') == 'penggajian' ? 'active' : '' }} "
                                 aria-current="page" href="{{ url('jadwal') }}">
-                                <i class="fa-regular fa-calendar"></i></i> <b>Jadwal Karyawan</b>
+                                <i class="fa-regular fa-calendar"></i> <b>Jadwal Karyawan</b>
                             </a>
                         </li>
                         <li><a class="nav-link {{ request()->segment('1') == 'cuti' ? 'active' : '' }} "
@@ -61,7 +61,7 @@
                 <li class="nav-item">
                     <a class="nav-link {{ request()->segment('1') == 'penggajian' ? 'active' : '' }} "
                         aria-current="page" href="{{ url('presensi') }}">
-                        <i class="fa-solid fa-person-circle-check"></i></i> <b>Presensi</b>
+                        <i class="fa-solid fa-person-circle-check"></i> <b>Presensi</b>
                     </a>
                 </li>
                 <li class="nav-item">
