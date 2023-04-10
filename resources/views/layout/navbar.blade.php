@@ -24,7 +24,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa-solid fa-building"></i><b>Office</b>
+                        <i class="fa-solid fa-building"></i> <b> Office</b>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li><a class="nav-link {{ request()->segment('1') == 'departemen' ? 'active' : '' }} "
@@ -43,7 +43,7 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa-solid fa-calendar-circle-user"></i><b>Jadwal</b>
+                        <i class="fa-solid fa-calendar-days"></i> <b> Jadwal</b>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li><a class="nav-link {{ request()->segment('1') == 'penggajian' ? 'active' : '' }} "
