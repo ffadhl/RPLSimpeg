@@ -46,8 +46,8 @@
                         <i class="fa-solid fa-calendar-days"></i> <b> Jadwal</b>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="nav-link {{ request()->segment('1') == 'penggajian' ? 'active' : '' }} "
-                                aria-current="page" href="{{ url('jadwal') }}">
+                        <li><a class="nav-link {{ request()->segment('1') == 'penjadwalan' ? 'active' : '' }} "
+                                aria-current="page" href="{{ url('penjadwalan') }}">
                                 <i class="fa-regular fa-calendar"></i> <b>Jadwal Karyawan</b>
                             </a>
                         </li>
