@@ -44,7 +44,7 @@
                                     <i class="fa-solid fa-edit"></i>
                                 </button>
                                 <form onsubmit="return deleteData('{{ $row->nama }}')" style="display: inline"
-                                    method="POST" action="{{ url('cuti/' . $row->kode_jadwal) }}">
+                                    method="POST" action="{{ url('penjadwalan/' . $row->kode_jadwal) }}">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" title="Hapus data" class="btn btn-danger btn-med">
