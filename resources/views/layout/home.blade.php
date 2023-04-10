@@ -9,10 +9,10 @@
                         class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
                         <div style="max-width: 350px;">
                             <h1 class="display-6 fw-bold mb-4">Selamat Datang di Pelayanan edit <span
-                                    class="colortext">Karyawan</span>.</h1>
-                            <p class="my-4">Pada Menu Ini Merupakan CRUD Untuk Mengelola Data Karyawan, Silahkan click
-                                button dibawah untuk Mengelola Data Karyawan</p><a class="btn btn-primary btn-lg me-2"
-                                role="button" href="/karyawan">Data Karyawan</a>
+                                    class="colortext">Sistem Kepegawaian</span>.</h1>
+                            <p class="my-4">Pada Menu Ini Merupakan CRUD Untuk Mengelola Semua data Kepegawaian, Mulai dari
+                                Data Karyawan, Data Jabatan, Data Departemen, Data penjadwalan, Data Absensi, Data Gaji, dan Cuti.
+                            </p>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -46,28 +46,6 @@
                                 Ruangan,
                                 dan Sistem Kepegawaian.</p>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-    <div>
-        <section class="py-3 mt-3">
-            <div class="container py-4 py-xl-5">
-                <div class="row gy-4 gy-md-0">
-                    <div
-                        class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
-                        <div style="max-width: 350px;">
-                            <h1 class="display-6 fw-bold mb-4">Selamat Datang di Pelayanan edit <span
-                                    class="colortext">Data Departemen Depatemen</span>.</h1>
-                            <p class="my-4">Pada Menu Ini Merupakan CRUD Untuk Mengelola Data deaprtemen, Silahkan click
-                                button dibawah untuk Mengelola Data Departemen</p><a class="btn btn-primary btn-lg me-2"
-                                role="button" href="/departemen">Data Departemen</a>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div><img class="rounded img-fluid w-55 fit-cover" style="min-height: 200px;"
-                                src="{{ asset('illustrasi.png') }}" /></div>
                     </div>
                 </div>
             </div>
