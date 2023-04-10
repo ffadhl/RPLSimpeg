@@ -47,11 +47,16 @@ Route::get('/penjadwalan/add', function () {
     return view('penjadwalan.formadd');
 });
 
+Route::get('/jabatan/add', function () {
+    return view('jabatan.formadd');
+});
+
 Route::resource('karyawan', KaryawanController::class)->middleware('isLogin');
 Route::resource('departemen', DepartemenController::class)->middleware('isLogin');
 Route::resource('penggajian', PenggajianController::class)->middleware('isLogin');
 Route::resource('cuti', CutiController::class)->middleware('isLogin');
 Route::resource('penjadwalan', PenjadwalanController::class)->middleware('isLogin');
+Route::resource('jabatan', jabatanController::class);
 
 Route::get('/sesi', [SessionController::class, 'index']);
 Route::post('/sesi/login', [SessionController::class, 'login']);
