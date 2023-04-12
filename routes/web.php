@@ -22,7 +22,7 @@ use App\Http\Controllers\SessionController;
 
 Route::get('/', function () {
     return view('sesi.index');
-});
+})->middleware('isLogin');
 
 Route::get('/home', function () {
     return view('layout.home');
