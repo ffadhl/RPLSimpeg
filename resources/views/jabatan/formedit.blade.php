@@ -9,22 +9,22 @@
             </button>
         </div>
         <div class="card-body">
-            <form method="POST" action="{{ url('jabatan/' . $idjabatan) }}">
+            <form method="POST" action="{{ url('jabatan/' . $field_id) }}">
                 @csrf
                 @method('PUT')
                 <div class="row mb-3">
-                    <label for="idjabatan" class="col-sm-2 col-form-label ">ID Jabatan</label>
+                    <label for="field_id" class="col-sm-2 col-form-label ">ID Jabatan</label>
                     <div class="col-sm-4">
-                        <input type="text" class="form-control-plaintext" id="idjabatan" name="idjabatan"
-                            value="{{ $idjabatan }}">
+                        <input type="text" class="form-control-plaintext" id="field_id" name="field_id"
+                            value="{{ $field_id }}">
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="namajabatan" class="col-sm-2 col-form-label">Nama Jabatan</label>
+                    <label for="field_nama" class="col-sm-2 col-form-label">Nama Jabatan</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control form-control-sm @error('namajabatan') is-invalid @enderror"
-                            id="namajabatan" name="namajabatan" value="{{ $namajabatan }}">
-                        @error('namajabatan')
+                        <input type="text" class="form-control form-control-sm @error('field_nama') is-invalid @enderror"
+                            id="field_nama" name="field_nama" value="{{ $field_nama }}">
+                        @error('field_nama')
                             <div class="invalid-feedback">
                                 {{ $message }}
                             </div>
@@ -32,11 +32,12 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="deskripsijabatan" class="col-sm-2 col-form-label">Deskripsi Jabatan</label>
+                    <label for="field_deskripsi" class="col-sm-2 col-form-label">Deskripsi Jabatan</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control form-control-sm @error('deskripsijabatan') is-invalid @enderror"
-                            id="deskripsijabatan" name="deskripsijabatan" value="{{ $deskripsijabatan }}">
-                        @error('deskripsijabatan')
+                        <input type="text"
+                            class="form-control form-control-sm @error('field_deskripsi') is-invalid @enderror"
+                            id="field_deskripsi" name="field_deskripsi" value="{{ $field_deskripsi }}">
+                        @error('field_deskripsi')
                             <div class="invalid-feedback">
                                 {{ $message }}
                             </div>
@@ -44,11 +45,11 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="gj_pkk" class="col-sm-2 col-form-label">Lokasi Jabatan</label>
+                    <label for="field_lokasi" class="col-sm-2 col-form-label">Lokasi Jabatan</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control form-control-sm @error('lokasijabatan') is-invalid @enderror"
-                            id="lokasijabatan" name="lokasijabatan" value="{{ $lokasijabatan }}">
-                        @error('gj_pkk')
+                        <input type="text" class="form-control form-control-sm @error('field_lokasi') is-invalid @enderror"
+                            id="field_lokasi" name="field_lokasi" value="{{ $field_lokasi }}">
+                        @error('field_lokasi')
                             <div class="invalid-feedback">
                                 {{ $message }}
                             </div>

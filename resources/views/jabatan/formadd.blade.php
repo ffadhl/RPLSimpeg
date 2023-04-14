@@ -9,14 +9,15 @@
             </button>
         </div>
         <div class="card-body">
-            <form method="POST" action="{{ url('jabatan') }}">
+            <form method="POST" action="{{ url('jabatan ') }}">
                 @csrf
+
                 <div class="row mb-3">
-                    <label for="idjabatan" class="col-sm-2 col-form-label ">ID Jabatan</label>
+                    <label for="field_id" class="col-sm-2 col-form-label ">ID Jabatan</label>
                     <div class="col-sm-4">
-                        <input type="text" class="form-control form-control-sm @error('idjabatan') is-invalid @enderror"
-                            id="idjabatan" name="idjabatan">
-                        @error('idjabatan')
+                        <input type="text" class="form-control form-control-sm @error('field_id') is-invalid @enderror"
+                            id="field_id" name="field_id">
+                        @error('field_id')
                             <div class="invalid-feedback">
                                 {{ $message }}
                             </div>
@@ -24,11 +25,11 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="namajabatan" class="col-sm-2 col-form-label ">Nama Jabatan</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control form-control-sm @error('namajabatan') is-invalid @enderror"
-                            id="namajabatan" name="namajabatan">
-                        @error('namajabatan')
+                    <label for="field_nama" class="col-sm-2 col-form-label">Nama Jabatan</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control form-control-sm @error('field_nama') is-invalid @enderror"
+                            id="field_nama" name="field_nama">
+                        @error('field_nama')
                             <div class="invalid-feedback">
                                 {{ $message }}
                             </div>
@@ -36,11 +37,12 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="deskripsijabatan" class="col-sm-2 col-form-label ">Deskripsi Jabatan</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control form-control-sm @error('deskripsijabatan') is-invalid @enderror"
-                            id="deskripsijabatan" name="deskripsijabatan">
-                        @error('deskripsijabatan')
+                    <label for="field_deskripsi" class="col-sm-2 col-form-label">Deskripsi Jabatan</label>
+                    <div class="col-sm-10">
+                        <input type="text"
+                            class="form-control form-control-sm @error('field_deskripsi') is-invalid @enderror"
+                            id="field_deskripsi" name="field_deskripsi">
+                        @error('field_deskripsi')
                             <div class="invalid-feedback">
                                 {{ $message }}
                             </div>
@@ -48,17 +50,18 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="lokasijabatan" class="col-sm-2 col-form-label ">Lokasi Jabatan</label>
-                    <div class="col-sm-4">
-                        <input type="text" class="form-control form-control-sm @error('gj_pkk') is-invalid @enderror"
-                            id="lokasijabatan" name="lokasijabatan">
-                        @error('gj_pkk')
+                    <label for="field_lokasi" class="col-sm-2 col-form-label">Lokasi Jabatan</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control form-control-sm @error('field_lokasi') is-invalid @enderror"
+                            id="field_lokasi" name="field_lokasi">
+                        @error('field_lokasi')
                             <div class="invalid-feedback">
                                 {{ $message }}
                             </div>
                         @enderror
                     </div>
                 </div>
+
 
                 <div class="row mb-3">
                     <label for="" class="col-sm-2 col-form-label"></label>

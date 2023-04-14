@@ -11,6 +11,7 @@
         <div class="card-body">
             <form method="POST" action="{{ url('karyawan ') }}">
                 @csrf
+                
                 <div class="row mb-3">
                     <label for="txtnip" class="col-sm-2 col-form-label ">NIP</label>
                     <div class="col-sm-4">

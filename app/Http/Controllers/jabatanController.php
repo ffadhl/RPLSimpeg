@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\jabatan;
+use App\Models\Jabatan;
 use App\Http\Requests\StoreJabatanRequest;
 use App\Http\Requests\UpdateJabatanRequest;
+use App\Http\Controllers\Controller;
+// use Illuminate\Http\Request;
 
-// use App\Http\Requests\StorePenggajianRequest;
-
-class jabatanController extends Controller
+class JabatanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class jabatanController extends Controller
     public function index()
     {
         return view('jabatan.data')->with([
-            'jabatan' => jabatan::all()
+            'jabatan' => Jabatan::all()
         ]);
     }
 
@@ -34,35 +34,37 @@ class jabatanController extends Controller
     public function store(StoreJabatanRequest $request)
     {
         $validate = $request->validated();
+        $JabatanStore = new Jabatan;
 
-        $jabatan = new jabatan;
-        $jabatan->id_jabatan = $request->idjabatan;
-        $jabatan->nama_jabatan = $request->namajabatan;
-        $jabatan->deskripsi_jabatan = $request->deskripsijabatan;
-        $jabatan->lokasi_jabatan = $request->lokasijabatan;
+        $JabatanStore->id_jabatan = $request->field_id;
+        $JabatanStore->nama_jabatan = $request->field_nama;
+        $JabatanStore->deskripsi_jabatan = $request->field_deskripsi;
+        $JabatanStore->lokasi_jabatan = $request->field_lokasi;
 
-        $jabatan->save();
-        return redirect('jabatan')->with('msg', 'Data berhasil ditambahkan');
+        $JabatanStore->save();
+
+        return redirect('jabatan')->with('msg', "Data ditambahkan");
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(jabatan $jabatan, $id_jabatan)
+    public function show(Jabatan $JabatanStore, $id_jabatan)
     {
-        $data = $jabatan->find($id_jabatan);
+        $data = $JabatanStore->find($id_jabatan);
+
         return view('jabatan.formedit')->with([
-            'idjabatan' => $id_jabatan,
-            'namajabatan' => $data->nama_jabatan,
-            'deskripsijabatan' => $data->deskripsi_jabatan,
-            'lokasijabatan' => $data->lokasi_jabatan
+            'field_id' => $id_jabatan,
+            'field_nama' => $JabatanStore->nama_jabatan,
+            'field_deskripsi' => $JabatanStore->deskripsi_jabatan,
+            'field_lokasi' => $JabatanStore->lokasi_jabatan,
         ]);
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    // public function edit(jabatan $jabatan)
+    // public function edit(Jabatan $jabatan)
     // {
     //     //
     // }
@@ -70,25 +72,24 @@ class jabatanController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateJabatanRequest $request, jabatan $jabatan, $id_jabatan)
+    public function update(UpdateJabatanRequest $request, Jabatan $JabatanStore, $id_jabatan)
     {
-        $data = $jabatan->find($id_jabatan);
-        $data->id_jabatan = $request->idjabatan;
-        $data->nama_jabatan = $request->namajabatan;
-        $data->deskripsi_jabatan = $request->deskripsijabatan;
-        $data->lokasi_jabatan = $request->lokasijabatan;
+        $data = $JabatanStore->find($id_jabatan);
+        $data->nama_jabatan = $request->field_nama;
+        $data->deskripsi_jabatan = $request->field_deskripsi;
+        $data->lokasi_jabatan = $request->field_lokasi;
         $data->save();
 
-        return redirect('jabatan')->with('msg', 'Data '. $data->nama_jabatan. ' berhasil diperbarui');
+        return redirect('jabatan')->with('msg', 'Data '. $data->nama_jabatan . ' berhasil diperbarui');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(jabatan $jabatan, $id_jabatan)
+    public function destroy(Jabatan $JabatanStore, $id_jabatan)
     {
-        $data = $jabatan->find($id_jabatan);
+        $data = $JabatanStore->find($id_jabatan);
         $data->delete();
-        return redirect('jabatan')->with('msg', 'Data '. $data->nama_jabatan . ' berhasil dihapus');
+        return redirect('jabatan')->with('msg', 'Data '. $data->nama_jabatan .' berhasil dihapus');
     }
 }
