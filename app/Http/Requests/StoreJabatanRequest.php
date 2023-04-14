@@ -22,30 +22,31 @@ class StoreJabatanRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'idjabatan' => 'required|unique:jabatan,id_jabatan|min:3|max:18',
-            'namajabatan' => 'required',
-            'deskripsijabatan' => 'required',
-            'lokasijabatan' => 'required',
+            'field_id' => 'required|unique:jabatan,id_jabatan|min:3|max:18',
+            'field_nama' => 'required',
+            'field_deskripsi' => 'required',
+            'field_lokasi' => 'required',
         ];
     }
     public function messages(): array
     {
         return [
-            'idjabatan.required' => ':attribute Tidak Boleh Kosong',
+            'field_id.required' => ':attribute Tidak Boleh Kosong',
             'body.unique' => ':attribute Sudah ada di dalam tabel',
-            'namajabatan.required' => ':attribute Tidak Boleh Kosong',
-            'deskripsijabatan.required' => ':attribute Tidak Boleh Kosong',
-            'lokasijabatan.required' => ':attribute Tidak Boleh Kosong',
+            'field_nama.required' => ':attribute Tidak Boleh Kosong',
+            'field_deskripsi.required' => ':attribute Tidak Boleh Kosong',
+            'field_lokasi.required' => ':attribute Tidak Boleh Kosong',
+    
 
         ];
     }
     public function attributes(): array
     {
         return [
-            'idjabatan' => 'ID Jabatan',
-            'namajabatan' => 'Nama Jabatan',
-            'deskripsijabatan' => 'Deskripsi Jabatan',
-            'lokasijabatan' => 'Lokasi Jabatan',
+            'field_id' => 'ID Jabatan',
+            'field_nama' => 'Nama Jabatan',
+            'field_deskripsi' => 'Deskripsi Jabatan',
+            'field_lokasi' => 'Lokasi Jabatan',
         ];
     }
 }
