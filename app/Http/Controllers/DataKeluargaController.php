@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\DataKeluarga;
-use App\Http\Requests\StoreKeluargaRequest;
-use App\Http\Requests\UpdateKeluargaRequest;
+use App\Http\Requests\StoreDataKeluargaRequest;
+use App\Http\Requests\UpdateDataKeluargaRequest;
 
 class DataKeluargaController extends Controller
 {
@@ -21,7 +21,7 @@ class DataKeluargaController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreKeluargaRequest $request)
+    public function store(StoreDataKeluargaRequest $request)
     {
         $validate = $request->validated();
 
@@ -54,7 +54,7 @@ class DataKeluargaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateKeluargaRequest $request, DataKeluarga $klrg, $nip)
+    public function update(UpdateDataKeluargaRequest $request, DataKeluarga $klrg, $nip)
     {
         $data = $klrg->find($nip);
         $klrg->nip = $request->txtnip;
