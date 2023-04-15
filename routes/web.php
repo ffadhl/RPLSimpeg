@@ -6,7 +6,7 @@ use App\Http\Controllers\DepartemenController;
 use App\Http\Controllers\PenggajianController;
 use App\Http\Controllers\PenjadwalanController;
 use App\Http\Controllers\CutiController;
-use App\Http\Controllers\KeluargaController;
+use App\Http\Controllers\DataKeluargaController;
 use App\Http\Controllers\SessionController;
 
 /*
