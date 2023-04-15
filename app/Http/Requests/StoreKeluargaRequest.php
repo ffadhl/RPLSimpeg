@@ -22,7 +22,7 @@ class StoreKeluargaRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'txtnip' => 'required|unique:keluarga,nip|min:7|max:18',
+            'txtnip' => 'required|unique:datakeluarga,nip|min:7|max:18',
             'txtnamadatakeluarga' => 'required',
             'txttempatlahir' => 'required',
             'txtjeniskelamin' => 'required',
