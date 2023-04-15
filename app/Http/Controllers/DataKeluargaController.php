@@ -47,7 +47,7 @@ class DataKeluargaController extends Controller
             'txtnamadatakeluarga' => $data->txtnamadatakeluarga,
             'txttempatlahir' => $data->txttempatlahir,
             'txtjeniskelamin' => $data->txtjeniskelamin,
-            'txtagamakeluarga' => $data->txtagamakeluarga,
+            'txtagamakeluarga' => $data->txtagamakeluarga
         ]);
     }
 
