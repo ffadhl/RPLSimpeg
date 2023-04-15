@@ -20,11 +20,11 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="txtnama" class="col-sm-2 col-form-label">Nama Keluarga</label>
+                    <label for="txtnamadatakeluarga" class="col-sm-2 col-form-label">Nama Keluarga</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control form-control-sm @error('txtnama') is-invalid @enderror"
-                            id="txtnama" name="txtnama" value="{{ $txtnama }}">
-                        @error('txtnama')
+                        <input type="text" class="form-control form-control-sm @error('txtnamadatakeluarga') is-invalid @enderror"
+                            id="txtnamadatakeluarga" name="txtnamadatakeluarga" value="{{ $txtnamadatakeluarga }}">
+                        @error('txtnamadatakeluarga')
                             <div class="invalid-feedback">
                                 {{ $message }}
                             </div>
