@@ -57,11 +57,11 @@ class DataKeluargaController extends Controller
     public function update(UpdateDataKeluargaRequest $request, DataKeluarga $klrg, $nip)
     {
         $data = $klrg->find($nip);
-        $klrg->nip = $request->txtnip;
-        $klrg->namadatakeluarga = $request->txtnamadatakeluarga;
-        $klrg->tempatlahir = $request->txttempatlahir;
-        $klrg->jeniskelamin = $request->txtjeniskelamin;
-        $klrg->agamakeluarga = $request->txtagamakeluarga;
+        $data->nip = $request->txtnip;
+        $data->namadatakeluarga = $request->txtnamadatakeluarga;
+        $data->tempatlahir = $request->txttempatlahir;
+        $data->jeniskelamin = $request->txtjeniskelamin;
+        $data->agamakeluarga = $request->txtagamakeluarga;
         $data->save();
 
         return redirect('datakeluarga')->with('msg', 'Data ' . $data->namadatakeluarga . ' Berhasil Di-Update');
