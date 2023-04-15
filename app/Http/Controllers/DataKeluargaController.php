@@ -2,19 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Keluarga;
+use App\Models\DataKeluarga;
 use App\Http\Requests\StoreKeluargaRequest;
 use App\Http\Requests\UpdateKeluargaRequest;
 
-class KeluargaController extends Controller
+class DataKeluargaController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('keluarga.data')->with([
-            'keluarga' => Keluarga::all()
+        return view('datakeluarga.data')->with([
+            'datakeluarga' => DataKeluarga::all()
         ]);
     }
 
@@ -25,7 +25,7 @@ class KeluargaController extends Controller
     {
         $validate = $request->validated();
 
-        $klrg = new Keluarga;
+        $klrg = new DataKeluarga;
         $klrg->nip = $request->txtnip;
         $klrg->namadatakeluarga = $request->txtnamadatakeluarga;
         $klrg->tempatlahir = $request->txttempatlahir;
@@ -39,10 +39,10 @@ class KeluargaController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Keluarga $klrg, $nip)
+    public function show(DataKeluarga $klrg, $nip)
     {
         $data = $klrg->find($nip);
-        return view('keluarga.formedit')->with([
+        return view('datakeluarga.formedit')->with([
             'txtnip' => $nip,
             'txtnamadatakeluarga' => $data->txtnamadatakeluarga,
             'txttempatlahir' => $data->txttempatlahir,
@@ -54,7 +54,7 @@ class KeluargaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateKeluargaRequest $request, Keluarga $klrg, $nip)
+    public function update(UpdateKeluargaRequest $request, DataKeluarga $klrg, $nip)
     {
         $data = $klrg->find($nip);
         $klrg->nip = $request->txtnip;
@@ -64,16 +64,16 @@ class KeluargaController extends Controller
         $klrg->agamakeluarga = $request->txtagamakeluarga;
         $data->save();
 
-        return redirect('keluarga')->with('msg', 'Data ' . $data->namadatakeluarga . ' Berhasil Di-Update');
+        return redirect('datakeluarga')->with('msg', 'Data ' . $data->namadatakeluarga . ' Berhasil Di-Update');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Keluarga $klrg, $nip)
+    public function destroy(DataKeluarga $klrg, $nip)
     {
         $data = $klrg->find($nip);
         $data->delete();
-        return redirect('keluarga')->with('msg', 'Data ' . $data->namadatakeluarga . ' Berhasil Dihapus');
+        return redirect('datakeluarga')->with('msg', 'Data ' . $data->namadatakeluarga . ' Berhasil Dihapus');
     }
 }

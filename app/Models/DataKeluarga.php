@@ -5,10 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class keluarga extends Model
+class DataKeluarga extends Model
 {
     use HasFactory;
-    protected $table = 'keluarga';
+    protected $table = 'datakeluarga';
     protected $primaryKey = 'nip';
 
     public $incrementing = false;
