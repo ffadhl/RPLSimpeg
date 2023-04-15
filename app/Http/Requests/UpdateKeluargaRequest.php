@@ -42,7 +42,6 @@ class UpdateKeluargaRequest extends FormRequest
     public function attributes(): array
     {
         return [
-            'txtnip' => 'NIP',
             'txtnamadatakeluarga' => 'Nama Keluarga',
             'txttempatlahir' => 'Tempat Lahir',
             'txtjeniskelamin' => 'Jenis Kelamin',
