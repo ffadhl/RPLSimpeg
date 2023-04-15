@@ -4,12 +4,12 @@
     <h3><strong> Edit Data Keluarga </strong></h3>
     <div class="card">
         <div class="card-header">
-            <button type="button" class="btn btn-sm btn-warning" onclick="window.location='{{ url('keluarga') }}'">
+            <button type="button" class="btn btn-sm btn-warning" onclick="window.location='{{ url('datakeluarga') }}'">
                 <i class="fa-solid fa-arrow-left"></i> Kembali
             </button>
         </div>
         <div class="card-body">
-            <form method="POST" action="{{ url('keluarga/' . $txtnip) }}">
+            <form method="POST" action="{{ url('datakeluarga/' . $txtnip) }}">
                 @csrf
                 @method('PUT')
                 <div class="row mb-3">

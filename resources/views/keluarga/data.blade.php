@@ -4,7 +4,7 @@
     <h3><strong> Data Keluarga </strong></h3>
     <div class="card">
         <div class="card-header">
-            <button type="button" class="btn btn-sm btn-primary" onclick="window.location='{{ url('keluarga/add') }}'">
+            <button type="button" class="btn btn-sm btn-primary" onclick="window.location='{{ url('datakeluarga/add') }}'">
                 <i class="fa-solid fa-circle-plus"></i> Tambah Data
             </button>
         </div>
@@ -28,7 +28,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($keluarga as $row)
+                    @foreach ($datakeluarga as $row)
                         <tr>
                             <th>{{ $loop->iteration }}</th>
                             <td>{{ $row->nip }}</td>
@@ -37,12 +37,12 @@
                             <td>{{ $row->jeniskelamin }}</td>
                             <td>{{ $row->agamakeluarga }}</td>
                             <td>
-                                <button onclick="window.location='{{ url('keluarga/' . $row->nip) }}'" type="button"
+                                <button onclick="window.location='{{ url('datakeluarga/' . $row->nip) }}'" type="button"
                                     class="btn btb-sm btn-primary" title="edit data">
                                     <i class="fa-solid fa-edit"></i>
                                 </button>
                                 <form onsubmit="return deleteData('{{ $row->namadatakeluarga }}')" style="display: inline"
-                                    method="POST" action="{{ url('keluarga/' . $row->nip) }}">
+                                    method="POST" action="{{ url('datakeluarga/' . $row->nip) }}">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" title="Hapus data" class="btn btn-danger btn-med">
