@@ -33,7 +33,7 @@ class DataKeluargaController extends Controller
         $klrg->agamakeluarga = $request->txtagamakeluarga;
         $klrg->save();
 
-        return redirect('keluarga')->with('msg', 'Data Berhasil Ditambahkan');
+        return redirect('datakeluarga')->with('msg', 'Data Berhasil Ditambahkan');
     }
 
     /**
