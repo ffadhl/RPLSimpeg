@@ -59,7 +59,7 @@
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->segment('1') == 'penggajian' ? 'active' : '' }} "
+                    <a class="nav-link {{ request()->segment('1') == 'presensi' ? 'active' : '' }} "
                         aria-current="page" href="{{ url('presensi') }}">
                         <i class="fa-solid fa-person-circle-check"></i> <b>Presensi</b>
                     </a>
