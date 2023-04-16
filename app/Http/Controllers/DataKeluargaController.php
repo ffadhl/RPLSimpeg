@@ -45,7 +45,7 @@ class DataKeluargaController extends Controller
         $data = $klrg->find($nik);
         return view('datakeluarga.formedit')->with([
             'txtnik' => $nik,
-            'txtnip' => $nip,
+            'txtnip' => $data->nip,
             'txtnamadatakeluarga' => $data->namadatakeluarga,
             'txttempatlahir' => $data->tempatlahir,
             'txtjeniskelamin' => $data->jeniskelamin,
