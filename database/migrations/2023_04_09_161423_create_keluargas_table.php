@@ -20,7 +20,7 @@ return new class extends Migration
             $table->enum('agamakeluarga',['Islam','Katholik','Kristen','Hindu', 'Buddha', 'Konghucu']);
         
             $table->primary('nik');
-            $table->foreign('nip')->references('nip')->on('karyawan')->onDelete('cascade');
+            # $table->foreign('nip')->references('nip')->on('karyawan')->onDelete('cascade');
             # $table->foreign('id_jabatan')->references('id')->on('jabatan')->onDelete('cascade');
             $table->timestamps();
         });
