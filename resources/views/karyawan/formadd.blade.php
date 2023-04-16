@@ -9,7 +9,7 @@
             </button>
         </div>
         <div class="card-body">
-            <form method="POST" action="{{ url('karyawan ') }}">
+            <form method="POST" action="{{ url('karyawan') }}">
                 @csrf
                 
                 <div class="row mb-3">
@@ -92,13 +92,21 @@
                 <div class="row mb-3">
                     <label for="txtagama" class="col-sm-2 col-form-label">Agama</label>
                     <div class="col-sm-4">
-                        <input type="text" class="form-control form-control-sm @error('txtagama') is-invalid @enderror"
-                            id="txtagama" name="txtagama">
-                        @error('txtagama')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                        @enderror
+                        <select class="form-select form-select-sm @error('txtagama') is-invalid @enderror"
+                            name="txtagama" id="txtagama">
+                            @error('txtagama')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                            <option value=" "selected>-pilih-</option>
+                            <option value="Islam">Islam</option>
+                            <option value="Katholik">Katholik</option>
+                            <option value="Kristen">Kristen</option>
+                            <option value="Hindu">Hindu</option>
+                            <option value="Buddha">Budhha</option>
+                            <option value="Konghucu">Konghucu</option>
+                        </select>
                     </div>
                 </div>
                 <div class="row mb-3">

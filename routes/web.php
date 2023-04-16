@@ -6,6 +6,7 @@ use App\Http\Controllers\DepartemenController;
 use App\Http\Controllers\PenggajianController;
 use App\Http\Controllers\PenjadwalanController;
 use App\Http\Controllers\CutiController;
+use App\Http\Controllers\DataKeluargaController;
 use App\Http\Controllers\SessionController;
 
 /*
@@ -48,16 +49,21 @@ Route::get('/penjadwalan/add', function () {
     return view('penjadwalan.formadd');
 });
 
+Route::get('/datakeluarga/add', function () {
+    return view('datakeluarga.formadd');
+});
+
 Route::get('/jabatan/add', function () {
     return view('jabatan.formadd');
 });
+
 
 Route::resource('karyawan', KaryawanController::class)->middleware('isLogin');
 Route::resource('departemen', DepartemenController::class)->middleware('isLogin');
 Route::resource('penggajian', PenggajianController::class)->middleware('isLogin');
 Route::resource('cuti', CutiController::class)->middleware('isLogin');
 Route::resource('penjadwalan', PenjadwalanController::class)->middleware('isLogin');
-Route::resource('jabatan', JabatanController::class)->middleware('isLogin');
+Route::resource('datakeluarga', DataKeluargaController::class)->middleware('isLogin');
 
 Route::get('/sesi', [SessionController::class, 'index']);
 Route::post('/sesi/login', [SessionController::class, 'login']);

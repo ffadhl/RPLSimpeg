@@ -87,13 +87,21 @@
                 <div class="row mb-3">
                     <label for="txtagama" class="col-sm-2 col-form-label">Agama</label>
                     <div class="col-sm-4">
-                        <input type="text" class="form-control form-control-sm @error('txtagama') is-invalid @enderror"
-                            id="txtagama" name="txtagama" value="{{ $txtagama }}">
-                        @error('txtagama')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                        @enderror
+                        <select class="form-select form-select-sm @error('txtagama') is-invalid @enderror"
+                            name="txtagama" id="txtagama">
+                            <option value=" "selected>-pilih-</option>
+                            <option value="islam" {{ $txtagama == 'Islam' ? 'selected' : '' }}>Islam</option>
+                            <option value="Katholik" {{ $txtagama == 'Katholik' ? 'selected' : '' }}>Katholik</option>
+                            <option value="Kristen" {{ $txtagama == 'Kristen' ? 'selected' : '' }}>Kristen</option>
+                            <option value="Hindu" {{ $txtagama == 'Hindu' ? 'selected' : '' }}>Hindu</option>
+                            <option value="Buddha" {{ $txtagama == 'Buddha' ? 'selected' : '' }}>Buddha</option>
+                            <option value="Konghucu" {{ $txtagama == 'Konghucu' ? 'selected' : '' }}>Konghucu</option>
+                            @error('txtagama')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </select>
                     </div>
                 </div>
                 <div class="row mb-3">
@@ -131,4 +139,6 @@
                 </div>
             </form>
         </div>
-    @endsection
+    </div>
+@endsection
+
