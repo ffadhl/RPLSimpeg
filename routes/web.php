@@ -8,7 +8,7 @@ use App\Http\Controllers\PenjadwalanController;
 use App\Http\Controllers\CutiController;
 use App\Http\Controllers\DataKeluargaController;
 use App\Http\Controllers\SessionController;
-use App\Http\Controllers\JabatanController;
+use App\Http\Controllers\jabatanController;
 
 /*
 |--------------------------------------------------------------------------
@@ -65,7 +65,7 @@ Route::resource('penggajian', PenggajianController::class)->middleware('isLogin'
 Route::resource('cuti', CutiController::class)->middleware('isLogin');
 Route::resource('penjadwalan', PenjadwalanController::class)->middleware('isLogin');
 Route::resource('datakeluarga', DataKeluargaController::class)->middleware('isLogin');
-Route::resource('jabatan', JabatanController::class)->middleware('isLogin');
+Route::resource('jabatan', jabatanController::class)->middleware('isLogin');
 
 Route::get('/sesi', [SessionController::class, 'index']);
 Route::post('/sesi/login', [SessionController::class, 'login']);
