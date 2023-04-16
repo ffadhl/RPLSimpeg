@@ -71,7 +71,7 @@
                                 </div>
                             @enderror
                             <option value=" "selected>-pilih-</option>
-                            <option value="Laki-Laki">Laki-Laki</option>
+                            <option value="LakiLaki">Laki-Laki</option>
                             <option value="Perempuan">Perempuan</option>
                         </select>
                     </div>
