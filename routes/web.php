@@ -53,7 +53,6 @@ Route::get('/datakeluarga/add', function () {
     return view('datakeluarga.formadd');
 });
 
-Route::get('/karyawan/add', [DataKeluargaController::class]);
 
 Route::resource('karyawan', KaryawanController::class)->middleware('isLogin');
 Route::resource('departemen', DepartemenController::class)->middleware('isLogin');
