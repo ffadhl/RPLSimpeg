@@ -27,7 +27,7 @@
                         <i class="fa-solid fa-building"></i> <b> Office</b>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="nav-link {{ request()->segment('1') == 'departemen' ? 'active' : '' }} "
+                        <li><a class="nav-link {{ request()->segment('1') == 'jabatan' ? 'active' : '' }} "
                                 aria-current="page" href="{{ url('jabatan') }}">
                                 <i class="fa-solid fa-building-circle-check"></i> <b>Jabatan</b>
                             </a>
