@@ -24,6 +24,18 @@
                     </div>
                 </div>
                 <div class="row mb-3">
+                    <label for="txtnik" class="col-sm-2 col-form-label ">NIK</label>
+                    <div class="col-sm-4">
+                        <input type="number" class="form-control form-control-sm @error('txtnik') is-invalid @enderror"
+                            id="txtnik" name="txtnik">
+                        @error('txtnik')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                    </div>
+                </div>
+                <div class="row mb-3">
                     <label for="txtnamadatakeluarga" class="col-sm-2 col-form-label">Nama Keluarga</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control form-control-sm @error('txtnamadatakeluarga') is-invalid @enderror"

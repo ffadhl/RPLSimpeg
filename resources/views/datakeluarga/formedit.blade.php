@@ -9,7 +9,7 @@
             </button>
         </div>
         <div class="card-body">
-            <form method="POST" action="{{ url('datakeluarga/' . $txtnip) }}">
+            <form method="POST" action="{{ url('datakeluarga/' . $txtnik) }}">
                 @csrf
                 @method('PUT')
                 <div class="row mb-3">
@@ -17,6 +17,13 @@
                     <div class="col-sm-4">
                         <input type="text" class="form-control-plaintext" id="txtnip" name="txtnip"
                             value="{{ $txtnip }}">
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="txtnik" class="col-sm-2 col-form-label ">NIK</label>
+                    <div class="col-sm-4">
+                        <input type="text" class="form-control-plaintext" id="txtnik" name="txtnik"
+                            value="{{ $txtnik }}">
                     </div>
                 </div>
                 <div class="row mb-3">

@@ -20,6 +20,7 @@
                     <tr>
                         <th>No</th>
                         <th>NIP</th>
+                        <th>NIK</th>
                         <th>Nama Keluarga</th>
                         <th>Tempat Lahir</th>
                         <th>Jenis Kelamin</th>
@@ -32,17 +33,18 @@
                         <tr>
                             <th>{{ $loop->iteration }}</th>
                             <td>{{ $row->nip }}</td>
+                            <td>{{ $row->nik }}</td>
                             <td>{{ $row->namadatakeluarga }}</td>
                             <td>{{ $row->tempatlahir }}</td>
                             <td>{{ $row->jeniskelamin }}</td>
                             <td>{{ $row->agamakeluarga }}</td>
                             <td>
-                                <button onclick="window.location='{{ url('datakeluarga/' . $row->nip) }}'" type="button"
+                                <button onclick="window.location='{{ url('datakeluarga/' . $row->nik) }}'" type="button"
                                     class="btn btb-sm btn-primary" title="edit data">
                                     <i class="fa-solid fa-edit"></i>
                                 </button>
                                 <form onsubmit="return deleteData('{{ $row->namadatakeluarga }}')" style="display: inline"
-                                    method="POST" action="{{ url('datakeluarga/' . $row->nip) }}">
+                                    method="POST" action="{{ url('datakeluarga/' . $row->nik) }}">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" title="Hapus data" class="btn btn-danger btn-med">

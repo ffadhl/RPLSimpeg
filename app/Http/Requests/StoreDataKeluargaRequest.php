@@ -23,6 +23,7 @@ class StoreDataKeluargaRequest extends FormRequest
     {
         return [
             'txtnip' => 'required|unique:datakeluarga,nip|min:7|max:18',
+            'txtnik' => 'required|unique:datakeluarga,nik|min:16|max:16',
             'txtnamadatakeluarga' => 'required',
             'txttempatlahir' => 'required',
             'txtjeniskelamin' => 'required',
@@ -33,6 +34,7 @@ class StoreDataKeluargaRequest extends FormRequest
     {
         return [
             'txtnip.required' => ':attribute Tidak Boleh Kosong',
+            'txtnik.required' => ':attribute Tidak Boleh Kosong',
             'body.unique' => ':attribute Sudah ada di dalam tabel',
             'txtnamadatakeluarga.required' => ':attribute Tidak Boleh Kosong',
             'txttempatlahir.required' => ':attribute Tidak Boleh Kosong',
@@ -44,6 +46,7 @@ class StoreDataKeluargaRequest extends FormRequest
     {
         return [
             'txtnip' => 'NIP',
+            'txtnik' => 'NIK',
             'txtnamadatakeluarga' => 'Nama Keluarga',
             'txttempatlahir' => 'Tempat Lahir',
             'txtjeniskelamin' => 'Jenis Kelamin',
