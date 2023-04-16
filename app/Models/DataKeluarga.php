@@ -9,7 +9,7 @@ class DataKeluarga extends Model
 {
     use HasFactory;
     protected $table = 'datakeluarga';
-    protected $primaryKey = 'nik';
+    # protected $primaryKey = 'nik';
 
     public $incrementing = false;
     public $timestamps = true;
