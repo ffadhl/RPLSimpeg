@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nip');
             $table->string('namadatakeluarga');
             $table->string('tempatlahir',30);
-            $table->enum('jeniskelamin', ['Pria', 'Wanita']);
+            $table->enum('jeniskelamin', ['Laki-Laki', 'Perempuan']);
             $table->enum('agamakeluarga',['Islam','Katholik','Kristen','Hindu', 'Buddha', 'Konghucu']);
         
             $table->primary('nik');
