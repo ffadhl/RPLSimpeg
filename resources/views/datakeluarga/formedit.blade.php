@@ -57,8 +57,8 @@
                         <select class="form-select form-select-sm @error('txtjeniskelamin') is-invalid @enderror"
                             name="txtjeniskelamin" id="txtjeniskelamin">
                             <option value=" "selected>-pilih-</option>
-                            <option value="L" {{ $txtjeniskelamin == 'L' ? 'selected' : '' }}>Laki-laki</option>
-                            <option value="P" {{ $txtjeniskelamin == 'P' ? 'selected' : '' }}>Perempuan</option>
+                            <option value="Laki_laki" {{ $txtjeniskelamin == 'Laki_laki' ? 'selected' : '' }}>Laki-laki</option>
+                            <option value="Perempuan" {{ $txtjeniskelamin == 'Perempuan' ? 'selected' : '' }}>Perempuan</option>
                             @error('txtjeniskelamin')
                                 <div class="invalid-feedback">
                                     {{ $message }}
