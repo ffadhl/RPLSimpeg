@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Karyawan;
 use App\Http\Requests\StoreKaryawanRequest;
 use App\Http\Requests\UpdateKaryawanRequest;
+use App\Models\DataKeluarga;
 
 class KaryawanController extends Controller
 {
@@ -14,7 +15,8 @@ class KaryawanController extends Controller
     public function index()
     {
         return view('karyawan.data')->with([
-            'karyawan' => Karyawan::all()
+            'karyawan' => Karyawan::all(),
+            'datakeluarga' => DataKeluarga::all()
         ]);
     }
 
