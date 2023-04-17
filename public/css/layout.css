@@ -11,6 +11,10 @@ a {
 	text-decoration: none;
 }
 
+li {
+	list-style: none;
+}
+
 b {
 	color: var(--dark);
 }
@@ -20,7 +24,7 @@ p {
 }
 
 h1 {
-	color: var(--light);
+	color: var(--dark);
 }
 
 h2 {
@@ -33,10 +37,6 @@ h3 {
 
 span {
 	color: var(--dark);
-}
-
-li {
-	list-style: none;
 }
 
 :root {
