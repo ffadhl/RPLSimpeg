@@ -1,12 +1,12 @@
 <!-- SIDEBAR -->
 <section id="sidebar">
-    <a href="#" class="brand">
+    <a href="home" class="brand">
         <i class='bx bxs-smile'></i>
         <span class="text">AdminHub</span>
     </a>
     <ul class="side-menu top">
         <li class="active">
-            <a href="#">
+            <a href="home">
                 <i class='bx bxs-home'></i>
                 <span class="text">Home</span>
             </a>
