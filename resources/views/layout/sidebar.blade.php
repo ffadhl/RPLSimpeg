@@ -12,7 +12,8 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a class="nav-link {{ request()->segment('1') == 'jabatan' ? 'active' : '' }} " aria-current="page"
+                href="{{ url('karyawan') }}">
                 <i class='bx bxs-user'></i>
                 <span class="text">Karyawan</span>
             </a>
