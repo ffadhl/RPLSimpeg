@@ -26,7 +26,7 @@ class StorePresensiRequest extends FormRequest
             'txtnip' => 'required',
             'txtnama' => 'required',
             'sts_prsns' => 'required',
-            'img_foto' => 'required|image|mimes:jpeg,jpg,png|max:2048',
+            'img_foto' => 'required|image|mimes:jpeg,jpg,png|max:9000',
         ];
     }
     public function messages(): array

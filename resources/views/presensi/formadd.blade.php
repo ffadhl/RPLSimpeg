@@ -9,7 +9,7 @@
             </button>
         </div>
         <div class="card-body">
-            <form method="POST" action="{{ url('presensi') }}">
+            <form method="POST" action="{{ url('presensi') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="row mb-3">
                     <label for="id_prsns" class="col-sm-2 col-form-label ">ID Presensi</label>
@@ -66,7 +66,7 @@
                 <div class="row mb-3">
                     <label for="img_foto" class="col-sm-2 col-form-label ">Foto</label>
                     <div class="col-sm-4">
-                        <input type="file" class="form-control" id="img_foto" name = 'img_foto' aria-label="Upload">
+                        <input type="file" class="form-control" id="img_foto" name = 'img_foto'>
                         @error('img_foto')
                             <div class="invalid-feedback">
                                 {{ $message }}
