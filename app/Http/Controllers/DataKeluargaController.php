@@ -32,6 +32,7 @@ class DataKeluargaController extends Controller
         $klrg->tempatlahir = $request->txttempatlahir;
         $klrg->jeniskelamin = $request->txtjeniskelamin;
         $klrg->agamakeluarga = $request->txtagamakeluarga;
+        $klrg->statuskeluarga = $request->txtstatuskeluarga;
         $klrg->save();
 
         return redirect('datakeluarga')->with('msg', 'Data Berhasil Ditambahkan');
@@ -49,7 +50,8 @@ class DataKeluargaController extends Controller
             'txtnamadatakeluarga' => $data->namadatakeluarga,
             'txttempatlahir' => $data->tempatlahir,
             'txtjeniskelamin' => $data->jeniskelamin,
-            'txtagamakeluarga' => $data->agamakeluarga
+            'txtagamakeluarga' => $data->agamakeluarga,
+            'txtstatuskeluarga' => $data->statuskeluarga
         ]);
     }
 
@@ -65,6 +67,7 @@ class DataKeluargaController extends Controller
         $data->tempatlahir = $request->txttempatlahir;
         $data->jeniskelamin = $request->txtjeniskelamin;
         $data->agamakeluarga = $request->txtagamakeluarga;
+        $data->statuskeluarga = $request->txtstatuskeluarga;
         $data->save();
 
         return redirect('datakeluarga')->with('msg', 'Data ' . $data->namadatakeluarga . ' Berhasil Di-Update');
