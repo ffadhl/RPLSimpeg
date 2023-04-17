@@ -57,7 +57,8 @@ class KaryawanController extends Controller
             'txttelp' => $data->no_telepon,
             'txtagama' => $data->agama,
             'txtpend' => $data->pendidikan,
-            'txtlisensi' => $data->lisensi
+            'txtlisensi' => $data->lisensi,
+            'datakeluarga' => DataKeluarga::all()
         ]);
     }
 
