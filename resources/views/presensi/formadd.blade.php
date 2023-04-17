@@ -67,7 +67,6 @@
                     <label for="img_foto" class="col-sm-2 col-form-label ">Foto</label>
                     <div class="col-sm-4">
                         <input type="file" class="form-control" id="img_foto" name = 'img_foto' aria-label="Upload">
-                        <button class="btn btn-outline-secondary" type="button" id="img_foto">Button</button>
                         @error('img_foto')
                             <div class="invalid-feedback">
                                 {{ $message }}
