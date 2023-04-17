@@ -23,6 +23,13 @@
     <link rel="stylesheet" href="{{ asset('css/layout.css') }}">
 </head>
 
+<style>
+    ol,
+    ul {
+        padding-left: 0;
+    }
+</style>
+
 <body>
     <!-- SIDEBAR -->
     @include('layout.sidebar')
