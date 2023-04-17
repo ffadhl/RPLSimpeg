@@ -11,6 +11,30 @@ a {
 	text-decoration: none;
 }
 
+b {
+	color: var(--dark);
+}
+
+p {
+	color: var(--dark);
+}
+
+h1 {
+	color: var(--dark);
+}
+
+h2 {
+	color: var(--dark);
+}
+
+h3 {
+	color: var(--dark);
+}
+
+span {
+	color: var(--dark);
+}
+
 li {
 	list-style: none;
 }
