@@ -9,6 +9,7 @@ use App\Http\Controllers\CutiController;
 use App\Http\Controllers\DataKeluargaController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\jabatanController;
+use App\Models\DataKeluarga;
 
 /*
 |--------------------------------------------------------------------------
