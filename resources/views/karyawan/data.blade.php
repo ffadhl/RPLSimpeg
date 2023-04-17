@@ -1,7 +1,15 @@
 @extends('layout.main')
 
 @section('content')
-    <h3><strong> Data Karyawan </strong></h3>
+    <div class="head-title">
+        <div class="left">
+            <h3><strong> Data Karyawan </strong></h3>
+        </div>
+        <a href="#" class="btn-download">
+            <i class='bx bxs-cloud-download'></i>
+            <span class="text">Download PDF</span>
+        </a>
+    </div>>
     <div class="card">
         <div class="card-header">
             <button type="button" class="btn btn-sm btn-primary" onclick="window.location='{{ url('karyawan/add') }}'">
