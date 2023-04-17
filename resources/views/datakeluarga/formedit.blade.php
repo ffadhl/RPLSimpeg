@@ -79,7 +79,26 @@
                             <option value="Hindu" {{ $txtagamakeluarga == 'Hindu' ? 'selected' : '' }}>Hindu</option>
                             <option value="Buddha" {{ $txtagamakeluarga == 'Buddha' ? 'selected' : '' }}>Buddha</option>
                             <option value="Konghucu" {{ $txtagamakeluarga == 'Konghucu' ? 'selected' : '' }}>Konghucu</option>
-                            @error('txtjeniskelamin')
+                            @error('txtagamakeluarga')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </select>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <label for="txtstatuskeluarga" class="col-sm-2 col-form-label">Agama</label>
+                    <div class="col-sm-4">
+                        <select class="form-select form-select-sm @error('txtstatuskeluarga') is-invalid @enderror"
+                            name="txtstatuskeluarga" id="txtstatuskeluarga">
+                            <option value=" "selected>-pilih-</option>
+                            <option value="Ayah" {{ $txtstatuskeluarga == 'Ayah' ? 'selected' : '' }}>Ayah</option>
+                            <option value="Ibu" {{ $txtstatuskeluarga == 'Ibu' ? 'selected' : '' }}>Ibu</option>
+                            <option value="Suami" {{ $txtstatuskeluarga == 'Suami' ? 'selected' : '' }}>Suami</option>
+                            <option value="Istri" {{ $txtstatuskeluarga == 'Istri' ? 'selected' : '' }}>Istri</option>
+                            <option value="Anak" {{ $txtstatuskeluarga == 'Anak' ? 'selected' : '' }}>Anak</option>
+                            @error('txtstatuskeluarga')
                                 <div class="invalid-feedback">
                                     {{ $message }}
                                 </div>

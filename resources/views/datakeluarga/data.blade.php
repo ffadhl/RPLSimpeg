@@ -25,6 +25,7 @@
                         <th>Tempat Lahir</th>
                         <th>Jenis Kelamin</th>
                         <th>Agama</th>
+                        <th>Status Keluarga</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -38,6 +39,7 @@
                             <td>{{ $row->tempatlahir }}</td>
                             <td>{{ $row->jeniskelamin }}</td>
                             <td>{{ $row->agamakeluarga }}</td>
+                            <td>{{ $row->statuskeluarga }}</td>
                             <td>
                                 <button onclick="window.location='{{ url('datakeluarga/' . $row->nik) }}'" type="button"
                                     class="btn btb-sm btn-primary" title="edit data">

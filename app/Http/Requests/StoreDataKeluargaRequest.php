@@ -28,6 +28,7 @@ class StoreDataKeluargaRequest extends FormRequest
             'txttempatlahir' => 'required',
             'txtjeniskelamin' => 'required',
             'txtagamakeluarga' => 'required',
+            'txtstatuskeluarga' => 'required',
         ];
     }
     public function messages(): array
@@ -40,6 +41,7 @@ class StoreDataKeluargaRequest extends FormRequest
             'txttempatlahir.required' => ':attribute Tidak Boleh Kosong',
             'txtjeniskelamin.required' => ':attribute Tidak Boleh Kosong',
             'txtagamakeluarga.required' => ':attribute Tidak Boleh Kosong',
+            'txtstatuskeluarga.required' => ':attribute Tidak Boleh Kosong',
         ];
     }
     public function attributes(): array
@@ -51,6 +53,7 @@ class StoreDataKeluargaRequest extends FormRequest
             'txttempatlahir' => 'Tempat Lahir',
             'txtjeniskelamin' => 'Jenis Kelamin',
             'txtagamakeluarga' => 'Agama',
+            'txtstatuskeluarga' => 'Status Keluarga',
         ];
     }
 }
