@@ -35,10 +35,6 @@ h3 {
 	color: var(--dark);
 }
 
-span {
-	color: var(--dark);
-}
-
 :root {
 	--poppins: 'Poppins', sans-serif;
 	--lato: 'Lato', sans-serif;
