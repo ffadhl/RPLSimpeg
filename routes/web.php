@@ -31,7 +31,9 @@ Route::get('/home', function () {
 })->middleware('isLogin');
 
 Route::get('/karyawan/add', function () {
-    return view('karyawan.formadd');
+    return view('karyawan.formadd')->with([
+        'datakeluarga' => DataKeluarga::all()
+    ]);
 });
 
 Route::get('/departemen/add', function () {
