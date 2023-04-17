@@ -88,7 +88,7 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="txtstatuskeluarga" class="col-sm-2 col-form-label">Agama</label>
+                    <label for="txtstatuskeluarga" class="col-sm-2 col-form-label">Status Keluarga</label>
                     <div class="col-sm-4">
                         <select class="form-select form-select-sm @error('txtstatuskeluarga') is-invalid @enderror"
                             name="txtstatuskeluarga" id="txtstatuskeluarga">

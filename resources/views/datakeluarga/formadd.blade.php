@@ -97,7 +97,7 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="txtstatuskeluarga" class="col-sm-2 col-form-label">Agama</label>
+                    <label for="txtstatuskeluarga" class="col-sm-2 col-form-label">Status Keluarga</label>
                     <div class="col-sm-4">
                         <select class="form-select form-select-sm @error('txtstatuskeluarga') is-invalid @enderror"
                             name="txtstatuskeluarga" id="txtstatuskeluarga">
@@ -107,11 +107,11 @@
                                 </div>
                             @enderror
                             <option value=" "selected>-pilih-</option>
-                            <option value="Ayah">Islam</option>
-                            <option value="Ibu">Katholik</option>
-                            <option value="Suami">Kristen</option>
-                            <option value="Istri">Hindu</option>
-                            <option value="Anak">Budhha</option>
+                            <option value="Ayah">Ayah</option>
+                            <option value="Ibu">Ibu</option>
+                            <option value="Suami">Suami</option>
+                            <option value="Istri">Istri</option>
+                            <option value="Anak">Anak</option>
                         </select>
                     </div>
                 </div>
