@@ -9,7 +9,7 @@
             <i class='bx bxs-cloud-download'></i>
             <span class="text">Download PDF</span>
         </a>
-    </div>>
+    </div>
     <div class="card">
         <div class="card-header">
             <button type="button" class="btn btn-sm btn-primary" onclick="window.location='{{ url('karyawan/add') }}'">
