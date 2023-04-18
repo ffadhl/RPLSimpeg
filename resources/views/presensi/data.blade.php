@@ -19,7 +19,6 @@
                         <th>Nama Karyawan</th>
                         <th>Status Presensi</th>
                         <th>Foto</th>
-                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
