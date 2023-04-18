@@ -27,6 +27,7 @@ class PresensiController extends Controller
         $validate = $request->validated();
         $image = $request->file('img_foto');
         $image->storeAs('public/presensi', $image->hashName());
+        
         $prsns = new Presensi;
         $prsns->id_presensi = $request->id_prsns;
         $prsns->nip = $request->txtnip;
