@@ -50,7 +50,7 @@ class PresensiController extends Controller
             'txtnip' => $data->nip,
             'txtnama' => $data->nama,
             'sts_prsns' => $data->status_presensi,
-            'img_foto' => $image->foto,
+            'img_foto' => $data->foto
         ]);
     }
 
