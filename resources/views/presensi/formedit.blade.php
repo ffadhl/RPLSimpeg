@@ -9,7 +9,7 @@
             </button>
         </div>
         <div class="card-body">
-            <form method="POST" action="{{ url('presensi/' . $id_prsns) }}">
+            <form method="POST" action="{{ url('presensi/' . $id_prsns) }} " enctype="multipart/form-data">
                 @csrf
                 @method('PUT')
                 <div class="row mb-3">
