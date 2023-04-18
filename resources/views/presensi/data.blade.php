@@ -31,7 +31,7 @@
                             <td>{{ $row->nama }}</td>
                             <td>{{ $row->status_presensi }}</td>
                             <td>
-                                <img src="{{ asset('/storage/presensi/'.$presensi->foto) }}" class="rounded" style="width: 150px">
+                                <img src="{{ asset('/storage/presensi/'.$row->foto) }}" class="rounded" style="width: 150px">
                             </td>
                         </tr>
                     @endforeach
