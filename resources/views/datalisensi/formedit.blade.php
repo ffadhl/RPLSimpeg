@@ -23,7 +23,7 @@
                     <label for="txtnamalisensi" class="col-sm-2 col-form-label">Nama Lisensi</label>
                     <div class="col-sm-10">
                         <input type="text" class="form-control form-control-sm @error('txtnamalisensi') is-invalid @enderror"
-                            id="txtnamalisensi" name="txtnamalisensi" value="{{ $txtsekolah }}">
+                            id="txtnamalisensi" name="txtnamalisensi" value="{{ $txtnamalisensi }}">
                         @error('txtnamalisensi')
                             <div class="invalid-feedback">
                                 {{ $message }}
