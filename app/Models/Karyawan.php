@@ -19,4 +19,9 @@ class Karyawan extends Model
     {
         return $this->hasMany(DataKeluarga::class);
     }
+
+    public function datapendidikan(): HasMany
+    {
+        return $this->hasMany(DataPendidikan::class);
+    }
 }
