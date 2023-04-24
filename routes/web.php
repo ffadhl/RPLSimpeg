@@ -10,6 +10,7 @@ use App\Http\Controllers\DataKeluargaController;
 use App\Http\Controllers\SessionController;
 use App\Http\Controllers\jabatanController;
 use App\Http\Controllers\PresensiController;
+use App\Http\Controllers\DataPendidikanController;
 use App\Models\DataKeluarga;
 
 /*
@@ -58,6 +59,10 @@ Route::get('/datakeluarga/add', function () {
     return view('datakeluarga.formadd');
 });
 
+Route::get('/datapendidikan/add', function () {
+    return view('datapendidikan.formadd');
+});
+
 Route::get('/jabatan/add', function () {
     return view('jabatan.formadd');
 });
@@ -75,6 +80,7 @@ Route::resource('penjadwalan', PenjadwalanController::class)->middleware('isLogi
 Route::resource('datakeluarga', DataKeluargaController::class)->middleware('isLogin');
 Route::resource('jabatan', jabatanController::class)->middleware('isLogin');
 Route::resource('presensi', PresensiController::class)->middleware('isLogin');
+Route::resource('datapendidikan', DataPendidikanController::class)->middleware('isLogin');
 
 Route::get('/sesi', [SessionController::class, 'index']);
 Route::post('/sesi/login', [SessionController::class, 'login']);
