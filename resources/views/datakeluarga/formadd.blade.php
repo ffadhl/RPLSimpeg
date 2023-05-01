@@ -64,11 +64,11 @@
                     <label for="txtjeniskelamin" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                     <div class="col-sm-4">
                         <div class="form-check">
-                            <input class="form-check-input @error('txtjeniskelamin') is-invalid @enderror" type="radio" name="txtjeniskelamin" id="txtjeniskelamin" value="L">
+                            <input class="form-check-input @error('txtjeniskelamin') is-invalid @enderror" type="radio" name="txtjeniskelamin" id="txtjeniskelamin" value="LakiLaki">
                             <label class="form-check-label" for="txtjenis_kelamin">Laki-Laki</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input @error('txtjeniskelamin') is-invalid @enderror" type="radio" name="txtjeniskelamin" id="txtjeniskelamin" value="P">
+                            <input class="form-check-input @error('txtjeniskelamin') is-invalid @enderror" type="radio" name="txtjeniskelamin" id="txtjeniskelamin" value="Perempuan">
                             <label class="form-check-label" for="txtjeniskelamin">Perempuan</label>
                         </div>
                         @error('txtjeniskelamin')

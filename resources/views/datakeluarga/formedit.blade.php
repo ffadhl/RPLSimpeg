@@ -55,11 +55,11 @@
                     <label for="txtjeniskelamin" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                     <div class="col-sm-4">
                         <div class="col-sm-4">
-                            <input class="form-check-input @error('txtjeniskelamin') is-invalid @enderror" type="radio" name="txtjeniskelamin" id="txtjeniskelamin" value="L" {{ $txtjeniskelamin == 'L' ? 'selected' : '' }}>
+                            <input class="form-check-input @error('txtjeniskelamin') is-invalid @enderror" type="radio" name="txtjeniskelamin" id="txtjeniskelamin" value="LakiLaki" {{ $txtjeniskelamin == 'LakiLaki' ? 'selected' : '' }}>
                             <label class="form-check-label" for="txtjeniskelamin">Laki-Laki</label>
                         </div>
                         <div class="col-sm-4">
-                            <input class="form-check-input @error('txtjeniskelamin') is-invalid @enderror" type="radio" name="txtjeniskelamin" id="txtjeniskelamin" value="P" {{ $txtjeniskelamin == 'P' ? 'selected' : '' }}>
+                            <input class="form-check-input @error('txtjeniskelamin') is-invalid @enderror" type="radio" name="txtjeniskelamin" id="txtjeniskelamin" value="Perempuan" {{ $txtjeniskelamin == 'Perempuan' ? 'selected' : '' }}>
                             <label class="form-check-label" for="txtjeniskelamin">Perempuan</label>
                         </div>
                         @error('txtjeniskelamin')
