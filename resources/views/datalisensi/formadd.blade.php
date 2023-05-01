@@ -1,7 +1,7 @@
 @extends('layout.main')
 
 @section('content')
-    <h3><strong>Masukkan Data Pendidikan</strong></h3>
+    <h3><strong>Masukkan Data Lisensi</strong></h3>
     <div class="card">
         <div class="card-header">
             <button type="button" class="btn btn-sm btn-warning" onclick="window.location='{{ url('datalisensi') }}'">
