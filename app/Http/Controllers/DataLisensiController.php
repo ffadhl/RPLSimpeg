@@ -42,7 +42,7 @@ class DataLisensiController extends Controller
      */
     public function show(DataLisensi $lsns, $id)
     {
-        $data = $lsns->find($id);
+        $data = $lsns->findOrFail($id);
         return view('datalisensi.formedit')->with([
             'txtnip' => $data->nip,
             'txtnamalisensi' => $data->namalisensi,
@@ -58,7 +58,7 @@ class DataLisensiController extends Controller
      */
     public function update(UpdateDataLisensiRequest $request, DataLisensi $lsns, $id)
     {
-        $data = $lsns->find($id);
+        $data = $lsns->findOrFail($id);
         $data->nip = $request->txtnip;
         $data->namalisensi = $request->txtnamalisensi;
         $data->penerbit = $request->txtpenerbit;
@@ -75,7 +75,7 @@ class DataLisensiController extends Controller
      */
     public function destroy(DataLisensi $lsns, $id)
     {
-        $data = $lsns->find($id);
+        $data = $lsns->findOrFail($id);
         $data->delete();
         return redirect('datalisensi')->with('msg', 'Data Lisensi dengan nip ' . $data->nip . ' Berhasil Dihapus');
     }
