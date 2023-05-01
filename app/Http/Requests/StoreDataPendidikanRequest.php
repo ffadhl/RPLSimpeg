@@ -47,6 +47,7 @@ class StoreDataPendidikanRequest extends FormRequest
     public function attributes(): array
     {
         return [
+            'txtid' => 'ID',
             'txtnip' => 'NIP',
             'txtsekolah' => 'Sekolah',
             'txtgelar' => 'Gelar',

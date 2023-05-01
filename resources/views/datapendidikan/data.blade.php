@@ -45,12 +45,12 @@
                             <td>{{ $row->tglselesai }}</td>
                             <td>{{ $row->nilai }}</td>
                             <td>
-                                <button onclick="window.location='{{ url('datapendidikan/' . $row->nip) }}'" type="button"
+                                <button onclick="window.location='{{ url('datapendidikan/' . $row->id) }}'" type="button"
                                     class="btn btb-sm btn-primary" title="edit data">
                                     <i class="fa-solid fa-edit"></i>
                                 </button>
-                                <form onsubmit="return deleteData('{{ $row->nip }}')" style="display: inline"
-                                    method="POST" action="{{ url('datapendidikan/' . $row->nip) }}">
+                                <form onsubmit="return deleteData('{{ $row->id }}')" style="display: inline"
+                                    method="POST" action="{{ url('datapendidikan/' . $row->id) }}">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" title="Hapus data" class="btn btn-danger btn-med">

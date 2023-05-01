@@ -41,11 +41,12 @@ class DataPendidikanController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(DataPendidikan $pddkn, $nip)
+    public function show(DataPendidikan $pddkn, $id)
     {
-        $data = $pddkn->find($nip);
+        $data = $pddkn->find($id);
         return view('datapendidikan.formedit')->with([
-            'txtnip' => $nip,
+            'txtid' => $data->id,
+            'txtnip' => $data->nip,
             'txtsekolah' => $data->sekolah,
             'txtgelar' => $data->gelar,
             'txtbidang' => $data->bidang,
@@ -58,9 +59,9 @@ class DataPendidikanController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateDataPendidikanRequest $request, DataPendidikan $pddkn, $nip)
+    public function update(UpdateDataPendidikanRequest $request, DataPendidikan $pddkn, $id)
     {
-        $data = $pddkn->find($nip);
+        $data = $pddkn->find($id);
         $data->nip = $request->txtnip;
         $data->sekolah = $request->txtsekolah;
         $data->gelar = $request->txtgelar;
@@ -76,9 +77,9 @@ class DataPendidikanController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(DataPendidikan $pddkn, $nip)
+    public function destroy(DataPendidikan $pddkn, $id)
     {
-        $data = $pddkn->find($nip);
+        $data = $pddkn->find($id);
         $data->delete();
         return redirect('datapendidikan')->with('msg', 'Data Pendidkan dengan nip' . $data->nip . ' Berhasil Dihapus');
     }
