@@ -56,9 +56,9 @@ class DataLisensiController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateDataLisensiRequest $request, DataLisensi $lsns, $nip)
+    public function update(UpdateDataLisensiRequest $request, DataLisensi $lsns, $id)
     {
-        $data = $lsns->find($nip);
+        $data = $lsns->find($id);
         $data->nip = $request->txtnip;
         $data->namalisensi = $request->txtnamalisensi;
         $data->penerbit = $request->txtpenerbit;
@@ -73,9 +73,9 @@ class DataLisensiController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(DataLisensi $lsns, $nip)
+    public function destroy(DataLisensi $lsns, $id)
     {
-        $data = $lsns->find($nip);
+        $data = $lsns->find($id);
         $data->delete();
         return redirect('datalisensi')->with('msg', 'Data Lisensi dengan nip ' . $data->nip . ' Berhasil Dihapus');
     }
