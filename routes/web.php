@@ -32,6 +32,10 @@ Route::get('/', function () {
     return view('sesi.index');
 })->middleware('isLogin');
 
+Route::get('/karyawanrosati', function () {
+    return view('layoutkaryawan.main');
+})->middleware('isLogin');
+
 Route::get('/home', function () {
     return view('layout.home');
 })->middleware('isLogin');
