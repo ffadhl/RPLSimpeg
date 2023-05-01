@@ -33,7 +33,7 @@ Route::get('/', function () {
 })->middleware('isLogin');
 
 Route::get('/karyawanrosati', function () {
-    return view('layoutkaryawan.main');
+    return view('layoutkaryawan.index');
 })->middleware('isLogin');
 
 Route::get('/home', function () {
