@@ -13,6 +13,8 @@ use App\Http\Controllers\PresensiController;
 use App\Http\Controllers\DataPendidikanController;
 use App\Http\Controllers\DataLisensiController;
 use App\Models\DataKeluarga;
+use App\Models\DataLisensi;
+use App\Models\DataPendidikan;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,7 +38,9 @@ Route::get('/home', function () {
 
 Route::get('/karyawan/add', function () {
     return view('karyawan.formadd')->with([
-        'datakeluarga' => DataKeluarga::all()
+        'datakeluarga' => DataKeluarga::all(),
+        'datalisensi' => DataLisensi::all(),
+        'datapendidikan' => DataPendidikan::all()
     ]);
 });
 

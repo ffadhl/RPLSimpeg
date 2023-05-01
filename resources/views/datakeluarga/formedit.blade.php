@@ -54,17 +54,19 @@
                 <div class="row mb-3">
                     <label for="txtjeniskelamin" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                     <div class="col-sm-4">
-                        <select class="form-select form-select-sm @error('txtjeniskelamin') is-invalid @enderror"
-                            name="txtjeniskelamin" id="txtjeniskelamin">
-                            <option value=" "selected>-pilih-</option>
-                            <option value="LakiLaki" {{ $txtjeniskelamin == 'LakiLaki' ? 'selected' : '' }}>Laki-laki</option>
-                            <option value="Perempuan" {{ $txtjeniskelamin == 'Perempuan' ? 'selected' : '' }}>Perempuan</option>
-                            @error('txtjeniskelamin')
+                        <div class="col-sm-4">
+                            <input class="form-check-input @error('txtjeniskelamin') is-invalid @enderror" type="radio" name="txtjeniskelamin" id="txtjeniskelamin" value="LakiLaki" {{ $txtjeniskelamin == 'LakiLaki' ? 'selected' : '' }}>
+                            <label class="form-check-label" for="txtjeniskelamin">Laki-Laki</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input class="form-check-input @error('txtjeniskelamin') is-invalid @enderror" type="radio" name="txtjeniskelamin" id="txtjeniskelamin" value="Perempuan" {{ $txtjeniskelamin == 'Perempuan' ? 'selected' : '' }}>
+                            <label class="form-check-label" for="txtjeniskelamin">Perempuan</label>
+                        </div>
+                        @error('txtjeniskelamin')
                                 <div class="invalid-feedback">
                                     {{ $message }}
                                 </div>
                             @enderror
-                        </select>
                     </div>
                 </div>
                 <div class="row mb-3">

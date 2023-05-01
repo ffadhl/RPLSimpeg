@@ -37,7 +37,7 @@
                             <td>{{ $row->nik }}</td>
                             <td>{{ $row->namadatakeluarga }}</td>
                             <td>{{ $row->tempatlahir }}</td>
-                            <td>{{ $row->jeniskelamin }}</td>
+                            <td>{{ $row->jeniskelamin == 'LakiLaki' ? 'Laki-laki' : 'Perempuan'}}</td>
                             <td>{{ $row->agamakeluarga }}</td>
                             <td>{{ $row->statuskeluarga }}</td>
                             <td>
