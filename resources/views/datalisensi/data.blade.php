@@ -43,12 +43,12 @@
                             <td>{{ $row->tglkadaluarsa }}</td>
                             <td>{{ $row->idkredensial }}</td>
                             <td>
-                                <button onclick="window.location='{{ url('datalisensi/' . $row->nip) }}'" type="button"
+                                <button onclick="window.location='{{ url('datalisensi/' . $row->id) }}'" type="button"
                                     class="btn btb-sm btn-primary" title="edit data">
                                     <i class="fa-solid fa-edit"></i>
                                 </button>
                                 <form onsubmit="return deleteData('{{ $row->nip }}')" style="display: inline"
-                                    method="POST" action="{{ url('datalisensi/' . $row->nip) }}">
+                                    method="POST" action="{{ url('datalisensi/' . $row->id) }}">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" title="Hapus data" class="btn btn-danger btn-med">
