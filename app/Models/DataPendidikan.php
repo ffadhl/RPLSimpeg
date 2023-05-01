@@ -10,7 +10,7 @@ class DataPendidikan extends Model
 {
     use HasFactory;
     protected $table = 'datapendidikan';
-    protected $primaryKey = 'nip';
+    protected $primaryKey = 'id';
 
     public $incrementing = false;
     public $timestamps = true;
