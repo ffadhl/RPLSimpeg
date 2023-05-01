@@ -32,6 +32,12 @@
                         <i class="fab fa-cc-visa"></i> <b>Penggajian</b>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->segment('1') == '#' ? 'active' : '' }} "
+                        aria-current="page" href="{{ url('#') }}">
+                        <i class="fa-solid fa-user-check"></i> <b>Presensi</b>
+                    </a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
