@@ -9,7 +9,7 @@
             </button>
         </div>
         <div class="card-body">
-            <form method="POST" action="{{ url('datalisensi/' . $txtnip) }}">
+            <form method="POST" action="{{ url('datalisensi') }}">
                 @csrf
                 @method('PUT')
                 <div class="row mb-3">
