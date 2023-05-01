@@ -40,11 +40,11 @@ class DataLisensiController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(DataLisensi $lsns, $nip)
+    public function show(DataLisensi $lsns, $id)
     {
-        $data = $lsns->find($nip);
+        $data = $lsns->find($id);
         return view('datalisensi.formedit')->with([
-            'txtnip' => $nip,
+            'txtnip' => $data->nip,
             'txtnamalisensi' => $data->namalisensi,
             'txtpenerbit' => $data->penerbit,
             'txttglterbit' => $data->tglterbit,
