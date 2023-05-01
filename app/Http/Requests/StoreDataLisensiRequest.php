@@ -22,7 +22,6 @@ class StoreDataLisensiRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'txtid' => 'required',
             'txtnip' => 'required|min:7|max:18',
             'txtnamalisensi' => 'required',
             'txtpenerbit' => 'required',
