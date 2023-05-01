@@ -44,7 +44,7 @@ class DataLisensiController extends Controller
     {
         $data = $lsns->findOrFail($id);
         return view('datalisensi.formedit')->with([
-            'txtnip' => $data->id,
+            'txtid' => $data->id,
             'txtnip' => $data->nip,
             'txtnamalisensi' => $data->namalisensi,
             'txtpenerbit' => $data->penerbit,
