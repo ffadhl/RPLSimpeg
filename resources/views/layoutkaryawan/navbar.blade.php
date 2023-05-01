@@ -9,68 +9,47 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav left">
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->segment('1') == '' || request()->segment('1') == 'home' ? 'active' : '' }}"
-                        aria-current="page" href="{{ url('home') }}">
-                        <i class="fas fa-house"></i> <b>Home</b>
+                    <a class="nav-link {{ request()->segment('1') == '' || request()->segment('1') == '#' ? 'active' : '' }}"
+                        aria-current="page" href="{{ url('#') }}">
+                        <i class="fas fa-house"></i> <b>Dashboard</b>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->segment('1') == 'karyawan' ? 'active' : '' }} " aria-current="page"
-                        href="{{ url('karyawan') }}">
-                        <i class="fas fa-user"></i> <b>Karyawan</b>
-                    </a>
-                </li>
-
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa-solid fa-building"></i> <b> Office</b>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="nav-link {{ request()->segment('1') == 'departemen' ? 'active' : '' }} "
-                                aria-current="page" href="{{ url('jabatan') }}">
-                                <i class="fa-solid fa-building-circle-check"></i> <b>Jabatan</b>
-                            </a>
-                        </li>
-                        <li><a class="nav-link {{ request()->segment('1') == 'departemen' ? 'active' : '' }} "
-                                aria-current="page" href="{{ url('departemen') }}">
-                                <i class="fas fa-hospital-alt"></i> <b>Departemen</b>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa-solid fa-calendar-days"></i> <b> Jadwal</b>
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="nav-link {{ request()->segment('1') == 'penjadwalan' ? 'active' : '' }} "
-                                aria-current="page" href="{{ url('penjadwalan') }}">
-                                <i class="fa-regular fa-calendar"></i> <b>Jadwal Karyawan</b>
-                            </a>
-                        </li>
-                        <li><a class="nav-link {{ request()->segment('1') == 'cuti' ? 'active' : '' }} "
-                                aria-current="page" href="{{ url('cuti') }}">
-                                <i class="fas fa-calendar-alt"></i> <b>Cuti</b>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {{ request()->segment('1') == 'penggajian' ? 'active' : '' }} "
-                        aria-current="page" href="{{ url('presensi') }}">
-                        <i class="fa-solid fa-person-circle-check"></i> <b>Presensi</b>
+                    <a class="nav-link {{ request()->segment('1') == '#' ? 'active' : '' }} " aria-current="page"
+                        href="{{ url('#') }}">
+                        <i class="fas fa-user"></i> <b>Data Diri</b>
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->segment('1') == 'penggajian' ? 'active' : '' }} "
-                        aria-current="page" href="{{ url('penggajian') }}">
+                    <a class="nav-link {{ request()->segment('1') == '#' ? 'active' : '' }} "
+                        aria-current="page" href="{{ url('#') }}">
+                        <i class="fa-solid fa-calendar-days"></i> <b>Jadwal</b>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {{ request()->segment('1') == '#' ? 'active' : '' }} "
+                        aria-current="page" href="{{ url('#') }}">
                         <i class="fab fa-cc-visa"></i> <b>Penggajian</b>
                     </a>
                 </li>
-
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa-solid fa-paper-plane"></i> <b> Pengajuan </b>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li><a class="nav-link {{ request()->segment('1') == '#' ? 'active' : '' }} "
+                                aria-current="page" href="{{ url('#') }}">
+                                <i class="fa-solid fa-user-pen"></i> <b>Edit Data</b>
+                            </a>
+                        </li>
+                        <li><a class="nav-link {{ request()->segment('1') == '#' ? 'active' : '' }} "
+                                aria-current="page" href="{{ url('#') }}">
+                                <i class="fa-solid fa-calendar-plus"></i> <b>Cuti</b>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
             </ul>
             <ul class="navbar-nav right">
                 <li class="nav-item dropdown">
