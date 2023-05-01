@@ -47,7 +47,7 @@
                                     class="btn btb-sm btn-primary" title="edit data">
                                     <i class="fa-solid fa-edit"></i>
                                 </button>
-                                <form onsubmit="return deleteData('{{ $row->nip }}')" style="display: inline"
+                                <form onsubmit="return deleteData('{{ $row->id }}')" style="display: inline"
                                     method="POST" action="{{ url('datalisensi/' . $row->id) }}">
                                     @csrf
                                     @method('DELETE')
