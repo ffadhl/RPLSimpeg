@@ -22,6 +22,7 @@ class StoreDataLisensiRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'txtid' => 'required',
             'txtnip' => 'required|min:7|max:18',
             'txtnamalisensi' => 'required',
             'txtpenerbit' => 'required',
@@ -33,6 +34,7 @@ class StoreDataLisensiRequest extends FormRequest
     public function messages(): array
     {
         return [
+            'txtid.required' => ':attribute Tidak Boleh Kosong',
             'txtnip.required' => ':attribute Tidak Boleh Kosong',
             'body.unique' => ':attribute Sudah ada di dalam tabel',
             'txtnamalisensi.required' => ':attribute Tidak Boleh Kosong',
@@ -45,6 +47,7 @@ class StoreDataLisensiRequest extends FormRequest
     public function attributes(): array
     {
         return [
+            'txtid' => 'ID',
             'txtnip' => 'NIP',
             'txtnamalisensi' => 'Nama Lisensi',
             'txtpenerbit' => 'Penerbit',
