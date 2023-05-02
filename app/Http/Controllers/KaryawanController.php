@@ -61,8 +61,8 @@ class KaryawanController extends Controller
             'txtpend' => $data->pendidikan,
             'txtlisensi' => $data->lisensi,
             'datakeluarga' => DataKeluarga::all(),
-            'datakeluarga' => DataPendidikan::all(),
-            'datakeluarga' => DataLisensi::all(),
+            'datapendidikan' => DataPendidikan::all(),
+            'datalisensi' => DataLisensi::all(),
         ]);
     }
 
