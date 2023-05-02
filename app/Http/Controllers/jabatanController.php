@@ -55,9 +55,9 @@ class JabatanController extends Controller
 
         return view('jabatan.formedit')->with([
             'field_id' => $id_jabatan,
-            'field_nama' => $JabatanStore->nama_jabatan,
-            'field_deskripsi' => $JabatanStore->deskripsi_jabatan,
-            'field_lokasi' => $JabatanStore->lokasi_jabatan,
+            'field_nama' => $data->nama_jabatan,
+            'field_deskripsi' => $data->deskripsi_jabatan,
+            'field_lokasi' => $data->lokasi_jabatan,
         ]);
     }
 
