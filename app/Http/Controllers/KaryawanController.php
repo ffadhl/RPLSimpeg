@@ -6,6 +6,8 @@ use App\Models\Karyawan;
 use App\Http\Requests\StoreKaryawanRequest;
 use App\Http\Requests\UpdateKaryawanRequest;
 use App\Models\DataKeluarga;
+use App\Models\DataLisensi;
+use App\Models\DataPendidikan;
 
 class KaryawanController extends Controller
 {
@@ -58,7 +60,9 @@ class KaryawanController extends Controller
             'txtagama' => $data->agama,
             'txtpend' => $data->pendidikan,
             'txtlisensi' => $data->lisensi,
-            'datakeluarga' => DataKeluarga::all()
+            'datakeluarga' => DataKeluarga::all(),
+            'datakeluarga' => DataPendidikan::all(),
+            'datakeluarga' => DataLisensi::all(),
         ]);
     }
 
