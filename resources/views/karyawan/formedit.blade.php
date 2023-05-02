@@ -202,5 +202,124 @@
             </table>
         </div>
     </div>
+
+    <h3><strong> Data Lisensi </strong></h3>
+    <div class="card">
+        <div class="card-header">
+            <button type="button" class="btn btn-sm btn-primary" onclick="window.location='{{ url('datalisensi/add') }}'">
+                <i class="fa-solid fa-circle-plus"></i> Tambah Data
+            </button>
+        </div>
+        <div class="card-body">
+            @if (session('msg'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong> Berhasil </strong> {{ session('msg') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
+            <table class="table table-sm table-stripde table-bordered">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>NIP</th>
+                        <th>Nama Lisensi</th>
+                        <th>Penerbit</th>
+                        <th>Tanggal Terbit</th>
+                        <th>Tanggal Kadaluarsa</th>
+                        <th>ID Kredensial</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($datalisensi as $row)
+                        <tr>
+                            <th>{{ $loop->iteration }}</th>
+                            <td>{{ $row->nip }}</td>
+                            <td>{{ $row->namalisensi }}</td>
+                            <td>{{ $row->penerbit }}</td>
+                            <td>{{ $row->tglterbit }}</td>
+                            <td>{{ $row->tglkadaluarsa }}</td>
+                            <td>{{ $row->idkredensial }}</td>
+                            <td>
+                                <button onclick="window.location='{{ url('datalisensi/' . $row->id) }}'" type="button"
+                                    class="btn btb-sm btn-primary" title="edit data">
+                                    <i class="fa-solid fa-edit"></i>
+                                </button>
+                                <form onsubmit="return deleteData('{{ $row->id }}')" style="display: inline"
+                                    method="POST" action="{{ url('datalisensi/' . $row->id) }}">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" title="Hapus data" class="btn btn-danger btn-med">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <h3><strong> Data Pendidikan </strong></h3>
+    <div class="card">
+        <div class="card-header">
+            <button type="button" class="btn btn-sm btn-primary" onclick="window.location='{{ url('datapendidikan/add') }}'">
+                <i class="fa-solid fa-circle-plus"></i> Tambah Data
+            </button>
+        </div>
+        <div class="card-body">
+            @if (session('msg'))
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <strong> Berhasil </strong> {{ session('msg') }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            @endif
+            <table class="table table-sm table-stripde table-bordered">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>NIP</th>
+                        <th>Sekolah</th>
+                        <th>Gelar</th>
+                        <th>Bidang</th>
+                        <th>Tanggal Mulai</th>
+                        <th>Tanggal Selesai</th>
+                        <th>Nilai</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($datapendidikan as $row)
+                        <tr>
+                            <th>{{ $loop->iteration }}</th>
+                            <td>{{ $row->nip }}</td>
+                            <td>{{ $row->sekolah }}</td>
+                            <td>{{ $row->gelar }}</td>
+                            <td>{{ $row->bidang }}</td>
+                            <td>{{ $row->tglmulai }}</td>
+                            <td>{{ $row->tglselesai }}</td>
+                            <td>{{ $row->nilai }}</td>
+                            <td>
+                                <button onclick="window.location='{{ url('datapendidikan/' . $row->id) }}'" type="button"
+                                    class="btn btb-sm btn-primary" title="edit data">
+                                    <i class="fa-solid fa-edit"></i>
+                                </button>
+                                <form onsubmit="return deleteData('{{ $row->id }}')" style="display: inline"
+                                    method="POST" action="{{ url('datapendidikan/' . $row->id) }}">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" title="Hapus data" class="btn btn-danger btn-med">
+                                        <i class="fa-solid fa-trash-can"></i>
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+    </div>
+
 @endsection
 
