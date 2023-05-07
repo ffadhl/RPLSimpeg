@@ -18,7 +18,7 @@
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link rel="stylesheet" href="{{ asset('css/stylelogin.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 </head>
 
 <body>
@@ -26,7 +26,7 @@
         <div class="box">
             <div class="inner-box">
                 <div class="forms-wrap">
-                    <form action="/sesi/create" method="POST" autocomplete="off" class="sign-in-form">
+                    <form action="sesi/login" method="POST" autocomplete="off" class="sign-in-form">
                         <div class="logo">
                             <img src="{{ asset('logologin.png') }}" height="auto" width="auto"
                                 alt="Rosati Hospital" />
@@ -34,18 +34,12 @@
                         </div>
 
                         <div class="heading">
-                            <h2>Get Started</h2>
-                            <h6>Already have an account?</h6>
-                            <a href="/sesi" class="toggle">Sign in</a>
+                            <h2>Welcome</h2>
+                            <h6>Not registred yet?</h6>
+                            <a href="sesi/register" class="toggle">Sign up</a>
                         </div>
                         @csrf
                         <div class="actual-form">
-                            <div class="txt_field">
-                                <input type="name" minlength="4" class="input-field" autocomplete="off"
-                                    value="{{ Session::get('name') }}" name="name" class="form-control" required />
-                                <label for="name" class="from-label">Name</label>
-                            </div>
-
                             <div class="txt_field">
                                 <input type="email" minlength="4" class="input-field" autocomplete="off"
                                     value="{{ Session::get('email') }}" name="email" class="form-control" required />
@@ -58,12 +52,17 @@
                                 <label for="password" class="from-label">Password</label>
                             </div>
 
-                            <input type="submit" value="Register" class="sign-btn" />
+                            <input type="submit" value="Login" class="sign-btn" />
+                            <div class="media-options">
+                                <a href="#" class="field google">
+                                    <img src="{{ asset('logogoogle.png') }}" alt="" class="google-img">
+                                    <span>Login with Google</span>
+                                </a>
+                            </div>
 
                             <p class="text">
-                                By signing up, I agree to the
-                                <a href="#">Terms of Services</a> and
-                                <a href="#">Privacy Policy</a>
+                                Forgotten your password or you login datails?
+                                <a href="#">Get help</a> signing in
                             </p>
                         </div>
                     </form>
@@ -95,6 +94,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </main>
