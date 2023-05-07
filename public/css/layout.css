@@ -425,11 +425,6 @@ body {
     color: #5479f7;
 }
 
-.logorosati {
-    margin-left: 10px;
-    margin-top: 10px;
-}
-
 table {
     text-align: center;
     border-collapse: collapse;
@@ -571,4 +566,9 @@ table {
 .collapse {
     padding: 0px;
     justify-content: space-between;
+}
+
+.logorosati {
+	margin-left: 10px;
+	margin-top: 10px;
 }
