@@ -11,7 +11,7 @@
         <div class="card-body">
             <form method="POST" action="{{ url('karyawan') }}">
                 @csrf
-                
+
                 <div class="row mb-3">
                     <label for="txtnip" class="col-sm-2 col-form-label ">NIP</label>
                     <div class="col-sm-4">
@@ -65,11 +65,13 @@
                     <label for="txtjenis_kelamin" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                     <div class="col-sm-4">
                         <div class="form-check">
-                            <input class="form-check-input @error('txtjenis_kelamin') is-invalid @enderror" type="radio" name="txtjenis_kelamin" id="txtjenis_kelamin" value="L">
+                            <input class="form-check-input @error('txtjenis_kelamin') is-invalid @enderror" type="radio"
+                                name="txtjenis_kelamin" id="txtjenis_kelamin" value="L">
                             <label class="form-check-label" for="txtjenis_kelamin">Laki-Laki</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input @error('txtjenis_kelamin') is-invalid @enderror" type="radio" name="txtjenis_kelamin" id="txtjenis_kelamin" value="P">
+                            <input class="form-check-input @error('txtjenis_kelamin') is-invalid @enderror" type="radio"
+                                name="txtjenis_kelamin" id="txtjenis_kelamin" value="P">
                             <label class="form-check-label" for="txtjenis_kelamin">Perempuan</label>
                         </div>
                         @error('txtjenis_kelamin')
@@ -94,8 +96,8 @@
                 <div class="row mb-3">
                     <label for="txtagama" class="col-sm-2 col-form-label">Agama</label>
                     <div class="col-sm-4">
-                        <select class="form-select form-select-sm @error('txtagama') is-invalid @enderror"
-                            name="txtagama" id="txtagama">
+                        <select class="form-select form-select-sm @error('txtagama') is-invalid @enderror" name="txtagama"
+                            id="txtagama">
                             @error('txtagama')
                                 <div class="invalid-feedback">
                                     {{ $message }}
@@ -111,30 +113,6 @@
                         </select>
                     </div>
                 </div>
-                <div class="row mb-3">
-                    <label for="txtpend" class="col-sm-2 col-form-label">Pendidikan Terakhir</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control form-control-sm @error('txtpend') is-invalid @enderror"
-                            id="txtpend" name="txtpend">
-                        @error('txtpend')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                        @enderror
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="txtlisensi" class="col-sm-2 col-form-label">Lisensi</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control form-control-sm @error('txtlisensi') is-invalid @enderror"
-                            id="txtlisensi" name="txtlisensi">
-                        @error('txtlisensi')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                        @enderror
-                    </div>
-                </div>
 
                 <div class="row mb-3">
                     <label for="" class="col-sm-2 col-form-label"></label>
@@ -147,11 +125,12 @@
             </form>
         </div>
     </div>
-    
+
     <h3><strong> Data Keluarga </strong></h3>
     <div class="card">
         <div class="card-header">
-            <button type="button" class="btn btn-sm btn-primary" onclick="window.location='{{ url('datakeluarga/add') }}'">
+            <button type="button" class="btn btn-sm btn-primary"
+                onclick="window.location='{{ url('datakeluarga/add') }}'">
                 <i class="fa-solid fa-circle-plus"></i> Tambah Data
             </button>
         </div>
@@ -192,8 +171,9 @@
                                     class="btn btb-sm btn-primary" title="edit data">
                                     <i class="fa-solid fa-edit"></i>
                                 </button>
-                                <form onsubmit="return deleteData('{{ $row->namadatakeluarga }}')" style="display: inline"
-                                    method="POST" action="{{ url('datakeluarga/' . $row->nik) }}">
+                                <form onsubmit="return deleteData('{{ $row->namadatakeluarga }}')"
+                                    style="display: inline" method="POST"
+                                    action="{{ url('datakeluarga/' . $row->nik) }}">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" title="Hapus data" class="btn btn-danger btn-med">
@@ -211,7 +191,8 @@
     <h3><strong> Data Lisensi </strong></h3>
     <div class="card">
         <div class="card-header">
-            <button type="button" class="btn btn-sm btn-primary" onclick="window.location='{{ url('datalisensi/add') }}'">
+            <button type="button" class="btn btn-sm btn-primary"
+                onclick="window.location='{{ url('datalisensi/add') }}'">
                 <i class="fa-solid fa-circle-plus"></i> Tambah Data
             </button>
         </div>
@@ -265,11 +246,12 @@
             </table>
         </div>
     </div>
-    
+
     <h3><strong> Data Pendidikan </strong></h3>
     <div class="card">
         <div class="card-header">
-            <button type="button" class="btn btn-sm btn-primary" onclick="window.location='{{ url('datapendidikan/add') }}'">
+            <button type="button" class="btn btn-sm btn-primary"
+                onclick="window.location='{{ url('datapendidikan/add') }}'">
                 <i class="fa-solid fa-circle-plus"></i> Tambah Data
             </button>
         </div>
@@ -306,8 +288,8 @@
                             <td>{{ $row->tglselesai }}</td>
                             <td>{{ $row->nilai }}</td>
                             <td>
-                                <button onclick="window.location='{{ url('datapendidikan/' . $row->id) }}'" type="button"
-                                    class="btn btb-sm btn-primary" title="edit data">
+                                <button onclick="window.location='{{ url('datapendidikan/' . $row->id) }}'"
+                                    type="button" class="btn btb-sm btn-primary" title="edit data">
                                     <i class="fa-solid fa-edit"></i>
                                 </button>
                                 <form onsubmit="return deleteData('{{ $row->id }}')" style="display: inline"
@@ -325,5 +307,4 @@
             </table>
         </div>
     </div>
-
 @endsection
