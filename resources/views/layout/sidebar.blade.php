@@ -1,7 +1,7 @@
 <!-- SIDEBAR -->
 <section id="sidebar">
     <a href="home" class="brand">
-        <img class="logorosati" src="{{ asset('logo.png') }}" height="65" width="auto" alt="Rosati Hospital" />
+        <img class="logorosati" src="{{ asset('logo.png') }}" height="75" width="auto" alt="Rosati Hospital" />
     </a>
     <ul class="side-menu top">
         <li class="active">
