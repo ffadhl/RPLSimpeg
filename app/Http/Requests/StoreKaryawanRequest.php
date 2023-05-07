@@ -29,8 +29,6 @@ class StoreKaryawanRequest extends FormRequest
             'txtjenis_kelamin' => 'required',
             'txttelp' => 'required',
             'txtagama' => 'required',
-            'txtpend' => 'required',
-            'txtlisensi' => 'required',
         ];
     }
     public function messages(): array
@@ -44,9 +42,6 @@ class StoreKaryawanRequest extends FormRequest
             'txtjenis_kelamin.required' => ':attribute Tidak Boleh Kosong',
             'txttelp.required' => ':attribute Tidak Boleh Kosong',
             'txtagama.required' => ':attribute Tidak Boleh Kosong',
-            'txtpend.required' => ':attribute Tidak Boleh Kosong',
-            'txtlisensi.required' => ':attribute Tidak Boleh Kosong',
-
         ];
     }
     public function attributes(): array
@@ -59,8 +54,6 @@ class StoreKaryawanRequest extends FormRequest
             'txtjenis_kelamin' => 'Jenis Kelamin',
             'txttelp' => 'No Telepon',
             'txtagama' => 'Agama',
-            'txtpend' => 'Pendidikan',
-            'txtlisensi' => 'Lisensi',
         ];
     }
 }

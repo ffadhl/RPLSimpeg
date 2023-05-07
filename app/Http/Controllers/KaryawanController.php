@@ -36,9 +36,7 @@ class KaryawanController extends Controller
         $krywan->tanggal_lahir = $request->tl;
         $krywan->jenis_kelamin = $request->txtjenis_kelamin;
         $krywan->no_telepon = $request->txttelp;
-        $krywan->agama = $request->txtagama;
-        $krywan->pendidikan = $request->txtpend;
-        $krywan->lisensi = $request->txtlisensi;
+        $krywan->agama = $request->txtagama;;
         $krywan->save();
 
         return redirect('karyawan')->with('msg', 'Data Berhasil Ditambahkan');
@@ -58,8 +56,6 @@ class KaryawanController extends Controller
             'txtjenis_kelamin' => $data->jenis_kelamin,
             'txttelp' => $data->no_telepon,
             'txtagama' => $data->agama,
-            'txtpend' => $data->pendidikan,
-            'txtlisensi' => $data->lisensi,
             'datakeluarga' => DataKeluarga::all(),
             'datapendidikan' => DataPendidikan::all(),
             'datalisensi' => DataLisensi::all(),
@@ -78,8 +74,6 @@ class KaryawanController extends Controller
         $data->jenis_kelamin = $request->txtjenis_kelamin;
         $data->no_telepon = $request->txttelp;
         $data->agama = $request->txtagama;
-        $data->pendidikan = $request->txtpend;
-        $data->lisensi = $request->txtlisensi;
         $data->save();
 
         return redirect('karyawan')->with('msg', 'Data ' . $data->nama . ' Berhasil Di-Update');
