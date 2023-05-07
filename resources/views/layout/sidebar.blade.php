@@ -1,8 +1,8 @@
 <!-- SIDEBAR -->
 <section id="sidebar">
     <a href="home" class="brand">
-        <i class='bx bxs-smile'></i>
-        <span class="text">Rosati</span>
+        <img src="{{ asset('logologin.png') }}" height="45" width="auto" alt="Rosati Hospital" />
+        <span class="logorosati">Rosati</span>
     </a>
     <ul class="side-menu top">
         <li class="active">
