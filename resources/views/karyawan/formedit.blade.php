@@ -106,30 +106,6 @@
                         </select>
                     </div>
                 </div>
-                <div class="row mb-3">
-                    <label for="txtpend" class="col-sm-2 col-form-label">Pendidikan Terakhir</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control form-control-sm @error('txtpend') is-invalid @enderror"
-                            id="txtpend" name="txtpend" value="{{ $txtpend }}">
-                        @error('txtpend')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                        @enderror
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="txtlisensi" class="col-sm-2 col-form-label">Lisensi</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control form-control-sm @error('txtlisensi') is-invalid @enderror"
-                            id="txtlisensi" name="txtlisensi" value="{{ $txtlisensi }}">
-                        @error('txtlisensi')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                        @enderror
-                    </div>
-                </div>
 
                 <div class="row mb-3">
                     <label for="" class="col-sm-2 col-form-label"></label>
