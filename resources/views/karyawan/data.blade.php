@@ -34,8 +34,6 @@
                         <th>Jenis Kelamin</th>
                         <th>No. Telepon</th>
                         <th>Agama</th>
-                        <th>Pendidikan</th>
-                        <th>Lisensi</th>
                         <th></th>
                     </tr>
                 </thead>
@@ -50,8 +48,6 @@
                             <td>{{ $row->jenis_kelamin == 'L' ? 'Laki-laki' : 'Perempuan' }}</td>
                             <td>{{ $row->no_telepon }}</td>
                             <td>{{ $row->agama }}</td>
-                            <td>{{ $row->pendidikan }}</td>
-                            <td>{{ $row->lisensi }}</td>
                             <td>
                                 <button onclick="window.location='{{ url('karyawan/' . $row->nip) }}'" type="button"
                                     class="btn btb-sm btn-primary" title="edit data">
