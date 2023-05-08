@@ -43,13 +43,13 @@
                         <div class="actual-form">
                             <div class="txt_field">
                                 <input type="name" minlength="4" class="input-field" autocomplete="off"
-                                    value="{{ Session::get('name') }}" name="name" class="form-control" required />
+                                    name="name" class="form-control" required />
                                 <label for="name" class="from-label">Name</label>
                             </div>
 
                             <div class="txt_field">
                                 <input type="email" minlength="4" class="input-field" autocomplete="off"
-                                    value="{{ Session::get('email') }}" name="email" class="form-control" required />
+                                    name="email" class="form-control" required />
                                 <label for="email" class="from-label">Email</label>
                             </div>
 
