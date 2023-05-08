@@ -15,6 +15,7 @@ use App\Http\Controllers\DataLisensiController;
 use App\Models\DataKeluarga;
 use App\Models\DataLisensi;
 use App\Models\DataPendidikan;
+use App\Models\Penggajian;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,13 +28,9 @@ use App\Models\DataPendidikan;
 |
 */
 
-
+// Admin
 Route::get('/', function () {
     return view('sesi.index');
-})->middleware('isLogin');
-
-Route::get('/karyawanrosati', function () {
-    return view('layoutkaryawan.index');
 })->middleware('isLogin');
 
 Route::get('/home', function () {
@@ -102,3 +99,37 @@ Route::get('/sesi/logout', [SessionController::class, 'logout']);
 
 Route::get('/sesi/register', [SessionController::class, 'register']);
 Route::post('/sesi/create', [SessionController::class, 'create']);
+
+//UsersKaryawan
+Route::get('/karyawanrosati', function () {
+    return view('layoutkaryawan.index');
+})->middleware('isLogin');
+
+Route::get('/karyawanrosati', function () {
+    return view('layoutkaryawan.dashboard');
+})->middleware('isLogin');
+
+Route::get('/karyawanrosati/datadirikaryawan', function () {
+    return view('layoutkaryawan.karyawandatadiri');
+})->middleware('isLogin');
+
+Route::get('/karyawanrosati/jadwalkaryawan', function () {
+    return view('layoutkaryawan.karyawanjadwal');
+})->middleware('isLogin');
+
+Route::get('/karyawanrosati/gajikaryawan', function () {
+    return view('layoutkaryawan.karyawanpenggajian')->with([
+            'penggajian' => Penggajian::all()]);
+}) ->middleware('isLogin');
+
+Route::get('/karyawanrosati/presensikaryawan', function () {
+    return view('layoutkaryawan.karyawanpresensi');
+})->middleware('isLogin');
+
+Route::get('/karyawanrosati/pengajuanedit', function () {
+    return view('layoutkaryawan.karyawanpengajuanedit');
+})->middleware('isLogin');
+
+Route::get('/karyawanrosati/pengajuancuti', function () {
+    return view('layoutkaryawan.karyawanpengajuancuti');
+})->middleware('isLogin');

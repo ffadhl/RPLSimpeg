@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-white">
     <div class="container">
-        <a class="navbar-brand" href="{{ url('home') }}"><img src="{{ asset('logo.png') }}" width="auto" height="60"
+        <a class="navbar-brand" href="{{ url('karyawanrosati') }}"><img src="{{ asset('logo.png') }}" width="auto" height="60"
                 alt=""> </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,31 +10,31 @@
             <ul class="navbar-nav left">
                 <li class="nav-item">
                     <a class="nav-link {{ request()->segment('1') == '' || request()->segment('1') == '#' ? 'active' : '' }}"
-                        aria-current="page" href="{{ url('#') }}">
+                        aria-current="page" href="{{ url('/karyawanrosati') }}">
                         <i class="fas fa-house"></i> <b>Dashboard</b>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->segment('1') == '#' ? 'active' : '' }} " aria-current="page"
-                        href="{{ url('#') }}">
+                        href="{{ url('/karyawanrosati/datadirikaryawan') }}">
                         <i class="fas fa-user"></i> <b>Data Diri</b>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->segment('1') == '#' ? 'active' : '' }} "
-                        aria-current="page" href="{{ url('#') }}">
+                        aria-current="page" href="{{ url('/karyawanrosati/jadwalkaryawan') }}">
                         <i class="fa-solid fa-calendar-days"></i> <b>Jadwal</b>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->segment('1') == '#' ? 'active' : '' }} "
-                        aria-current="page" href="{{ url('#') }}">
+                        aria-current="page" href="{{ url('/karyawanrosati/gajikaryawan') }}">
                         <i class="fab fa-cc-visa"></i> <b>Penggajian</b>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->segment('1') == '#' ? 'active' : '' }} "
-                        aria-current="page" href="{{ url('#') }}">
+                        aria-current="page" href="{{ url('/karyawanrosati/presensikaryawan') }}">
                         <i class="fa-solid fa-user-check"></i> <b>Presensi</b>
                     </a>
                 </li>
@@ -45,12 +45,12 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li><a class="nav-link {{ request()->segment('1') == '#' ? 'active' : '' }} "
-                                aria-current="page" href="{{ url('#') }}">
+                                aria-current="page" href="{{ url('/karyawanrosati/pengajuanedit') }}">
                                 <i class="fa-solid fa-user-pen"></i> <b>Edit Data</b>
                             </a>
                         </li>
                         <li><a class="nav-link {{ request()->segment('1') == '#' ? 'active' : '' }} "
-                                aria-current="page" href="{{ url('#') }}">
+                                aria-current="page" href="{{ url('/karyawanrosati/pengajuancuti') }}">
                                 <i class="fa-solid fa-calendar-plus"></i> <b>Cuti</b>
                             </a>
                         </li>
