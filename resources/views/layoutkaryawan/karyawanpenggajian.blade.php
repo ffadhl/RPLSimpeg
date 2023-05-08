@@ -1,15 +1,22 @@
 @extends('layoutkaryawan.index')
 
 @section('content')
-    <h3><strong> Data Penggajian </strong></h3>
+    <div style="background-image: url('{{ asset('slide1.png') }}'); background-size: cover;" class="heading-page header-text">
+        <section class="page-heading">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-content">
+                            <h4>Layanan</h4>
+                            <h2>Penggajian Karyawan</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
     <div class="card">
         <div class="card-body">
-            @if (session('msg'))
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    <strong> Berhasil </strong> {{ session('msg') }}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                </div>
-            @endif
             <table class="table table-sm table-stripde table-bordered">
                 <thead>
                     <tr>
