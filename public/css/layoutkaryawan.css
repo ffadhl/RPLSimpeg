@@ -91,6 +91,7 @@ table {
 
 .card {
     margin: 5px;
+    margin-top: 25px;
     padding: 5px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -105,6 +106,10 @@ table {
     font-size: 0.85rem;
     font-weight: 600;
     background-color: #5479f7;
+}
+
+.card-headerjadwal{
+    text-align: center;
 }
 
 .btn:hover {
@@ -192,4 +197,103 @@ table {
 .collapse {
     padding: 0px;
     justify-content: space-between;
+}
+
+.containerpresensi {
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 20px;
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.containerpresensi header {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+}
+
+.containerpresensi .form {
+    margin-top: 30px;
+}
+.form .input-boxpresensi {
+    width: 100%;
+    margin-top: 20px;
+}
+.input-boxpresensi label {
+    color: #333;
+}
+.form :where(.input-boxpresensi input, .select-box) {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #707070;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+}
+.input-boxpresensi input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.form button {
+    height: 55px;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #5479f7;
+    border-radius: 10px;
+}
+.form button:hover {
+    background: #4869d5;
+}
+/*Responsive*/
+@media screen and (max-width: 500px) {
+    .form .column {
+        flex-wrap: wrap;
+    }
+    .form :where(.gender-option, .gender) {
+        row-gap: 15px;
+    }
+}
+
+.page-heading {
+    margin: 0px 10px;
+    padding: 120px 0px;
+    text-align: left;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page-heading .text-content h4{
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+}
+
+.page-heading .text-content h2
+{
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
 }
