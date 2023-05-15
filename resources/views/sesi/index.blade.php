@@ -80,10 +80,10 @@
                     <div class="text-slider">
                         <div class="text-wrap">
                             <div class="text-group">
-                                <h2></h2>
-                                <h2></h2>
-                                <h2></h2>
-                                <h2></h2>
+                                <h2>Melayani dengan baik</h2>
+                                <h2>Melayani dengan sepenuh hati</h2>
+                                <h2>Melayani dengan senyuman</h2>
+                                <h2>Melayani semampu kami</h2>
                             </div>
                         </div>
 
