@@ -297,3 +297,174 @@ table {
     letter-spacing: 0.5px;
     margin-bottom: 15px;
 }
+
+/* pengajuan edit */
+.containereditdata{
+    margin: auto;
+    max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  }
+  .containereditdata .titleeditdata{
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+  }
+  .containereditdata .titleeditdata::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #5479f7, #68a9ff);
+  }
+  .contenteditdata form .user-detailsedit{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+  }
+
+.bagiandata span.bagiandata-details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+  .bagiandata select{
+    height: 45px;
+    width: 161%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  }
+
+  .bagiandata .input-boxeditdata{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+  }
+  .bagiandata .input-boxeditdata input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  }
+  .bagiandata .input-boxeditdata input:focus,
+  .bagiandata .input-boxeditdata input:valid{
+    border-color: #5479f7;
+  }
+  .bagiandata .input-boxeditdata select{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  }
+  .bagiandata .input-boxeditdata select:focus,
+  .bagiandata .input-boxeditdata select:valid{
+    border-color: #5479f7;
+  }
+
+  .user-detailsedit{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+  form .user-detailsedit .input-boxeditdata{
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+  }
+  form .input-boxeditdata span.detailsedit{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+  .user-detailsedit .input-boxeditdata input{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  }
+  .user-detailsedit .input-boxeditdata input:focus,
+  .user-detailsedit .input-boxeditdata input:valid{
+    border-color: #5479f7;
+  }
+   form .buttoneditdata{
+     height: 45px;
+     margin: 35px 0
+   }
+   form .buttoneditdata input{
+     height: 100%;
+     width: 100%;
+     border-radius: 5px;
+     border: none;
+     color: #fff;
+     font-size: 18px;
+     font-weight: 500;
+     letter-spacing: 1px;
+     cursor: pointer;
+     transition: all 0.3s ease;
+     background: linear-gradient(135deg, #5479f7, #68a9ff);
+   }
+   form .buttoneditdata input:hover{
+    /* transform: scale(0.99); */
+    background: linear-gradient(-135deg, #5479f7, #68a9ff);
+    }
+   @media(max-width: 584px){
+   .containereditdata{
+    max-width: 100%;
+  }
+  form .user-detailsedit .input-boxeditdata{
+      margin-bottom: 15px;
+      width: 100%;
+    }
+    .content form .user-detailsedit{
+      max-height: 300px;
+      overflow-y: scroll;
+    }
+    .user-detailsedit::-webkit-scrollbar{
+      width: 5px;
+    }
+    }
+    @media(max-width: 459px){
+    .containereditdata .contenteditdata {
+      flex-direction: column;
+    }
+  }
+
+  .input-boxeditdata textarea{
+    height: 100px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+  }
