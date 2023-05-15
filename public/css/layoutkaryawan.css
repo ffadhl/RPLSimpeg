@@ -467,3 +467,174 @@ form .buttoneditdata input:hover {
     border-bottom-width: 2px;
     transition: all 0.3s ease;
 }
+
+/* pengajuan cuti */
+.containercuti {
+    margin: auto;
+    max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+.containercuti .titlecuti {
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+}
+.containercuti .titlecuti::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #5479f7, #68a9ff);
+}
+.contentcuti form .user-detailsedit {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+.jeniscuti span.jeniscuti-details {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.jeniscuti select {
+    height: 45px;
+    width: 131%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.jeniscuti .input-boxcuti {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+.jeniscuti .input-boxcuti input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.jeniscuti .input-boxcuti input:focus,
+.jeniscuti .input-boxcuti input:valid {
+    border-color: #5479f7;
+}
+.jeniscuti .input-boxcuti select {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.jeniscuti .input-boxcuti select:focus,
+.jeniscuti .input-boxcuti select:valid {
+    border-color: #5479f7;
+}
+
+.user-detailsedit {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .user-detailsedit .input-boxcuti {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+form .input-boxcuti span.detailsedit {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.user-detailsedit .input-boxcuti input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+.user-detailsedit .input-boxcuti input:focus,
+.user-detailsedit .input-boxcuti input:valid {
+    border-color: #5479f7;
+}
+form .buttoncuti {
+    height: 45px;
+    margin: 35px 0;
+}
+form .buttoncuti input {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: linear-gradient(135deg, #5479f7, #68a9ff);
+}
+form .buttoncuti input:hover {
+    /* transform: scale(0.99); */
+    background: linear-gradient(-135deg, #5479f7, #68a9ff);
+}
+@media (max-width: 584px) {
+    .containercuti {
+        max-width: 100%;
+    }
+    form .user-detailsedit .input-boxcuti {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .content form .user-detailsedit {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    .user-detailsedit::-webkit-scrollbar {
+        width: 5px;
+    }
+}
+@media (max-width: 459px) {
+    .containercuti .contentcuti {
+        flex-direction: column;
+    }
+}
+
+.input-boxcuti textarea {
+    height: 100px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
