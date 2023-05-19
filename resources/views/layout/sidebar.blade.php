@@ -86,7 +86,7 @@
         </li> --}}
         <li>
             <a class="nav-link {{ request()->segment('1') == 'logout' ? 'active' : '' }} " aria-current="page"
-                href="{{ url('/sesi/logout') }}">
+                href="{{ url('logout') }}">
                 <i class='bx bx-log-out' style='color:#ff0000'></i>
                 <span class="text">Logout</span>
             </a>
