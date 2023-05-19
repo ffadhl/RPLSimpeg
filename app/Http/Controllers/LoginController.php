@@ -7,43 +7,62 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Http\RedirectResponse;
 
-class SessionController extends Controller
+class LoginController extends Controller
 {
-    function index()
-    {
-        return view("sesi/index");
+    public function index (){
+        if($user = Auth::user()){
+            if($user->level == '1'){
+                return redirect()->intended('home');
+            }elseif($user->level == '2'){
+                return redirect()->intended('karyawanrosati');
+            }
+            // return redirect()->intended('home');
+        }
+
+        return view('sesi.index');
     }
 
-    function login(Request $request)
-    {
-        Session::flash('email', $request->email);
+    public function proses (Request $request){
         $request->validate([
-            'email' => 'required',
-            'password' => 'required'
-        ], [
-            'email.required' => 'Email tidak boleh kosong',
-            'password.required' => 'Password tidak boleh kosong'
+            'email'=> 'required',
+            'password'=> 'required',
+        ],[
+            'email.required' => 'email tidak boleh kosong',
         ]);
 
-        $infologin = [
-            'email' => $request->email,
-            'password' => $request->password
-        ];
+        $kredensial = $request->only('email', 'password');
 
-        if (Auth::attempt($infologin)) {
-            //jika otentikasi sukses
-            return redirect('home')->with('success', 'Login berhasil');
-        } else {
-            //jika otentikasi gagal
-            return redirect('/sesi')->withErrors('Email atau password salah');
+        if(Auth::attempt($kredensial)){
+            $request = session()->regenerate();
+            $user = Auth::user();
+            if($user->level == '1'){
+                return redirect()->intended('home');
+            }elseif($user->level == '2'){
+                return redirect()->intended('karyawanrosati');
+            }
+
+            // if($user){
+            //     return redirect()->intended('home');
+            // }
+
+            return redirect()->intended('/');
         }
+
+        return back()->withErrors([
+            'email' => 'Maaf, email atau Password yang anda masukkan salah'
+        ])->onlyInput('username');
     }
 
-    function logout()
-    {
+    public function logout(Request $request): RedirectResponse{
         Auth::logout();
-        return redirect('/sesi')->with('success', 'Logout berhasil');
+    
+        $request->session()->invalidate();
+    
+        $request->session()->regenerateToken();
+    
+        return redirect('/sesi');
     }
 
     function register()

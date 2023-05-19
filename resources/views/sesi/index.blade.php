@@ -27,7 +27,7 @@
         <div class="box">
             <div class="inner-box">
                 <div class="forms-wrap">
-                    <form action="sesi/login" method="POST" autocomplete="off" class="sign-in-form">
+                    <form action="{{ url('sesi/proses') }}" method="POST" autocomplete="off" class="sign-in-form">
                         <div class="logo">
                             <img src="{{ asset('logologin.png') }}" height="auto" width="auto"
                                 alt="Rosati Hospital" />
@@ -42,15 +42,33 @@
                         @csrf
                         <div class="actual-form">
                             <div class="txt_field">
-                                <input type="email" minlength="4" class="input-field" autocomplete="off"
-                                    name="email" class="form-control" required />
+                                <input autofocus type="email" minlength="4" class="input-field
+                                @error('email')
+                                    is-invalid
+                                @enderror"
+                                 autocomplete="off"
+                                    name="email" value="{{ old('email') }}" class="form-control" required />
                                 <label for="email" class="from-label">Email</label>
+                                @error('email')
+                                <div class="invalid-feedback">
+                                    {{$message}}
+                                </div>
+                                @enderror
                             </div>
 
                             <div class="txt_field">
-                                <input type="password" minlength="4" class="input-field" autocomplete="off"
+                                <input type="password" minlength="4" class="input-field
+                                @error('password')
+                                    is-invalid
+                                @enderror"
+                                autocomplete="off"
                                     name="password" class="form-control" required />
                                 <label for="password" class="from-label">Password</label>
+                                @error('password')
+                                <div class="invalid-feedback">
+                                    {{$message}}
+                                </div>
+                                @enderror
                             </div>
 
                             <input type="submit" value="Login" class="sign-btn" />

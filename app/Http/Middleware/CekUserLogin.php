@@ -7,18 +7,23 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
-class isLogin
+class CekUserLogin
 {
     /**
      * Handle an incoming request.
      *
      * @param  \Closure(\Illuminate\Http\Request): (\Symfony\Component\HttpFoundation\Response)  $next
      */
-    public function handle(Request $request, Closure $next): Response
+    public function handle(Request $request, Closure $next, $rules): Response
     {
-        if(Auth::check()){
-            return $next($request);
+        if(!Auth::check()){
+            return redirect('sesi');
         }
-        return redirect('sesi')->with('error', 'Anda harus login terlebih dahulu');
+
+        $user = Auth::user();
+        if($user->level == $rules)
+            return $next($request);
+
+            return redirect('sesi')->with('error', 'Akses Tidak Diizinkan');
     }
 }
