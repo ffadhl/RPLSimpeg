@@ -583,3 +583,24 @@ table{
 	margin-left: 10px;
 	margin-top: 10px;
 }
+
+.carddashboard{
+	margin: 10px;
+	padding: 25px;
+	border-radius: 5px;
+	background : var(--light);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+	flex: auto;
+}
+
+.carddashboard span {
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+.carddashboard-container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
