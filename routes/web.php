@@ -17,7 +17,6 @@ use App\Models\DataKeluarga;
 use App\Models\DataLisensi;
 use App\Models\DataPendidikan;
 use App\Models\Penggajian;
-use App\Http\Controllers\GoogleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,12 +46,8 @@ use App\Http\Controllers\GoogleController;
 Route::get('/',[LayoutController::class,'index'])->middleware('auth');
 Route::get('/home',[LayoutController::class,'index'])->middleware('auth');
 
-
 Route::controller(LoginController::class)->group(function(){
-
     Route::get('sesi', 'index')->name('login');
-    Route::get('auth/google', [App\Http\Controllers\GoogleController::class, 'redirectToGoogle'])->name('google.login');
-    Route::get('auth/google/callback', [App\Http\Controllers\GoogleController::class, 'handleGoogleCallback'])->name('google.callback');
     Route::post('sesi/proses', 'proses');
     Route::get('logout','logout');
 });
