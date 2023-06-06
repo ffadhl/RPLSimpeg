@@ -30,7 +30,7 @@ class FadhlmahasiswaController extends Controller
     public function store(Request $request)
     {
         mahasiswa::create($request->except(['_token']));
-        return redirect('/mahasiswa');
+        return redirect('/fadhlmahasiswa');
     }
 
     /**
@@ -54,7 +54,7 @@ class FadhlmahasiswaController extends Controller
     {
         $mahasiswa = mahasiswa::find($IDmahasiswa);
         $mahasiswa->update($request->except(['_token','submit']));
-        return redirect('/mahasiswa');
+        return redirect('/fadhlmahasiswa');
     }
 
     /**
@@ -64,6 +64,6 @@ class FadhlmahasiswaController extends Controller
     {
         $mahasiswa = mahasiswa::find($IDmahasiswa);
         $mahasiswa->delete();
-        return redirect('/mahasiswa');
+        return redirect('/fadhlmahasiswa');
     }
 }
