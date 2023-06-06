@@ -1,3 +1,21 @@
+<h1>Fadhl Al-Hafizh</h1>
+<h3>1.</h3> <p> Pada UAS ini saya menggunakan bahasa pemrograman PHP dan juga Framework dari Laravel.</p><br>
+
+<h3>2.</h3> <p> pada UAS ini tabel yang dibuat oleh Fadhl Al-Hafizh yaitu bernama "mahasiswa" dengan atribut, antara lain</p><br>
+<p>1. ID Mahasiswa sebagai Primary Key</p>
+<p>2. Nama</p>
+<p>3. Prodi</p>
+<p>4. Jenis Kelamin</p>
+<p>5. Agama</p>
+<p>6. NIK</p>
+<p>7. Telepon</p>
+<p>8. Alamat</p>
+<p>9. Tanggal Lahir</p>
+<p>10. Email</p><br>
+
+
+
+
 <a href="/fadhlmahasiswa/create">Add Mahasiswa</a>
 
 <table border="1">
