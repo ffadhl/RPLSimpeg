@@ -170,11 +170,11 @@ Route::get('/mahasiswa', function () {
     return view('fadhl.index');
 });
 
-Route::get('/mahasiswa',[FadhlmahasiswaController::class,'index']);
-Route::get('/mahasiswa/create',[FadhlmahasiswaController::class,'create']);
-Route::post('/mahasiswa/store',[FadhlmahasiswaController::class,'store']);
+Route::get('/fadhlmahasiswa',[FadhlmahasiswaController::class,'index']);
+Route::get('/fadhlmahasiswa/create',[FadhlmahasiswaController::class,'create']);
+Route::post('/fadhlmahasiswa/store',[FadhlmahasiswaController::class,'store']);
 
-Route::get('/mahasiswa/{IDmahasiswa}/edit',[FadhlmahasiswaController::class,'edit']);
-Route::put('/mahasiswa/{IDmahasiswa}',[FadhlmahasiswaController::class,'update']);
+Route::get('/fadhlmahasiswa/{IDmahasiswa}/edit',[FadhlmahasiswaController::class,'edit']);
+Route::put('/fadhlmahasiswa/{IDmahasiswa}',[FadhlmahasiswaController::class,'update']);
 
-Route::delete('/mahasiswa/{IDmahasiswa}',[FadhlmahasiswaController::class,'destroy']);
+Route::delete('/fadhlmahasiswa/{IDmahasiswa}',[FadhlmahasiswaController::class,'destroy']);

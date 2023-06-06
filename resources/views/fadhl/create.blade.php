@@ -1,6 +1,6 @@
 <h1>Data Mahasiswa Baru</h1>
 
-<form action="/mahasiswa/store" method="POST">
+<form action="/fadhlmahasiswa/store" method="POST">
     @csrf
     <input type="text" name="IDmahasiswa" placeholder="Masukkan ID Mahasiswa"><br>
     <input type="text" name="nama" placeholder="Masukkan Nama"><br>
