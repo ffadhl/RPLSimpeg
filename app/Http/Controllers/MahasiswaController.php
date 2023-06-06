@@ -2,86 +2,105 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Mahasiswacheva;
+use App\Models\mahasiswa;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use Illuminate\View\View;
 
-class MahasiswaController extends Controller
+class mahasiswaController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(): View
     {
-        $mahasiswa = Mahasiswacheva::latest()->paginate(5);
-        return view('mahasiswa.index', compact('mahasiswa'))->with('i', (request()->input('page', 1)-1)*5);
+        $mahasiswas = mahasiswa::latest()->paginate(5);
+        
+        return view('mahasiswas.index',compact('mahasiswas'))
+                    ->with('i', (request()->input('page', 1) - 1) * 5);
     }
-
+  
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(): View
     {
-        return view('mahasiswa.create');
+        return view('mahasiswas.create');
     }
-
+  
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
         $request->validate([
+            'idmhs' => 'required',
             'nama' => 'required',
-            'nik' => 'required',
-            'jenis_kelamin' => 'required',
+            'tempat_lahir' => 'required',
+            'tanggal_lahir' => 'required',
+            'mahasiswa_kelamin' => 'required',
             'prodi' => 'required',
             'agama' => 'required',
-            'telepon' => 'required',
-            'alamat' => 'required',
+            'nik' => 'required',
+            'no_telepon' => 'required',
         ]);
-
-        Mahasiswacheva::create($request->all());
-        return redirect()->route('mahasiswa.index')->with('success', 'Mahasiswa berhasil ditambahkan');
+        
+        mahasiswa::create($request->all());
+         
+        return redirect()->route('mahasiswas.index')
+                        ->with('success','mahasiswa created successfully.');
     }
-
+  
     /**
      * Display the specified resource.
      */
-    public function show(Mahasiswacheva $mahasiswa)
+    public function show(mahasiswa $mahasiswa): View
     {
-        return view('mahasiswa.show', compact('mahasiswa'));
+        return view('mahasiswas.show',compact('mahasiswa'));
     }
-
+  
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Mahasiswacheva $mahasiswa)
+    public function edit(mahasiswa $mahasiswa): View
     {
-        return view('mahasiswa.edit', compact('mahasiswa'));
+        return view('mahasiswas.edit',compact('mahasiswa'));
     }
-
+  
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Mahasiswacheva $mahasiswa)
+    public function update(Request $request, mahasiswa $mahasiswa): RedirectResponse
     {
         $request->validate([
+            'idmhs' => 'required',
             'nama' => 'required',
-            'nik' => 'required',
-            'jenis_kelamin' => 'required',
+            'tempat_lahir' => 'required',
+            'tanggal_lahir' => 'required',
+            'mahasiswa_kelamin' => 'required',
             'prodi' => 'required',
             'agama' => 'required',
-            'telepon' => 'required',
-            'alamat' => 'required',
-            ]);
-        return redirect()->route('mahasiswa.index')->with('success', 'Mahasiswa berhasil diupdate');
+            'nik' => 'required',
+            'no_telepon' => 'required',
+        ]);
+        
+        $mahasiswa->update($request->all());
+        
+        return redirect()->route('mahasiswas.index')
+                        ->with('success','mahasiswa updated successfully');
     }
-
+  
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Mahasiswacheva $mahasiswa)
+    public function destroy(mahasiswa $mahasiswa): RedirectResponse
     {
         $mahasiswa->delete();
-        return redirect()->route('mahasiswa.index')->with('success', 'Mahasiswa berhasil dihapus');
+         
+        return redirect()->route('mahasiswas.index')
+                        ->with('success','mahasiswa deleted successfully');
     }
+
+
 }
