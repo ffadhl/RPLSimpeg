@@ -76,6 +76,41 @@
                 <span class="text">Penggajian</span>
             </a>
         </li>
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class='bx bx-calendar'></i>
+                <span class="text">UAS</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="nav-link {{ request()->segment('1') == 'penjadwalan' ? 'active' : '' }} "
+                        aria-current="page" href="{{ url('fadhlmahasiswa') }}">
+                        <i class='bx bx-calendar-plus'></i>
+                        <span class="text">UAS_Fadhl</span>
+                    </a>
+                </li>
+                <li><a class="nav-link {{ request()->segment('1') == 'cuti' ? 'active' : '' }} " aria-current="page"
+                        href="{{ url('cuti') }}">
+                        <i class='bx bx-calendar-exclamation'></i>
+                        <span class="text">UAS_Cheva</span>
+                    </a>
+                </li>
+                <li><a class="nav-link {{ request()->segment('1') == 'cuti' ? 'active' : '' }} " aria-current="page"
+                    href="{{ url('cuti') }}">
+                    <i class='bx bx-calendar-exclamation'></i>
+                    <span class="text">UAS_Jessica</span>
+                </a>
+                </li>
+                <li><a class="nav-link {{ request()->segment('1') == 'cuti' ? 'active' : '' }} " aria-current="page"
+                    href="{{ url('cuti') }}">
+                    <i class='bx bx-calendar-exclamation'></i>
+                    <span class="text">UAS_Imam</span>
+                </a>
+                </li>
+            </ul>
+        </li>
+
     </ul>
     <ul class="side-menu">
         {{-- <li>
