@@ -53,7 +53,7 @@ class FadhlmahasiswaController extends Controller
     public function update($IDmahasiswa, Request $request)
     {
         $mahasiswa = mahasiswa::find($IDmahasiswa);
-        $mahasiswa->update($request->except(['_token']));
+        $mahasiswa->update($request->except(['_token','submit']));
         return redirect('/mahasiswa');
     }
 
