@@ -1,3 +1,6 @@
+@extends('layout.main')
+
+@section('content')
 <h1>Fadhl Al-Hafizh</h1>
 <h3>1.</h3> <p> Pada UAS ini saya menggunakan bahasa pemrograman PHP dan juga Framework dari Laravel.</p><br>
 
@@ -56,3 +59,4 @@
         </tr>
     @endforeach
 </table>
+@endsection

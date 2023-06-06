@@ -1,3 +1,6 @@
+@extends('layout.main')
+
+@section('content')
 <h1>Data Mahasiswa Baru</h1>
 
 <form action="/fadhlmahasiswa/store" method="POST">
@@ -33,3 +36,4 @@
     <input type="submit" value="Simpan">
 
 </form>
+@endsection
