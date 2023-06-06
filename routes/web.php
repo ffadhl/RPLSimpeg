@@ -165,7 +165,7 @@ Route::group(['middleware' => ['auth']], function(){
 });
 
 
-Route::get('/fadhl', function () {
+Route::get('/fadhl/mahasiswa', function () {
     return view('fadhl.index');
 });
 
