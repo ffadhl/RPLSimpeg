@@ -18,7 +18,7 @@ use App\Models\DataLisensi;
 use App\Models\DataPendidikan;
 use App\Models\Penggajian;
 use App\Http\Controllers\GoogleController;
-use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\FadhlmahasiswaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -170,11 +170,11 @@ Route::get('/mahasiswa', function () {
     return view('fadhl.index');
 });
 
-Route::get('/mahasiswa',[MahasiswaController::class,'index']);
-Route::get('/mahasiswa/create',[MahasiswaController::class,'create']);
-Route::post('/mahasiswa/store',[MahasiswaController::class,'store']);
+Route::get('/mahasiswa',[FadhlmahasiswaController::class,'index']);
+Route::get('/mahasiswa/create',[FadhlmahasiswaController::class,'create']);
+Route::post('/mahasiswa/store',[FadhlmahasiswaController::class,'store']);
 
-Route::get('/mahasiswa/{IDmahasiswa}/edit',[MahasiswaController::class,'edit']);
-Route::put('/mahasiswa/{IDmahasiswa}',[MahasiswaController::class,'update']);
+Route::get('/mahasiswa/{IDmahasiswa}/edit',[FadhlmahasiswaController::class,'edit']);
+Route::put('/mahasiswa/{IDmahasiswa}',[FadhlmahasiswaController::class,'update']);
 
-Route::delete('/mahasiswa/{IDmahasiswa}',[MahasiswaController::class,'destroy']);
+Route::delete('/mahasiswa/{IDmahasiswa}',[FadhlmahasiswaController::class,'destroy']);
