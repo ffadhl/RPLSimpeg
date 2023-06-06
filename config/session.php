@@ -155,8 +155,7 @@ return [
     |
     */
 
-    // 'domain' => env('SESSION_DOMAIN'),
-    'domain' => env('sdmrosati.me'),
+    'domain' => env('SESSION_DOMAIN'),
 
     /*
     |--------------------------------------------------------------------------
