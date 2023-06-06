@@ -4,7 +4,7 @@
 
 <h1>Edit Mahasiswa Baru</h1>
 
-<form action="/fadhlmahasiswa/{{ $mahasiswa -> NIM }}" method="POST">
+<form action="/fadhlmahasiswa/{{ $mahasiswa -> IDmahasiswa }}" method="POST">
     @method('PUT')
     @csrf
     <input type="text" name="IDmahasiswa" placeholder="Masukkan ID Mahasiswa" value="{{ $mahasiswa -> IDmahasiswa }}"><br>
