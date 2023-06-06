@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class mahasiswa extends Model
 {
     use HasFactory;
+<<<<<<< HEAD
     protected $table = 'mahasiswas';
     protected $primaryKey = 'idmhs';
     protected $fillable = [
@@ -53,3 +54,12 @@ class mahasiswa extends Model
     }
 }
 
+=======
+    protected $table = 'mahasiswa';
+    protected $primaryKey = 'IDmahasiswa';
+    protected $guarded = [];
+
+    public $incrementing = false;
+    public $timestamps = true;
+}
+>>>>>>> 612afbf99163b8071ea86227677c435ad2bb0b2e

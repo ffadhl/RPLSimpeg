@@ -73,7 +73,8 @@
 
                             <input type="submit" value="Login" class="sign-btn" />
                             <div class="media-options">
-                                <a href="#" class="field google">
+                                {{-- ( > w < ) --}}
+                                <a href="{{route('google.login')}}" class="field google">
                                     <img src="{{ asset('logogoogle.png') }}" alt="" class="google-img">
                                     <span>Login with Google</span>
                                 </a>

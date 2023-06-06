@@ -17,6 +17,8 @@ use App\Models\DataKeluarga;
 use App\Models\DataLisensi;
 use App\Models\DataPendidikan;
 use App\Models\Penggajian;
+use App\Http\Controllers\GoogleController;
+use App\Http\Controllers\FadhlmahasiswaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,8 +48,12 @@ use App\Models\Penggajian;
 Route::get('/',[LayoutController::class,'index'])->middleware('auth');
 Route::get('/home',[LayoutController::class,'index'])->middleware('auth');
 
+
 Route::controller(LoginController::class)->group(function(){
+
     Route::get('sesi', 'index')->name('login');
+    Route::get('auth/google', [App\Http\Controllers\GoogleController::class, 'redirectToGoogle'])->name('google.login');
+    Route::get('auth/google/callback', [App\Http\Controllers\GoogleController::class, 'handleGoogleCallback'])->name('google.callback');
     Route::post('sesi/proses', 'proses');
     Route::get('logout','logout');
 });
@@ -158,3 +164,17 @@ Route::group(['middleware' => ['auth']], function(){
     });
 
 });
+
+
+Route::get('/fadhlmahasiswa', function () {
+    return view('fadhl.index');
+});
+
+Route::get('/fadhlmahasiswa',[FadhlmahasiswaController::class,'index']);
+Route::get('/fadhlmahasiswa/create',[FadhlmahasiswaController::class,'create']);
+Route::post('/fadhlmahasiswa/store',[FadhlmahasiswaController::class,'store']);
+
+Route::get('/fadhlmahasiswa/{IDmahasiswa}/edit',[FadhlmahasiswaController::class,'edit']);
+Route::put('/fadhlmahasiswa/{IDmahasiswa}',[FadhlmahasiswaController::class,'update']);
+
+Route::delete('/fadhlmahasiswa/{IDmahasiswa}',[FadhlmahasiswaController::class,'destroy']);
