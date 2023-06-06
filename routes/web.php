@@ -19,6 +19,7 @@ use App\Models\DataPendidikan;
 use App\Models\Penggajian;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\FadhlmahasiswaController;
+use App\Http\Controllers\MahasiswaController;
 
 /*
 |--------------------------------------------------------------------------
