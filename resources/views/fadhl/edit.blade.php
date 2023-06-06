@@ -1,3 +1,7 @@
+@extends('layout.main')
+
+@section('content')
+
 <h1>Edit Mahasiswa Baru</h1>
 
 <form action="/fadhlmahasiswa/{{ $mahasiswa -> NIM }}" method="POST">
@@ -34,3 +38,4 @@
     <input type="submit" value="Simpan">
 
 </form>
+@endsection
