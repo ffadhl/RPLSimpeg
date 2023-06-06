@@ -163,3 +163,17 @@ Route::group(['middleware' => ['auth']], function(){
     });
 
 });
+
+
+Route::get('/fadhl', function () {
+    return view('fadhl.index');
+});
+
+Route::get('/mahasiswa',[MahasiswaController::class,'index']);
+Route::get('/mahasiswa/create',[MahasiswaController::class,'create']);
+Route::post('/mahasiswa/store',[MahasiswaController::class,'store']);
+
+Route::get('/mahasiswa/{IDmahasiswa}/edit',[MahasiswaController::class,'edit']);
+Route::put('/mahasiswa/{IDmahasiswa}',[MahasiswaController::class,'update']);
+
+Route::delete('/mahasiswa/{IDmahasiswa}',[MahasiswaController::class,'destroy']);
