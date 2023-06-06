@@ -1,4 +1,4 @@
-<a href="/mahasiswa/create">Add Mahasiswa</a>
+<a href="/fadhlmahasiswa/create">Add Mahasiswa</a>
 
 <table border="1">
     <tr>
