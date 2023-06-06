@@ -27,8 +27,8 @@
             <td>{{ $row->tanggal_lahir }}</td>
             <td>{{ $row->email }}</td>
             <td>
-                <a href="/mahasiswa/{{ $row->IDmahasiswa }}/edit">Edit</a>
-                <form action="/mahasiswa/{{ $row->IDmahasiswa }}" method="POST">
+                <a href="/fadhlmahasiswa/{{ $row->IDmahasiswa }}/edit">Edit</a>
+                <form action="/fadhlmahasiswa/{{ $row->IDmahasiswa }}" method="POST">
                     @csrf
                     @method('DELETE')
                     <input type="submit" value="Delete">
