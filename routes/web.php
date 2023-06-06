@@ -47,7 +47,7 @@ use App\Http\Controllers\FadhlmahasiswaController;
 
 Route::get('/',[LayoutController::class,'index'])->middleware('auth');
 Route::get('/home',[LayoutController::class,'index'])->middleware('auth');
-
+Route::resource('/mahasiswa', MahasiswaController::class);
 
 Route::controller(LoginController::class)->group(function(){
 
