@@ -119,7 +119,7 @@
                     </a>
                 </li>
                 <li><a class="nav-link {{ request()->segment('1') == '#' ? 'active' : '' }} " aria-current="page"
-                        href="{{ url('#') }}">
+                        href="{{ url('cheva') }}">
                         <i class='bx bxs-user-check'></i>
                         <span class="text">UAS_Cheva</span>
                     </a>
