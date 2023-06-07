@@ -35,7 +35,7 @@
                         </tr>
                     </thead>
 
-                    <tbody>
+                    {{-- <tbody>
                         @foreach ($penjadwalan as $row)
                             <tr>
                                 <th>{{ $loop->iteration }}</th>
@@ -47,7 +47,7 @@
                                 <td>{{ $row->tanggal_shift }}</td>
                             </tr>
                         @endforeach
-                    </tbody>
+                    </tbody> --}}
                 </table>
             </div>
         </div>
