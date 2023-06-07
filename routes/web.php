@@ -13,6 +13,7 @@ use App\Http\Controllers\jabatanController;
 use App\Http\Controllers\PresensiController;
 use App\Http\Controllers\DataPendidikanController;
 use App\Http\Controllers\DataLisensiController;
+use app\Models\Karyawan;
 use App\Models\DataKeluarga;
 use App\Models\DataLisensi;
 use App\Models\DataPendidikan;
@@ -21,6 +22,7 @@ use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\FadhlmahasiswaController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\MahasiswaControllerC;
+use App\Models\Jabatan;
 
 /*
 |--------------------------------------------------------------------------
@@ -77,27 +79,34 @@ Route::group(['middleware' => ['auth']], function(){
         });
         
         Route::get('/penggajian/add', function () {
-            return view('penggajian.formadd');
+            $karyawans = Karyawan::all();
+            return view('penggajian.formadd', compact('karyawans'));
         });
         
         Route::get('/cuti/add', function () {
-            return view('cuti.formadd');
+            $karyawans = Karyawan::all();
+            return view('cuti.formadd', compact('karyawans'));
         });
         
         Route::get('/penjadwalan/add', function () {
-            return view('penjadwalan.formadd');
+            $karyawans = Karyawan::all();
+            $jabatans = Jabatan::all();
+            return view('penjadwalan.formadd', compact('karyawans', 'jabatans'));
         });
         
         Route::get('/datakeluarga/add', function () {
-            return view('datakeluarga.formadd');
+            $karyawans = Karyawan::all();
+            return view('datakeluarga.formadd', compact('karyawans'));
         });
         
         Route::get('/datapendidikan/add', function () {
-            return view('datapendidikan.formadd');
+            $karyawans = Karyawan::all();
+            return view('datapendidikan.formadd', compact('karyawans'));
         });
         
         Route::get('/datalisensi/add', function () {
-            return view('datalisensi.formadd');
+            $karyawans = Karyawan::all();
+            return view('datalisensi.formadd', compact('karyawans'));
         });
         
         Route::get('/jabatan/add', function () {

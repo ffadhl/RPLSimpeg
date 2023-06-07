@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Penjadwalan;
 use App\Http\Requests\StorePenjadwalanRequest;
 use App\Http\Requests\UpdatePenjadwalanRequest;
+use App\Models\Jabatan;
+use App\Models\Karyawan;
 
 class PenjadwalanController extends Controller
 {
@@ -43,8 +45,11 @@ class PenjadwalanController extends Controller
      */
     public function show(Penjadwalan $pjwln, $kode_jadwal)
     {
+        $karyawans = Karyawan::all();
+        $jabatans = Jabatan::all();
+
         $data = $pjwln->find($kode_jadwal);
-        return view('penjadwalan.formedit')->with([
+        return view('penjadwalan.formedit',compact('karyawans', 'jabatans'))->with([
             'kd_jwl' => $kode_jadwal,
             'txtnip' => $data->nip,
             'txtnama' => $data->nama,
