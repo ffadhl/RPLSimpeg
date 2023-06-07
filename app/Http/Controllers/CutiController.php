@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Cuti;
 use App\Http\Requests\StoreCutiRequest;
 use App\Http\Requests\UpdateCutiRequest;
+use App\Models\Karyawan;
 
 class CutiController extends Controller
 {
@@ -43,8 +44,9 @@ class CutiController extends Controller
      */
     public function show(Cuti $ct, $id_cuti)
     {
+        $karyawans = Karyawan::all();
         $data = $ct->find($id_cuti);
-        return view('cuti.formedit')->with([
+        return view('cuti.formedit', compact('karyawans'))->with([
             'id_ct' => $id_cuti,
             'txtnip' => $data->nip,
             'txtnama' => $data->nama,
