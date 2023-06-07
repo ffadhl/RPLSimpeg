@@ -39,7 +39,7 @@
                 </li>
                 <li><a class="nav-link {{ request()->segment('1') == 'datalisensi' ? 'active' : '' }} "
                     aria-current="page" href="{{ url('datalisensi') }}">
-                    <i class="fa-solid fa-id-card"></i>
+                    <i class='bx bxs-user'></i>
                     <span class="text">Data Lisensi</span>
                 </a>
             </li>
