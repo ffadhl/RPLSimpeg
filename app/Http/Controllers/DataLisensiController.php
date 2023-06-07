@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\DataLisensi;
 use App\Http\Requests\StoreDataLisensiRequest;
 use App\Http\Requests\UpdateDataLisensiRequest;
+use App\Models\Karyawan;
 
 class DataLisensiController extends Controller
 {
@@ -42,8 +43,9 @@ class DataLisensiController extends Controller
      */
     public function show(DataLisensi $lsns, $id)
     {
+        $karyawans = Karyawan::all();
         $data = $lsns->findOrFail($id);
-        return view('datalisensi.formedit')->with([
+        return view('datalisensi.formedit', compact('karyawans'))->with([
             'txtid' => $data->id,
             'txtnip' => $data->nip,
             'txtnamalisensi' => $data->namalisensi,
