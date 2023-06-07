@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\DataKeluarga;
 use App\Http\Requests\StoreDataKeluargaRequest;
 use App\Http\Requests\UpdateDataKeluargaRequest;
+use App\Models\Karyawan;
 
 class DataKeluargaController extends Controller
 {
@@ -43,8 +44,9 @@ class DataKeluargaController extends Controller
      */
     public function show(DataKeluarga $klrg, $nik)
     {
+        $karyawans = Karyawan::all();
         $data = $klrg->find($nik);
-        return view('datakeluarga.formedit')->with([
+        return view('datakeluarga.formedit', compact('karyawans'))->with([
             'txtnik' => $nik,
             'txtnip' => $data->nip,
             'txtnamadatakeluarga' => $data->namadatakeluarga,
