@@ -13,10 +13,21 @@
                 @csrf
                 @method('PUT')
                 <div class="row mb-3">
-                    <label for="txtnip" class="col-sm-2 col-form-label ">NIP</label>
+                    <label for="txtnip" class="col-sm-2 col-form-label">NIP</label>
                     <div class="col-sm-4">
-                        <input type="text" class="form-control-plaintext" id="txtnip" name="txtnip"
-                            value="{{ $txtnip }}">
+                        <select class="form-select form-select-sm @error('txtnip') is-invalid @enderror"
+                            name="txtnip" id="txtnip">
+                            <option value=" "selected>-pilih-</option>
+                            {{-- <option value="islam" {{ $txtagama == 'Islam' ? 'selected' : '' }}>Islam</option> --}}
+                            @foreach ($karyawans as $list)
+                                <option value="{{$list->nip}}" {{ $txtnip == $list->nip ? 'selected' : '' }}>{{$list->nip}}</option>
+                            @endforeach
+                            @error('txtnip')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </select>
                     </div>
                 </div>
                 <div class="row mb-3">
