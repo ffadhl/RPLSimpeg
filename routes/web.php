@@ -13,7 +13,7 @@ use App\Http\Controllers\jabatanController;
 use App\Http\Controllers\PresensiController;
 use App\Http\Controllers\DataPendidikanController;
 use App\Http\Controllers\DataLisensiController;
-use app\Models\Karyawan;
+use App\Models\Karyawan;
 use App\Models\DataKeluarga;
 use App\Models\DataLisensi;
 use App\Models\DataPendidikan;
