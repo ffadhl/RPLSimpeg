@@ -20,6 +20,7 @@ use App\Models\Penggajian;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\FadhlmahasiswaController;
 use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\MahasiswaControllerC;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,6 +50,7 @@ use App\Http\Controllers\MahasiswaController;
 Route::get('/',[LayoutController::class,'index'])->middleware('auth');
 Route::get('/home',[LayoutController::class,'index'])->middleware('auth');
 Route::resource('/mahasiswa', MahasiswaController::class);
+Route::resource('/cheva', MahasiswaControllerC::class);
 
 Route::controller(LoginController::class)->group(function(){
 
