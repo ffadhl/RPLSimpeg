@@ -17,6 +17,34 @@
                 <span class="text">Karyawan</span>
             </a>
         </li>
+        
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-circle-info"></i>
+                <span class="text">Data Lainnya</span>
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="nav-link {{ request()->segment('1') == 'datakeluarga' ? 'active' : '' }} "
+                        aria-current="page" href="{{ url('datakeluarga') }}">
+                        <i class="fa-solid fa-people-group"></i>
+                        <span class="text">Data Keluarga</span>
+                    </a>
+                </li>
+                <li><a class="nav-link {{ request()->segment('1') == 'datapendidikan' ? 'active' : '' }} " aria-current="page"
+                        href="{{ url('datapendidikan') }}">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span class="text">Data Pendidikan</span>
+                    </a>
+                </li>
+                <li><a class="nav-link {{ request()->segment('1') == 'datalisensi' ? 'active' : '' }} " aria-current="page"
+                    href="{{ url('datalisensi') }}">
+                    <i class="fa-solid fa-id-card"></i>
+                    <span class="text">Data Lisensi</span>
+                </a>
+                </li>
+            </ul>
+        </li>
 
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -80,31 +108,31 @@
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
-                <i class='bx bx-calendar'></i>
+                <i class="fa-solid fa-school-circle-check"></i>
                 <span class="text">UAS</span>
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="nav-link {{ request()->segment('1') == 'penjadwalan' ? 'active' : '' }} "
+                <li><a class="nav-link {{ request()->segment('1') == 'fadhlmahasiswa' ? 'active' : '' }} "
                         aria-current="page" href="{{ url('fadhlmahasiswa') }}">
-                        <i class='bx bx-calendar-plus'></i>
+                        <i class="fa-solid fa-chalkboard-user"></i>
                         <span class="text">UAS_Fadhl</span>
                     </a>
                 </li>
-                <li><a class="nav-link {{ request()->segment('1') == 'cuti' ? 'active' : '' }} " aria-current="page"
-                        href="{{ url('cuti') }}">
-                        <i class='bx bx-calendar-exclamation'></i>
+                <li><a class="nav-link {{ request()->segment('1') == '#' ? 'active' : '' }} " aria-current="page"
+                        href="{{ url('#') }}">
+                        <i class="fa-solid fa-chalkboard-user"></i>
                         <span class="text">UAS_Cheva</span>
                     </a>
                 </li>
-                <li><a class="nav-link {{ request()->segment('1') == 'cuti' ? 'active' : '' }} " aria-current="page"
-                    href="{{ url('cuti') }}">
-                    <i class='bx bx-calendar-exclamation'></i>
+                <li><a class="nav-link {{ request()->segment('1') == '#' ? 'active' : '' }} " aria-current="page"
+                    href="{{ url('#') }}">
+                    <i class="fa-solid fa-chalkboard-user"></i>
                     <span class="text">UAS_Jessica</span>
                 </a>
                 </li>
-                <li><a class="nav-link {{ request()->segment('1') == 'cuti' ? 'active' : '' }} " aria-current="page"
-                    href="{{ url('cuti') }}">
-                    <i class='bx bx-calendar-exclamation'></i>
+                <li><a class="nav-link {{ request()->segment('1') == '#' ? 'active' : '' }} " aria-current="page"
+                    href="{{ url('#') }}">
+                    <i class="fa-solid fa-chalkboard-user"></i>
                     <span class="text">UAS_Imam</span>
                 </a>
                 </li>
