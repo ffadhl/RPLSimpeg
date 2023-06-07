@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\DataPendidikan;
 use App\Http\Requests\StoreDataPendidikanRequest;
 use App\Http\Requests\UpdateDataPendidikanRequest;
+use App\Models\Karyawan;
 
 class DataPendidikanController extends Controller
 {
@@ -43,8 +44,9 @@ class DataPendidikanController extends Controller
      */
     public function show(DataPendidikan $pddkn, $id)
     {
+        $karyawans = Karyawan::all();
         $data = $pddkn->find($id);
-        return view('datapendidikan.formedit')->with([
+        return view('datapendidikan.formedit',compact('karyawans'))->with([
             'txtid' => $data->id,
             'txtnip' => $data->nip,
             'txtsekolah' => $data->sekolah,
