@@ -24,27 +24,37 @@
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="txtnip" class="col-sm-2 col-form-label ">NIP</label>
+                    <label for="txtnip" class="col-sm-2 col-form-label">NIP</label>
                     <div class="col-sm-4">
-                        <input type="text" class="form-control form-control-sm @error('txtnip') is-invalid @enderror"
-                            id="txtnip" name="txtnip">
-                        @error('txtnip')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                        @enderror
+                        <select class="form-select form-select-sm @error('txtnip') is-invalid @enderror" name="txtnip"
+                            id="txtnip">
+                            @error('txtnip')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                            <option value=" "selected>-pilih-</option>
+                            @foreach ($karyawans as $list)
+                                <option value="{{$list->nip}}">-{{$list->nip}}-</option>
+                            @endforeach
+                        </select>
                     </div>
                 </div>
                 <div class="row mb-3">
-                    <label for="txtnama" class="col-sm-2 col-form-label ">Nama Karyawan</label>
+                    <label for="txtnama" class="col-sm-2 col-form-label">Nama Karyawan</label>
                     <div class="col-sm-4">
-                        <input type="text" class="form-control form-control-sm @error('txtnama') is-invalid @enderror"
-                            id="txtnama" name="txtnama">
-                        @error('txtnama')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                        @enderror
+                        <select class="form-select form-select-sm @error('txtnama') is-invalid @enderror" name="txtnama"
+                            id="txtnama">
+                            @error('txtnama')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                            <option value=" "selected>-pilih-</option>
+                            @foreach ($karyawans as $list)
+                                <option value="{{$list->nama}}">-{{$list->nama}}-</option>
+                            @endforeach
+                        </select>
                     </div>
                 </div>
                 <div class="row mb-3">
