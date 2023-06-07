@@ -21,38 +21,56 @@
                 </div>
                 <div class="row mb-3">
                     <label for="txtnip" class="col-sm-2 col-form-label">NIP</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control form-control-sm @error('txtnip') is-invalid @enderror"
-                            id="txtnip" name="txtnip" value="{{ $txtnip }}">
-                        @error('txtnip')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                        @enderror
+                    <div class="col-sm-4">
+                        <select class="form-select form-select-sm @error('txtnip') is-invalid @enderror"
+                            name="txtnip" id="txtnip">
+                            <option value=" "selected>-pilih-</option>
+                            {{-- <option value="islam" {{ $txtagama == 'Islam' ? 'selected' : '' }}>Islam</option> --}}
+                            @foreach ($karyawans as $list)
+                                <option value="{{$list->nip}}" {{ $txtnip == $list->nip ? 'selected' : '' }}>{{$list->nip}}</option>
+                            @endforeach
+                            @error('txtnip')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </select>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <label for="txtnama" class="col-sm-2 col-form-label">Nama Karyawan</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control form-control-sm @error('txtnama') is-invalid @enderror"
-                            id="txtnama" name="txtnama" value="{{ $txtnama }}">
-                        @error('txtnama')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                        @enderror
+                    <div class="col-sm-4">
+                        <select class="form-select form-select-sm @error('txtnama') is-invalid @enderror"
+                            name="txtnama" id="txtnama">
+                            <option value=" "selected>-pilih-</option>
+                            {{-- <option value="islam" {{ $txtagama == 'Islam' ? 'selected' : '' }}>Islam</option> --}}
+                            @foreach ($karyawans as $list)
+                                <option value="{{$list->nama}}" {{ $txtnama == $list->nama ? 'selected' : '' }}>{{$list->nama}}</option>
+                            @endforeach
+                            @error('txtnama')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </select>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <label for="id_jbtn" class="col-sm-2 col-form-label">ID Jabatan</label>
-                    <div class="col-sm-10">
-                        <input type="text" class="form-control form-control-sm @error('id_jbtn') is-invalid @enderror"
-                            id="id_jbtn" name="id_jbtn" value="{{ $id_jbtn }}">
-                        @error('id_jbtn')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                        @enderror
+                    <div class="col-sm-4">
+                        <select class="form-select form-select-sm @error('id_jbtn') is-invalid @enderror"
+                            name="id_jbtn" id="id_jbtn">
+                            <option value=" "selected>-pilih-</option>
+                            {{-- <option value="islam" {{ $txtagama == 'Islam' ? 'selected' : '' }}>Islam</option> --}}
+                            @foreach ($jabatans as $list)
+                                <option value="{{$list->id_jabatan}}" {{ $id_jbtn == $list->id_jabatan ? 'selected' : '' }}>{{$list->id_jabatan}}</option>
+                            @endforeach
+                            @error('id_jbtn')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                            @enderror
+                        </select>
                     </div>
                 </div>
                 <div class="row mb-3">
