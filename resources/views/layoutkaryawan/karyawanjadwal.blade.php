@@ -21,53 +21,32 @@
         </div>
         <div class="card-body">
             <div>
-                <table class="table table-bordered">
+                <table class="table table-sm table-stripde table-bordered">
                     <thead>
                         <tr>
-                            <th><i class="fa fa-calendar" aria-hidden="true"></i></th>
-                            <th>Senin</th>
-                            <th>Selasa</th>
-                            <th>Rabu</th>
-                            <th>Kamis</th>
-                            <th>Jumat</th>
-                            <th>Sabtu</th>
-                            <th>Minggu</th>
+                            <th>No</th>
+                            <th>Kode Jadwal</th>
+                            <th>NIP</th>
+                            <th>Nama Karyawan</th>
+                            <th>ID Jabatan</th>
+                            <th>Waktu Shift</th>
+                            <th>Tanggal Shift</th>
+                            <th></th>
                         </tr>
-
                     </thead>
 
                     <tbody>
-                        <tr>
-                            <td><small>Pagi </small></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td><small>Siang </small></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                        <tr>
-                            <td><small>Malam </small></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-
+                        @foreach ($penjadwalan as $row)
+                            <tr>
+                                <th>{{ $loop->iteration }}</th>
+                                <td>{{ $row->kode_jadwal }}</td>
+                                <td>{{ $row->nip }}</td>
+                                <td>{{ $row->nama }}</td>
+                                <td>{{ $row->id_jabatan }}</td>
+                                <td>{{ $row->waktu_shift }}</td>
+                                <td>{{ $row->tanggal_shift }}</td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
