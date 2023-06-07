@@ -16,40 +16,34 @@
         </section>
     </div>
     <div class="card">
-        <div class="card-headerjadwal">
-            <h4><b>Jadwal Karyawan</b></h4>
-        </div>
         <div class="card-body">
-            <div>
-                <table class="table table-sm table-stripde table-bordered">
-                    <thead>
+            <table class="table table-sm table-stripde table-bordered">
+                <thead>
+                    <tr>
+                        <th>No</th>
+                        <th>Kode Jadwal</th>
+                        <th>NIP</th>
+                        <th>Nama Karyawan</th>
+                        <th>ID Jabatan</th>
+                        <th>Waktu Shift</th>
+                        <th>Tanggal Shift</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($penjadwalan as $row)
                         <tr>
-                            <th>No</th>
-                            <th>Kode Jadwal</th>
-                            <th>NIP</th>
-                            <th>Nama Karyawan</th>
-                            <th>ID Jabatan</th>
-                            <th>Waktu Shift</th>
-                            <th>Tanggal Shift</th>
-                            <th></th>
+                            <th>{{ $loop->iteration }}</th>
+                            <td>{{ $row->kode_jadwal }}</td>
+                            <td>{{ $row->nip }}</td>
+                            <td>{{ $row->nama }}</td>
+                            <td>{{ $row->id_jabatan }}</td>
+                            <td>{{ $row->waktu_shift }}</td>
+                            <td>{{ $row->tanggal_shift }}</td>
                         </tr>
-                    </thead>
-
-                    {{-- <tbody>
-                        @foreach ($penjadwalan as $row)
-                            <tr>
-                                <th>{{ $loop->iteration }}</th>
-                                <td>{{ $row->kode_jadwal }}</td>
-                                <td>{{ $row->nip }}</td>
-                                <td>{{ $row->nama }}</td>
-                                <td>{{ $row->id_jabatan }}</td>
-                                <td>{{ $row->waktu_shift }}</td>
-                                <td>{{ $row->tanggal_shift }}</td>
-                            </tr>
-                        @endforeach
-                    </tbody> --}}
-                </table>
-            </div>
+                    @endforeach
+                </tbody>
+            </table>
         </div>
     </div>
 @endsection
