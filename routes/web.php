@@ -166,7 +166,7 @@ Route::group(['middleware' => ['auth']], function(){
 
 });
 
-
+//uas Fadhl
 Route::get('/fadhlmahasiswa', function () {
     return view('fadhl.index');
 });
