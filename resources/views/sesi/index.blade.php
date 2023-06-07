@@ -81,7 +81,7 @@
                             </div>
 
                             <p class="text">
-                                Forgotten your password or you login datails?
+                                Forgot your password or your login details?
                                 <a href="#">Get help</a> signing in
                             </p>
                         </div>
