@@ -18,11 +18,11 @@ use App\Models\DataKeluarga;
 use App\Models\DataLisensi;
 use App\Models\DataPendidikan;
 use App\Models\Penggajian;
+use App\Models\Jabatan;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\FadhlmahasiswaController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\MahasiswaControllerC;
-use App\Models\Jabatan;
 
 /*
 |--------------------------------------------------------------------------
