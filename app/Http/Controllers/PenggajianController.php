@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Penggajian;
 use App\Http\Requests\StorePenggajianRequest;
 use App\Http\Requests\UpdatePenggajianRequest;
+use App\Models\Karyawan;
 
 class PenggajianController extends Controller
 {
@@ -42,8 +43,9 @@ class PenggajianController extends Controller
      */
     public function show(Penggajian $pgjn, $id_gaji)
     {
+        $karyawans = Karyawan::all();
         $data = $pgjn->find($id_gaji);
-        return view('penggajian.formedit')->with([
+        return view('penggajian.formedit', compact('karyawans'))->with([
             'id_gj' => $id_gaji,
             'txtnip' => $data->nip,
             'txtnama' => $data->nama,
