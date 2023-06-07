@@ -11,13 +11,13 @@
             </a>
         </li>
         <li>
-            <a class="nav-link {{ request()->segment('1') == 'jabatan' ? 'active' : '' }} " aria-current="page"
+            <a class="nav-link {{ request()->segment('1') == 'karyawan' ? 'active' : '' }} " aria-current="page"
                 href="{{ url('karyawan') }}">
                 <i class='bx bxs-user'></i>
                 <span class="text">Karyawan</span>
             </a>
         </li>
-        
+
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -25,24 +25,24 @@
                 <span class="text">Data Lainnya</span>
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li><a class="nav-link {{ request()->segment('1') == 'datakeluarga' ? 'active' : '' }} "
-                        aria-current="page" href="{{ url('datakeluarga') }}">
+                <li><a class="nav-link {{ request()->segment('1') == 'datakeluarga' ? 'active' : '' }} " aria-current="page"
+                        href="{{ url('datakeluarga') }}">
                         <i class="fa-solid fa-people-group"></i>
                         <span class="text">Data Keluarga</span>
                     </a>
                 </li>
-                <li><a class="nav-link {{ request()->segment('1') == 'datapendidikan' ? 'active' : '' }} " aria-current="page"
-                        href="{{ url('datapendidikan') }}">
+                <li><a class="nav-link {{ request()->segment('1') == 'datapendidikan' ? 'active' : '' }} "
+                        aria-current="page" href="{{ url('datapendidikan') }}">
                         <i class="fa-solid fa-graduation-cap"></i>
                         <span class="text">Data Pendidikan</span>
                     </a>
                 </li>
-                <li><a class="nav-link {{ request()->segment('1') == 'datalisensi' ? 'active' : '' }} " aria-current="page"
-                    href="{{ url('datalisensi') }}">
+                <li><a class="nav-link {{ request()->segment('1') == 'datalisensi' ? 'active' : '' }} "
+                    aria-current="page" href="{{ url('datalisensi') }}">
                     <i class="fa-solid fa-id-card"></i>
                     <span class="text">Data Lisensi</span>
                 </a>
-                </li>
+            </li>
             </ul>
         </li>
 
