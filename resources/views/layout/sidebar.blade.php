@@ -39,7 +39,7 @@
                 </li>
                 <li><a class="nav-link {{ request()->segment('1') == 'datalisensi' ? 'active' : '' }} "
                     aria-current="page" href="{{ url('datalisensi') }}">
-                    <i class='bx bxs-user'></i>
+                    <i class="fa-solid fa-id-card"></i>
                     <span class="text">Data Lisensi</span>
                 </a>
             </li>
@@ -108,31 +108,31 @@
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
                 data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fa-solid fa-school-circle-check"></i>
+                <i class='bx bxs-user-check'></i>
                 <span class="text">UAS</span>
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <li><a class="nav-link {{ request()->segment('1') == 'fadhlmahasiswa' ? 'active' : '' }} "
                         aria-current="page" href="{{ url('fadhlmahasiswa') }}">
-                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <i class='bx bxs-user-check'></i>
                         <span class="text">UAS_Fadhl</span>
                     </a>
                 </li>
                 <li><a class="nav-link {{ request()->segment('1') == '#' ? 'active' : '' }} " aria-current="page"
                         href="{{ url('#') }}">
-                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <i class='bx bxs-user-check'></i>
                         <span class="text">UAS_Cheva</span>
                     </a>
                 </li>
                 <li><a class="nav-link {{ request()->segment('1') == '#' ? 'active' : '' }} " aria-current="page"
                     href="{{ url('#') }}">
-                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <i class='bx bxs-user-check'></i>
                     <span class="text">UAS_Jessica</span>
                 </a>
                 </li>
                 <li><a class="nav-link {{ request()->segment('1') == '#' ? 'active' : '' }} " aria-current="page"
                     href="{{ url('#') }}">
-                    <i class="fa-solid fa-chalkboard-user"></i>
+                    <i class='bx bxs-user-check'></i>
                     <span class="text">UAS_Imam</span>
                 </a>
                 </li>
