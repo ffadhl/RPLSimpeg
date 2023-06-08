@@ -21,10 +21,8 @@ use App\Models\Penggajian;
 use App\Models\jabatan;
 use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\FadhlmahasiswaController;
-use App\Http\Controllers\ImamMahasiswaController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\MahasiswaControllerC;
-use App\Models\ImamMahasiswa;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,7 +40,6 @@ use App\Models\ImamMahasiswa;
 //     return view('sesi.index');
 // })->middleware('isLogin');
 
-//ehe -Sepa
 
 
 // Route::get('/sesi', [SessionController::class, 'index']);
@@ -56,11 +53,12 @@ Route::get('/',[LayoutController::class,'index'])->middleware('auth');
 Route::get('/home',[LayoutController::class,'index'])->middleware('auth');
 Route::resource('/mahasiswa', MahasiswaController::class);
 Route::resource('/cheva', MahasiswaControllerC::class);
-Route::resoure('/imammahasiswa', ImamMahasiswaController::class);
 
 Route::controller(LoginController::class)->group(function(){
 
     Route::get('sesi', 'index')->name('login');
+    Route::get('auth/google', [App\Http\Controllers\GoogleController::class, 'redirectToGoogle'])->name('google.login');
+    Route::get('auth/google/callback', [App\Http\Controllers\GoogleController::class, 'handleGoogleCallback'])->name('google.callback');
     Route::post('sesi/proses', 'proses');
     Route::get('logout','logout');
 });
@@ -167,9 +165,6 @@ Route::group(['middleware' => ['auth']], function(){
             return view('layoutkaryawan.karyawanpengajuancuti');
         });
 
-        Route::get('/karyawan/formeditdata', [FormEditDataController::class, 'index'])->name('formeditdata');
-        Route::post('/karyawan/formeditdata', [FormEditDataController::class, 'store'])->name('formeditdata.store');
-
     });
 
     Route::group(['middleware' => ['cekUserLogin:3']], function(){
@@ -195,9 +190,3 @@ Route::get('/fadhlmahasiswa/{IDmahasiswa}/edit',[FadhlmahasiswaController::class
 Route::put('/fadhlmahasiswa/{IDmahasiswa}',[FadhlmahasiswaController::class,'update']);
 
 Route::delete('/fadhlmahasiswa/{IDmahasiswa}',[FadhlmahasiswaController::class,'destroy']);
-
-Route::get('/imammahasiswa/add', function () {
-    return view('imammahasiswa.formadd');
-});
-
-Route::resource('imammahasiswa', ImamMahasiswaController::class);
