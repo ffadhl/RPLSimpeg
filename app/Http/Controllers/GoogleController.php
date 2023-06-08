@@ -61,7 +61,7 @@ class GoogleController extends Controller
     //         ]);
     //     }
 
-        Auth::login($newuser);
-        return redirect()->intended('home');
-    }
-}
+//         Auth::login($newuser);
+//         return redirect()->intended('home');
+//     }
+// }
