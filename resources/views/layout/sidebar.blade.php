@@ -124,14 +124,14 @@
                         <span class="text">UAS_Cheva</span>
                     </a>
                 </li>
-                <li><a class="nav-link {{ request()->segment('1') == 'imammahasiswa' ? 'active' : '' }} " aria-current="page"
-                    href="{{ url('imammahasiswa') }}">
+                <li><a class="nav-link {{ request()->segment('1') == '#' ? 'active' : '' }} " aria-current="page"
+                    href="{{ url('i') }}">
                     <i class='bx bxs-user-check'></i>
                     <span class="text">UAS_Jessica</span>
                 </a>
                 </li>
-                <li><a class="nav-link {{ request()->segment('1') == '#' ? 'active' : '' }} " aria-current="page"
-                    href="{{ url('#') }}">
+                <li><a class="nav-link {{ request()->segment('1') == 'imammahasiswa' ? 'active' : '' }} " aria-current="page"
+                    href="{{ url('imammahasiswa') }}">
                     <i class='bx bxs-user-check'></i>
                     <span class="text">UAS_Imam</span>
                 </a>
