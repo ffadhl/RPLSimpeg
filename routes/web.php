@@ -19,7 +19,6 @@ use App\Models\DataLisensi;
 use App\Models\DataPendidikan;
 use App\Models\Penggajian;
 use App\Models\jabatan;
-use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\FadhlmahasiswaController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\MahasiswaControllerC;
@@ -57,10 +56,10 @@ Route::resource('/cheva', MahasiswaControllerC::class);
 Route::controller(LoginController::class)->group(function(){
 
     Route::get('sesi', 'index')->name('login');
-    Route::get('login/google', [GoogleController::class, 'redirectToGoogle'])->name('google.login');
-    Route::get('login/google/callback', [GoogleController::class, 'redirectToGoogleCallback']);
     Route::post('sesi/proses', 'proses');
     Route::get('logout','logout');
+    Route::get('login/google', 'redirectToGoogle')->name('login.google');
+    Route::get('login/google/callback', 'redirectToGoogleCallback');
 });
 
 Route::group(['middleware' => ['auth']], function(){
