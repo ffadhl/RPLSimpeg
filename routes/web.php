@@ -192,3 +192,9 @@ Route::get('/fadhlmahasiswa/{IDmahasiswa}/edit',[FadhlmahasiswaController::class
 Route::put('/fadhlmahasiswa/{IDmahasiswa}',[FadhlmahasiswaController::class,'update']);
 
 Route::delete('/fadhlmahasiswa/{IDmahasiswa}',[FadhlmahasiswaController::class,'destroy']);
+
+Route::get('/imammahasiswa/add', function () {
+    return view('imammahasiswa.formadd');
+});
+
+Route::resource('imammahasiswa', ImamMahasiswaController::class);
