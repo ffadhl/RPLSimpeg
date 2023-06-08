@@ -164,6 +164,9 @@ Route::group(['middleware' => ['auth']], function(){
             return view('layoutkaryawan.karyawanpengajuancuti');
         });
 
+        Route::get('/karyawan/formeditdata', [FormEditDataController::class, 'index'])->name('formeditdata');
+        Route::post('/karyawan/formeditdata', [FormEditDataController::class, 'store'])->name('formeditdata.store');
+
     });
 
     Route::group(['middleware' => ['cekUserLogin:3']], function(){
