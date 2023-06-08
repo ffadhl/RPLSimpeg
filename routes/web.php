@@ -40,7 +40,7 @@ use App\Http\Controllers\MahasiswaControllerC;
 //     return view('sesi.index');
 // })->middleware('isLogin');
 
-// sepakbola
+// sepakbola gtg
 
 // Route::get('/sesi', [SessionController::class, 'index']);
 // Route::post('/sesi/login', [SessionController::class, 'login']);
