@@ -57,8 +57,8 @@ Route::resource('/cheva', MahasiswaControllerC::class);
 Route::controller(LoginController::class)->group(function(){
 
     Route::get('sesi', 'index')->name('login');
-    Route::get('auth/google', [App\Http\Controllers\GoogleController::class, 'redirectToGoogle'])->name('google.login');
-    Route::get('auth/google/callback', [App\Http\Controllers\GoogleController::class, 'handleGoogleCallback'])->name('google.callback');
+    Route::get('login/google', [GoogleController::class, 'redirectToGoogle'])->name('google.login');
+    Route::get('login/google/callback', [GoogleController::class, 'redirectToGoogleCallback']);
     Route::post('sesi/proses', 'proses');
     Route::get('logout','logout');
 });
