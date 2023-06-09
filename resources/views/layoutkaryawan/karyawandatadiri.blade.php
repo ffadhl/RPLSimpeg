@@ -21,32 +21,32 @@
                         <th>Lisensi</th>
                     </tr>
                 </thead>
-                if(@isset($karyawan)
+                if(@empty($karyawan)
                 <tbody>
                     <tr>
-                        <td>{{ $karyawan->nip }}</td>
-                        <td>{{ $karyawan->nama }}</td>
-                        <td>{{ $karyawan->tempat_lahir }}</td>
-                        <td>{{ $karyawan->tanggal_lahir }}</td>
-                        <td>{{ $karyawan->jenis_kelamin }}</td>
-                        <td>{{ $karyawan->no_telepon }}</td>
-                        <td>{{ $karyawan->agama }}</td>
-                        <td>{{ $karyawan->pendidikan }}</td>
-                        <td>{{ $karyawan->lisensi }}</td>
+                        <td>{{ 'sample' }}</td>
+                        <td>{{ 'sample' }}</td>
+                        <td>{{ 'sample' }}</td>
+                        <td>{{ 'sample' }}</td>
+                        <td>{{ 'sample' }}</td>
+                        <td>{{ 'sample' }}</td>
+                        <td>{{ 'sample' }}</td>
+                        <td>{{ 'sample' }}</td>
+                        <td>{{ 'sample' }}</td>
                     </tr>
                 </tbody>
-                @endisset)else{
+                @endempty)else{
                     <tbody>
                         <tr>
-                            <td>{{ 'sample' }}</td>
-                            <td>{{ 'sample' }}</td>
-                            <td>{{ 'sample' }}</td>
-                            <td>{{ 'sample' }}</td>
-                            <td>{{ 'sample' }}</td>
-                            <td>{{ 'sample' }}</td>
-                            <td>{{ 'sample' }}</td>
-                            <td>{{ 'sample' }}</td>
-                            <td>{{ 'sample' }}</td>
+                            <td>{{ $karyawan->nip }}</td>
+                            <td>{{ $karyawan->nama }}</td>
+                            <td>{{ $karyawan->tempat_lahir }}</td>
+                            <td>{{ $karyawan->tanggal_lahir }}</td>
+                            <td>{{ $karyawan->jenis_kelamin }}</td>
+                            <td>{{ $karyawan->no_telepon }}</td>
+                            <td>{{ $karyawan->agama }}</td>
+                            <td>{{ $karyawan->pendidikan }}</td>
+                            <td>{{ $karyawan->lisensi }}</td>
                         </tr>
                     </tbody>
                 }
