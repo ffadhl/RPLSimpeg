@@ -88,4 +88,14 @@ class KaryawanController extends Controller
         $data->delete();
         return redirect('karyawan')->with('msg', 'Data ' . $data->nama . ' Berhasil Dihapus');
     }
+
+    public function dataDiri(){
+        $userNip = auth()->user()->nip;
+        return view('layoutkaryawan.karyawandatadiri', [
+            'karyawan' => Karyawan::where('nip', $userNip)->firstOrFail(),
+            'datakeluarga' => DataKeluarga::where('nip', $userNip)->firstOrFail(),
+            'datapendidikan' => DataPendidikan::where('nip', $userNip)->firstOrFail(),
+            // 'datalisensi' => DataLisensi::where('nip', $userNip)->firstOrFail(),
+        ]);
+    }
 }
