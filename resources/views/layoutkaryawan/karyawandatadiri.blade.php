@@ -23,15 +23,15 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>{{ $data->nip }}</td>
-                        <td>{{ $data->nama }}</td>
-                        <td>{{ $data>tempat_lahir }}</td>
-                        <td>{{ $data->tanggal_lahir }}</td>
-                        <td>{{ $data->jenis_kelamin }}</td>
-                        <td>{{ $data->no_telepon }}</td>
-                        <td>{{ $data->agama }}</td>
-                        <td>{{ $data->pendidikan }}</td>
-                        <td>{{ $data->lisensi }}</td>
+                        <td>{{ $karyawan->nip }}</td>
+                        <td>{{ $karyawan->nama }}</td>
+                        <td>{{ $karyawan->tempat_lahir }}</td>
+                        <td>{{ $karyawan->tanggal_lahir }}</td>
+                        <td>{{ $karyawan->jenis_kelamin }}</td>
+                        <td>{{ $karyawan->no_telepon }}</td>
+                        <td>{{ $karyawan->agama }}</td>
+                        <td>{{ $karyawan->pendidikan }}</td>
+                        <td>{{ $karyawan->lisensi }}</td>
                     </tr>
                 </tbody>
             </table>

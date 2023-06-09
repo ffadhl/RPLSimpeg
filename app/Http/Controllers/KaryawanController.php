@@ -93,9 +93,7 @@ class KaryawanController extends Controller
         $userNip = auth()->user()->nip;
         return view('layoutkaryawan.karyawandatadiri', [
             'karyawan' => Karyawan::where('nip', $userNip)->firstOrFail(),
-            'datakeluarga' => DataKeluarga::where('nip', $userNip)->firstOrFail(),
-            'datapendidikan' => DataPendidikan::where('nip', $userNip)->firstOrFail(),
-            // 'datalisensi' => DataLisensi::where('nip', $userNip)->firstOrFail(),
+            // 'datalisensi' => DataLisensi::where('nip', $userNip)->firsOrFail(),
         ]);
     }
 }
