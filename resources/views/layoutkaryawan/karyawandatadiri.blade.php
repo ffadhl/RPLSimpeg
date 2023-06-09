@@ -22,20 +22,17 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($karyawan as $row)
-                        <tr>
-                            <th>{{ $loop->iteration }}</th>
-                            <td>{{ $row->nip }}</td>
-                            <td>{{ $row->nama }}</td>
-                            <td>{{ $row->tempat_lahir }}</td>
-                            <td>{{ $row->tanggal_lahir }}</td>
-                            <td>{{ $row->jenis_kelamin }}</td>
-                            <td>{{ $row->no_telepon }}</td>
-                            <td>{{ $row->agama }}</td>
-                            <td>{{ $row->pendidikan }}</td>
-                            <td>{{ $row->lisensi }}</td>
-                        </tr>
-                    @endforeach
+                    <tr>
+                        <td>{{ $data->nip }}</td>
+                        <td>{{ $data->nama }}</td>
+                        <td>{{ $data>tempat_lahir }}</td>
+                        <td>{{ $data->tanggal_lahir }}</td>
+                        <td>{{ $data->jenis_kelamin }}</td>
+                        <td>{{ $data->no_telepon }}</td>
+                        <td>{{ $data->agama }}</td>
+                        <td>{{ $data->pendidikan }}</td>
+                        <td>{{ $data->lisensi }}</td>
+                    </tr>
                 </tbody>
             </table>
         </div>
