@@ -140,7 +140,8 @@ Route::group(['middleware' => ['auth']], function(){
         });
 
         Route::get('/karyawanrosati/datadirikaryawan', function () {
-            return view('layoutkaryawan.karyawandatadiri');
+            return view('layoutkaryawan.karyawandatadiri')->with([
+                'karyawan' => karyawan::all()]);
         });
 
         Route::get('/karyawanrosati/jadwalkaryawan', function () {
