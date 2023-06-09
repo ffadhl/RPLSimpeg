@@ -12,7 +12,9 @@
             <form action="/fadhlmahasiswa/store" method="POST">
                 @csrf
                 <div class="row mb-3">
-                    <input type="text" name="IDmahasiswa" placeholder="Masukkan ID Mahasiswa"><br>
+                    <div class="col-sm-4">
+                        <input type="text" name="IDmahasiswa" placeholder="Masukkan ID Mahasiswa"><br>
+                    </div>
                 </div>
                 <input type="text" name="nama" placeholder="Masukkan Nama"><br>
                 <select name="jenis_kelamin" id="">
