@@ -91,9 +91,6 @@ class KaryawanController extends Controller
 
     public function dataDiri(){
         $userNip = auth()->user()->nip;
-        return view('layoutkaryawan.karyawandatadiri', [
-            'karyawan' => Karyawan::where('nip', $userNip)->firstOrFail(),
-            // 'datalisensi' => DataLisensi::where('nip', $userNip)->firsOrFail(),
-        ]);
+        return view('layoutkaryawan.karyawandatadiri');
     }
 }
