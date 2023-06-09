@@ -140,11 +140,7 @@ Route::group(['middleware' => ['auth']], function(){
             return view('layoutkaryawan.dashboard');
         });
 
-        Route::get('/karyawanrosati/datadirikaryawan', function () {
-            return view('layoutkaryawan.karyawandatadiri',[
-                'karyawan' =>  Karyawan::where('nip', auth()->user()->nip)->get(),
-            ]);
-        });
+        Route::get('/karyawanrosati/datadirikaryawan', 'App\Http\Controllers\KaryawanController@dataDiri');
 
         Route::get('/karyawanrosati/jadwalkaryawan', function () {
             return view('layoutkaryawan.karyawanjadwal');

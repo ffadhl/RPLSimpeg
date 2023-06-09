@@ -12,6 +12,12 @@ class Karyawan extends Model
     protected $table = 'karyawan';
     protected $primaryKey = 'nip';
 
+    // protected $fillable = [
+    //     'nip',
+    //     'email',
+    //     'password',
+    // ];
+
     public $incrementing = false;
     public $timestamps = true;
 

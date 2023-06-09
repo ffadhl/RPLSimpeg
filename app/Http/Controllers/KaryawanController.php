@@ -90,7 +90,7 @@ class KaryawanController extends Controller
     }
 
     public function dataDiri(){
-        $userNip = auth()->user()->nip;
+        // $userId = auth()->user()->id;
         return view('layoutkaryawan.karyawandatadiri');
     }
 }
