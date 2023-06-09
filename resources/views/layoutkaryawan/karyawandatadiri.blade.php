@@ -21,6 +21,7 @@
                         <th>Lisensi</th>
                     </tr>
                 </thead>
+                if(@isset($karyawan)
                 <tbody>
                     <tr>
                         <td>{{ $karyawan->nip }}</td>
@@ -34,6 +35,21 @@
                         <td>{{ $karyawan->lisensi }}</td>
                     </tr>
                 </tbody>
+                @endisset)else{
+                    <tbody>
+                        <tr>
+                            <td>{{ 'sample' }}</td>
+                            <td>{{ 'sample' }}</td>
+                            <td>{{ 'sample' }}</td>
+                            <td>{{ 'sample' }}</td>
+                            <td>{{ 'sample' }}</td>
+                            <td>{{ 'sample' }}</td>
+                            <td>{{ 'sample' }}</td>
+                            <td>{{ 'sample' }}</td>
+                            <td>{{ 'sample' }}</td>
+                        </tr>
+                    </tbody>
+                }
             </table>
         </div>
     </div>
