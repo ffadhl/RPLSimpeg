@@ -11,7 +11,9 @@
         <div class="card-body">
             <form action="/fadhlmahasiswa/store" method="POST">
                 @csrf
-                <input type="text" name="IDmahasiswa" placeholder="Masukkan ID Mahasiswa"><br>
+                <div class="row mb-3">
+                    <input type="text" name="IDmahasiswa" placeholder="Masukkan ID Mahasiswa"><br>
+                </div>
                 <input type="text" name="nama" placeholder="Masukkan Nama"><br>
                 <select name="jenis_kelamin" id="">
                     <option value="">== Pilih jenis Kelamin ==</option>
