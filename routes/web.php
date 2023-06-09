@@ -24,6 +24,7 @@ use App\Http\Controllers\FadhlmahasiswaController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\MahasiswaControllerC;
 use App\Http\Controllers\ImamMahasiswaController;
+use App\Http\Controllers\FormPengajuanCutiController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -163,7 +164,8 @@ Route::group(['middleware' => ['auth']], function(){
             return view('layoutkaryawan.karyawanpengajuancuti');
         });
 
-
+        Route::resource('pengajuancuti', FormPengajuanCutiController::class);
+        Route::post('/karyawanrosati/pengajuancuti', [FormPengajuanCutiController::class, 'store']);
 
     });
 
