@@ -142,7 +142,7 @@ Route::group(['middleware' => ['auth']], function(){
 
         Route::get('/karyawanrosati/datadirikaryawan', function () {
             return view('layoutkaryawan.karyawandatadiri',[
-                'karyawan' =>  Karyawan::where('id', Auth::karyawan()->nip)->firstOrFail(),
+                'karyawan' =>  Karyawan::where('nip', Auth::karyawan()->nip)->firstOrFail(),
             ]);
         });
 
