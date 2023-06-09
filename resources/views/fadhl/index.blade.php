@@ -59,7 +59,7 @@
                             <td>{{ $row->tanggal_lahir }}</td>
                             <td>{{ $row->email }}</td>
                             <td>
-                                <a href="/fadhlmahasiswa/{{ $row->IDmahasiswa }}/edit">Edit</a>
+                                <a href="/fadhlmahasiswa/{{ $row->IDmahasiswa }}/edit"><i class="fa-solid fa-edit"></i>Edit</a>
                                 <form action="/fadhlmahasiswa/{{ $row->IDmahasiswa }}" method="POST">
                                     @csrf
                                     @method('DELETE')
