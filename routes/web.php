@@ -23,6 +23,7 @@ use App\Http\Controllers\GoogleController;
 use App\Http\Controllers\FadhlmahasiswaController;
 use App\Http\Controllers\MahasiswaController;
 use App\Http\Controllers\MahasiswaControllerC;
+use App\Http\Controllers\ImamMahasiswaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -190,3 +191,9 @@ Route::get('/fadhlmahasiswa/{IDmahasiswa}/edit',[FadhlmahasiswaController::class
 Route::put('/fadhlmahasiswa/{IDmahasiswa}',[FadhlmahasiswaController::class,'update']);
 
 Route::delete('/fadhlmahasiswa/{IDmahasiswa}',[FadhlmahasiswaController::class,'destroy']);
+
+Route::get('/imammahasiswa/add', function () {
+    return view('imammahasiswa.formadd');
+});
+
+Route::resource('imammahasiswa', ImamMahasiswaController::class);
