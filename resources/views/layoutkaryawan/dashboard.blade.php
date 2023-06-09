@@ -8,7 +8,7 @@
                     <div
                         class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
                         <div style="max-width: 350px;">
-                            <h1 class="display-6 fw-bold mb-4">Selamat Datang di Pelayanan edit <span
+                            <h1 class="display-6 fw-bold mb-4">Selamat Datang di Pelayanan<span
                                     class="colortext">Sistem Kepegawaian</span>.</h1>
                             <p class="my-4">Pada Menu Ini Merupakan CRUD Untuk Mengelola Semua data Kepegawaian, Mulai dari
                                 Data Karyawan, Data Jabatan, Data Departemen, Data penjadwalan, Data Absensi, Data Gaji, dan Cuti.
