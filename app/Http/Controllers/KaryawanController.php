@@ -91,6 +91,9 @@ class KaryawanController extends Controller
 
     public function dataDiri(){
         // $userId = auth()->user()->id;
+        // return view('layoutkaryawan.karyawandatadiri', [
+        //     'karyawan' => Karyawan::where('user_id', $userId)->first()
+        // ]);
         return view('layoutkaryawan.karyawandatadiri');
     }
 }
