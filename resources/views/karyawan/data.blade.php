@@ -3,7 +3,7 @@
 @section('content')
     <div class="head-title">
         <div class="left">
-            <h3><strong> Data Karyawan </strong></h3>
+            <h3><strong> Bapak Ganteng </strong></h3>
         </div>
         {{-- <a href="#" class="btn-download">
             <i class='bx bxs-cloud-download'></i>
